@@ -1,7 +1,7 @@
-# Adda Transit — i bus del quadrangolo
+# Adda Transit — i bus della Bassa Adda
 ### Fara Gera d'Adda · Vaprio d'Adda · Canonica d'Adda · Treviglio · Cassano d'Adda
 
-Mappa e matrice interattiva dei collegamenti bus fra i cinque comuni del quadrangolo, con le
+Mappa e matrice interattiva dei collegamenti bus fra i cinque comuni, con le
 estensioni verso **Trezzo sull'Adda** e **Gessate M2**. Scegli due luoghi qualsiasi e la pagina
 dice quale linea prendere, oppure dove cambiare quando il diretto non c'è.
 
@@ -33,6 +33,10 @@ linee e le coincidenze.
 - **Uso da telefono**: menu a scomparsa sotto i 780 pixel, aree toccabili da 44 pixel,
   campi a 16 pixel per non far zoomare iOS, ombre e suggerimento di scorrimento sulle tabelle
   larghe, rispetto di `prefers-reduced-motion` e delle safe area
+- **Matrice leggibile da telefono**: sotto i 640 pixel la griglia 7×7 lascia il posto a una
+  lista per luogo di partenza, con le stesse informazioni
+- **Riepilogo senza JavaScript**: un blocco `noscript` elenca le cinque linee, i gestori e le
+  fonti, così la pagina resta leggibile e indicizzabile anche se lo script non parte
 
 ## Criterio editoriale
 

@@ -41,6 +41,7 @@ function nextTrain(arrivalHHMM, list, marginMin) {
   return null;
 }
 function waitClass(min) { if (min == null) return 'bad'; if (min <= 10) return 'good'; if (min <= 20) return 'ok'; return 'bad'; }
+function waitWord(min) { if (min == null) return 'nessun treno'; if (min <= 10) return 'comoda'; if (min <= 20) return 'media'; return 'lunga'; }
 function waitLabel(min) { if (min == null) return 'nessun treno utile nel quadro consultato'; return 'attesa ' + min + ' min'; }
 
 // ===== Legend + Lines list =====
@@ -59,7 +60,7 @@ LINES.forEach(line => {
   item.innerHTML = `
     <input type="checkbox" checked data-line="${line.id}" />
     <span class="legend-swatch" style="background:${line.color}"></span>
-    <span class="li-text"><span class="li-code">${line.code}</span><span class="li-gestore">${line.gestore}</span></span>
+    <span class="li-text"><span class="li-code">${line.code}</span>${line.alias ? ` <span class="li-alias">${line.alias}</span>` : ''}<span class="li-gestore">${line.gestore}</span></span>
   `;
   legendList.appendChild(item);
 });
@@ -84,6 +85,7 @@ LINES.forEach(line => {
     <div class="body">
       <div class="top-row">
         <span class="line-code">${line.code}</span>
+        ${line.alias ? `<span class="line-alias">${line.alias}</span>` : ''}
         <span class="line-gestore">${line.gestore}</span>
       </div>
       <div class="line-name">${line.name}</div>
@@ -267,6 +269,24 @@ function renderMatrix() {
 }
 renderMatrix();
 
+// Su schermo stretto la matrice 7x7 e' illeggibile: stessa informazione, una lista per partenza.
+function renderMatrixList() {
+  const wrap = document.getElementById('matrix-list');
+  if (!wrap) return;
+  wrap.innerHTML = PLACES.map(rowP => {
+    const righe = PLACES.filter(p => p.key !== rowP.key).map(colP => {
+      const conn = getConnection(rowP.key, colP.key);
+      let valore;
+      if (!conn) valore = '<span class="mx-none">nessun dato</span>';
+      else if (conn.type === 'change') valore = `<span class="mx-change">cambio a ${placeShort(conn.via)}</span>`;
+      else valore = conn.lines.map(lineBadge).join(' ') + (conn.type === 'limited' ? '<span class="mx-star">*</span>' : '');
+      return `<li><span class="mx-dest">${colP.name}</span><span class="mx-val">${valore}</span></li>`;
+    }).join('');
+    return `<details class="mx-group"><summary>Da ${rowP.name}</summary><ul>${righe}</ul></details>`;
+  }).join('');
+}
+renderMatrixList();
+
 // ===== Coincidence tables =====
 function buildTable(containerId, busArrivals, destinations) {
   const container = document.getElementById(containerId);
@@ -277,11 +297,12 @@ function buildTable(containerId, busArrivals, destinations) {
   const tbody = document.createElement('tbody');
   busArrivals.forEach(row => {
     const tr = document.createElement('tr');
-    let cells = `<td>${row.linea}</td><td class="cell-time">${row.ora}</td>`;
+    let cells = `<td class="cell-line">${lineBadge(row.line)}</td><td class="cell-time">${row.ora}</td>`;
     destinations.forEach(d => {
       const trainTime = nextTrain(row.ora, d.list);
       const wait = trainTime ? (toMinutes(trainTime) - toMinutes(row.ora)) : null;
-      cells += `<td class="cell-time">${trainTime || '—'} <span class="badge ${waitClass(wait)}">${wait != null ? wait + "'" : 'n/d'}</span></td>`;
+      const parola = waitWord(wait);
+      cells += `<td class="cell-time">${trainTime || '—'} <span class="badge ${waitClass(wait)}" title="attesa ${parola}">${wait != null ? wait + "'" : 'n/d'} <span class="badge-word">${parola}</span></span></td>`;
     });
     tr.innerHTML = cells;
     tbody.appendChild(tr);

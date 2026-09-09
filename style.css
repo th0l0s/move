@@ -351,3 +351,36 @@ footer { padding-block: var(--space-10); text-align: center; color: var(--color-
 /* Rimando al progetto gemello (edu.privix.org) */
 .footer-twin { margin-top: var(--space-4); }
 .footer-twin a { color: var(--color-primary); font-weight: 600; }
+
+/* Alias della linea: "ex linea F" sta accanto al codice, non dentro il chip */
+.line-alias, .li-alias { font-size: var(--text-xs); color: var(--color-text-faint); font-style: italic; }
+.li-alias { display: block; }
+
+/* Attesa del treno: la parola accanto ai minuti, cosi' il colore non e' l'unico segnale */
+.badge-word { margin-left: 0.35em; font-weight: 500; opacity: 0.85; }
+
+/* Matrice su schermo stretto: una lista per luogo di partenza al posto della griglia 7x7 */
+.matrix-list { display: none; }
+@media (max-width: 640px) {
+  #matrix-wrap { display: none; }
+  .matrix-list { display: grid; gap: var(--space-2); }
+  .mx-group { border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: var(--color-surface); overflow: hidden; }
+  .mx-group > summary { display: flex; align-items: center; min-height: 52px; padding-inline: var(--space-4); font-weight: 600; cursor: pointer; }
+  .mx-group > summary::-webkit-details-marker { display: none; }
+  .mx-group > summary::after { content: '+'; margin-left: auto; font-size: var(--text-lg); color: var(--color-text-faint); }
+  .mx-group[open] > summary::after { content: '\2212'; }
+  .mx-group ul { list-style: none; padding: 0 var(--space-4) var(--space-2); }
+  .mx-group li { display: flex; align-items: center; gap: var(--space-3); min-height: 44px; padding-block: var(--space-2); border-top: 1px solid var(--color-divider); }
+  .mx-dest { flex: 1 1 auto; font-size: var(--text-sm); }
+  .mx-val { flex: 0 0 auto; display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 2px; text-align: right; }
+  .mx-change { font-size: var(--text-xs); color: var(--color-text-muted); }
+  .mx-none { font-size: var(--text-xs); color: var(--color-text-faint); }
+}
+
+/* Riepilogo per chi non ha JavaScript */
+.noscript-fallback { padding-block: var(--space-8); border-bottom: 1px solid var(--color-divider); }
+.noscript-fallback h2 { font-size: var(--text-xl); margin-bottom: var(--space-3); }
+.noscript-fallback h3 { font-size: var(--text-base); margin: var(--space-5) 0 var(--space-2); }
+.noscript-fallback ul { padding-left: var(--space-5); display: grid; gap: var(--space-2); margin-block: var(--space-3); }
+.noscript-fallback p { color: var(--color-text-muted); }
+.coinc-table .cell-line { white-space: nowrap; }

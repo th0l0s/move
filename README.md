@@ -30,6 +30,9 @@ linee e le coincidenze.
   biglietto prima di salire, rete ridotta nei festivi)
 - **Tratte critiche**: dove il sistema bus+treno è più fragile in fascia scolastica
 - **Fonti**: i portali ufficiali da cui vengono i dati, per il controllo puntuale
+- **Uso da telefono**: menu a scomparsa sotto i 780 pixel, aree toccabili da 44 pixel,
+  campi a 16 pixel per non far zoomare iOS, ombre e suggerimento di scorrimento sulle tabelle
+  larghe, rispetto di `prefers-reduced-motion` e delle safe area
 
 ## Criterio editoriale
 

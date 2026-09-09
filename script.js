@@ -15,6 +15,22 @@
   if (t) t.addEventListener('click', () => { mode = mode === 'dark' ? 'light' : 'dark'; apply(); if (window.__reflowMap) window.__reflowMap(); });
 })();
 
+// ===== Mobile nav =====
+(function () {
+  const btn = document.querySelector('[data-nav-toggle]');
+  const panel = document.querySelector('[data-mobile-nav]');
+  if (!btn || !panel) return;
+  function closeMenu() { btn.setAttribute('aria-expanded', 'false'); panel.classList.remove('is-open'); }
+  function openMenu() { btn.setAttribute('aria-expanded', 'true'); panel.classList.add('is-open'); }
+  btn.addEventListener('click', () => {
+    const isOpen = btn.getAttribute('aria-expanded') === 'true';
+    isOpen ? closeMenu() : openMenu();
+  });
+  panel.querySelectorAll('a').forEach((a) => a.addEventListener('click', closeMenu));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+  window.addEventListener('resize', () => { if (window.innerWidth > 780) closeMenu(); });
+})();
+
 // ===== Time helpers =====
 function toMinutes(hhmm) { const [h, m] = hhmm.split(':').map(Number); return h * 60 + m; }
 function fromMinutes(min) { const h = Math.floor(min / 60) % 24; const m = min % 60; return String(h).padStart(2, '0') + ':' + String(m).padStart(2, '0'); }

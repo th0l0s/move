@@ -1,42 +1,47 @@
-# Adda Transit — i bus della Bassa Adda
+# Adda Transit — che bus prendo
 ### Fara Gera d'Adda · Vaprio d'Adda · Canonica d'Adda · Treviglio · Cassano d'Adda
 
-Mappa e matrice interattiva dei collegamenti bus fra i cinque comuni, con le
-estensioni verso **Trezzo sull'Adda** e **Gessate M2**. Scegli due luoghi qualsiasi e la pagina
-dice quale linea prendere, oppure dove cambiare quando il diretto non c'è.
+Scegli da dove parti e dove vai: la pagina dice che linea prendere, se serve cambiare e nei
+giorni in cui quel bus non passa. Copre i cinque comuni più **Trezzo sull'Adda** e **Gessate M2**.
 
 Sito pubblicato su **https://move.privix.org** via GitHub Pages + GitHub Actions.
 
 Progetto gemello di **[edu.privix.org](https://edu.privix.org)** (repo `orientom`), la guida alla
 scelta della scuola superiore: stessa area geografica, stesso criterio editoriale, stessa catena
-di pubblicazione. Quella guida copre gli abbonamenti e le tariffe per studenti, questa copre le
-linee e le coincidenze.
+di pubblicazione.
+
+## A chi parla
+
+A chi il tragitto lo fa davvero, tutti i giorni, in gran parte ragazzi che vanno a scuola.
+Si dà del tu, le frasi sono corte, i termini da addetti ai lavori non ci sono: si legge
+«diretto, nessun cambio» e «la domenica non passa», non «dorsale» o «fascia scolastica».
 
 ## Cosa contiene
 
-- **Mappa interattiva** (MapLibre GL + tile OpenFreeMap) con le cinque linee accendibili dalla
-  legenda e le fermate cliccabili. I tracciati seguono la sequenza ufficiale delle fermate, non
-  la geometria stradale: sono schematici e la pagina lo dichiara
-- **Schede delle cinque linee**: T10 e B812 (ex «F») di SAI / Bergamo Trasporti, Z309 e Z311 di
-  NET, z405 di Autoguidovie Milano Sud Est — con gestore, percorso, validità dell'orario e giorni
-- **«Trova il bus giusto»**: scegli partenza e arrivo fra sette luoghi e ottieni la linea diretta,
-  oppure il nodo di interscambio e le due tratte da fare
-- **Matrice di tutte le combinazioni**: 21 coppie, con il codice della linea diretta o
-  l'indicazione del cambio. L'asterisco marca i diretti che esistono ma con pochissime corse
-- **«Verso i treni»**: confronto fra gli arrivi dei bus a Treviglio FS e a Cassano d'Adda FS e i
-  treni regionali in partenza, con l'attesa calcolata e colorata (comoda ≤10', media 11–20',
-  lunga >20')
-- **Guida pratica in cinque passi** e quattro promemoria operativi (data di validità, app,
-  biglietto prima di salire, rete ridotta nei festivi)
-- **Tratte critiche**: dove il sistema bus+treno è più fragile in fascia scolastica
-- **Fonti**: i portali ufficiali da cui vengono i dati, per il controllo puntuale
-- **Uso da telefono**: menu a scomparsa sotto i 780 pixel, aree toccabili da 44 pixel,
-  campi a 16 pixel per non far zoomare iOS, ombre e suggerimento di scorrimento sulle tabelle
-  larghe, rispetto di `prefers-reduced-motion` e delle safe area
-- **Matrice leggibile da telefono**: sotto i 640 pixel la griglia 7×7 lascia il posto a una
-  lista per luogo di partenza, con le stesse informazioni
-- **Riepilogo senza JavaScript**: un blocco `noscript` elenca le cinque linee, i gestori e le
-  fonti, così la pagina resta leggibile e indicizzabile anche se lo script non parte
+- **«Che bus prendo?»**, in cima alla pagina: due tendine, il pulsante per invertirle e la
+  risposta in una schermata. Nessuna tabella da leggere per arrivarci
+- **Filtri di contesto**: *Vado a scuola*, *Torno a casa* (inverte partenza e arrivo) e
+  *Weekend*, che verifica se quelle linee circolano di domenica
+- **Avvisi dentro il risultato**, non sepolti in una guida: se la domenica quella tratta non
+  è coperta, lo dice lì
+- **Coincidenze col treno nel risultato**: se scendi a Treviglio o a Cassano, il risultato
+  mostra quanto aspetti in media per Milano, Bergamo o Treviglio
+- **«Le mie tratte»**: le salvi con un tocco, restano in `localStorage` su quel dispositivo,
+  dentro try/catch. Nessun server, nessun account
+- **Condivisione**: usa la condivisione di sistema dove c'è, altrimenti apre WhatsApp. Il link
+  porta la tratta con sé (`?da=fara&a=treviglio`) e all'apertura la pagina la ricarica
+- **Avviso del cambio orario** che compare da solo nelle tre settimane prima del 14 settembre
+  2026 e nelle due dopo, con il conto alla rovescia dei giorni
+- **App installabile**: manifest e service worker, con la pagina che si apre anche senza rete
+  (la mappa no, le tile arrivano da internet)
+- **Un colore per ogni linea**, identico in mappa, risultati, elenco tratte e coincidenze:
+  T10 blu, B812 rossa, Z309 verde, Z311 viola, z405 grigia
+- **Mappa** MapLibre con tile OpenFreeMap, caricata solo quando serve: su desktop quando ti
+  avvicini scorrendo, su telefono solo se tocchi il pulsante, per non consumare dati
+- **Le cinque linee**, con percorso, giorni di servizio, validità dell'orario e gestore
+- **Tutte le tratte**: le 21 coppie di luoghi, in liste per luogo di partenza
+- **Riepilogo senza JavaScript**: un blocco `noscript` con linee, gestori e fonti, così la
+  pagina resta leggibile e indicizzabile anche se lo script non parte
 
 ## Criterio editoriale
 
@@ -45,36 +50,54 @@ NET, Autoguidovie Milano Sud Est) e dai quadri orario RFI e Trenord per la parte
 La pagina non promette orari in tempo reale: dichiara la data di validità di ciò che mostra e
 rimanda alle fonti per la verifica prima di partire.
 
+Le frequenze sono qualitative («passa spesso, dal lunedì al sabato») perché è quello che dicono
+le fonti: non ci sono intervalli in minuti, e non vengono inventati.
+
+**Niente notifiche push.** Servirebbero un servizio di push e un backend che tiene le
+sottoscrizioni, che un sito statico non ha. Al loro posto c'è l'avviso in pagina con il conto
+alla rovescia, che compare da solo e non chiede permessi.
+
 ## Struttura tecnica
 
 Sito statico, nessun framework, nessun tracker, nessuna pubblicità.
 
 ```
-index.html    struttura della pagina
-style.css     design token e layout, con tema chiaro/scuro
-data.js       fermate, linee, orari dei treni, matrice delle connessioni
-script.js     mappa, calcolatore delle tratte, tabelle, render delle sezioni
-vendor/       MapLibre GL JS 4.7.1, servito dal repo e non da CDN
+index.html             struttura della pagina
+style.css              token e layout, mobile-first, tema chiaro e scuro
+data.js                fermate, linee, orari dei treni, matrice delle connessioni
+script.js              strumento, tratte salvate, mappa, liste, coincidenze
+sw.js                  service worker: rete per prima, cache come riserva
+manifest.webmanifest   dati per l'installazione come app
+icon.svg               icona di app e scheda del browser
+vendor/                MapLibre GL JS 4.7.1, servito dal repo e non da CDN
 ```
 
 Le uniche risorse esterne a runtime sono **Google Fonts** e i **tile vettoriali di
 OpenFreeMap** (`tiles.openfreemap.org`, senza chiave API). MapLibre è nel repo di proposito:
 un CDN che non risponde non deve poter spegnere la mappa.
 
+Regole di interfaccia rispettate in tutta la pagina: testo base 16 pixel, cose da toccare da
+48 pixel, hover solo su puntatori che lo supportano, rispetto di `prefers-reduced-motion`,
+safe area e `viewport-fit=cover`.
+
 ## Manutenzione
 
 Le voci che invecchiano più in fretta, in ordine:
 
-1. **Orari dei bus** — SAI e NET cambiano libretto a metà settembre (invernale/scolastico) e a
-   giugno (estivo). I dati in pagina sono l'orario estivo fino al 13/09/2026 più l'orario
+1. **Orari dei bus** — SAI e NET cambiano libretto a metà settembre (invernale e scolastico) e
+   a giugno (estivo). I dati in pagina sono l'orario estivo fino al 13/09/2026 più l'orario
    scolastico 2025/26 già pubblicato per la T10. Stanno in `data.js`, in `BUS_ARRIVI_TREVIGLIO`
    e `BUS_ARRIVI_CASSANO`
 2. **Orari dei treni** — `TRAINS` in `data.js`, dai quadri orario RFI delle due stazioni
-3. **Percorsi delle linee** — `LINES` in `data.js`. La rete è stata riorganizzata il 3 agosto
-   2026, con la linea F diventata B812 e prolungata a Verdellino: riassetti così vanno rifatti
-   a mano
+3. **Percorsi delle linee** — `LINES` in `data.js`, con i campi `sabato` e `festivi` che
+   pilotano gli avvisi sulla domenica. La rete è stata riorganizzata il 3 agosto 2026, con la
+   linea F diventata B812 e prolungata a Verdellino: riassetti così vanno rifatti a mano
 4. **Matrice delle connessioni** — `CONNECTIONS` in `data.js`, da rivedere quando cambia un
    percorso
+5. **Avviso del cambio orario** — la data sta in `script.js`, nella sezione «Avviso del cambio
+   orario». Va spostata al cambio successivo
+6. **Service worker** — a ogni pubblicazione va alzato `CACHE` in `sw.js`, altrimenti chi ha
+   già visitato il sito continua a vedere la versione vecchia
 
 Ultima verifica delle fonti: **9 settembre 2026**.
 

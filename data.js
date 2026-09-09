@@ -33,6 +33,7 @@ const LINES = [
     branchLabel: "ramo Treviglio–Badalasco–Fara–Cassano (corse limitate)",
     validita: "Orario estivo dal 03/08/2026. L'ultimo libretto scolastico pubblicato resta quello del 2025/26; il nuovo è atteso a metà settembre 2026",
     giorni: "Lun–Sab (nessuna corsa festiva)",
+    sabato: true, festivi: false,
     note: "Linea principale per collegare tutti e 5 i comuni della richiesta in un'unica dorsale.",
   },
   {
@@ -41,10 +42,11 @@ const LINES = [
     alias: "ex linea F",
     name: "Treviglio – Badalasco – Fara – Canonica – Vaprio – Pontirolo – Ciserano – Verdellino",
     gestore: "SAI / Bergamo Trasporti",
-    color: "#e07a1f",
+    color: "#c0392b",
     stops: ["treviglio", "badalasco", "fara", "canonica", "vaprio", "pontirolo", "ciserano", "verdellino"],
     validita: "Riorganizzata il 3/08/2026 — orario estivo fino al 13/09/2026, poi scolastico dal 14/09/2026",
     giorni: "Lun–Sab (nessuna corsa festiva indicata)",
+    sabato: true, festivi: false,
     note: "Storica linea \"F\": oggi prosegue fino a Verdellino, interscambio con il nuovo E-BRT per Bergamo. È la linea più frequente fra Fara, Canonica, Vaprio e Treviglio.",
   },
   {
@@ -58,6 +60,7 @@ const LINES = [
     branchLabel: "alcune corse proseguono su Inzago",
     validita: "Orario estivo dal 09/06/2026, sostituito dall'invernale il 14/09/2026 (il libretto estivo era stampato valido fino al 16/09)",
     giorni: "Lun–Ven e Sabato (no festivi)",
+    sabato: true, festivi: false,
     note: "Unico collegamento diretto e frequente fra Vaprio e la stazione FS di Cassano d'Adda.",
   },
   {
@@ -69,6 +72,7 @@ const LINES = [
     stops: ["vaprio", "pozzo", "gessate"],
     validita: "Orario estivo dal 09/06/2026, sostituito dall'invernale il 14/09/2026 (il libretto estivo era stampato valido fino al 16/09)",
     giorni: "Tutti i giorni, anche festivi",
+    sabato: true, festivi: true,
     note: "Attiva anche la domenica: è l'unico bus della zona insieme alla z405 a garantire servizio festivo.",
   },
   {
@@ -76,10 +80,11 @@ const LINES = [
     code: "z405",
     name: "Gessate M2 – Cassano FS – Treviglio FS",
     gestore: "Autoguidovie Milano Sud Est",
-    color: "#c23b5a",
+    color: "#5b6577",
     stops: ["gessate", "cassano", "treviglio"],
     validita: "Variante estiva valida; orari scolastici invernali a parte",
     giorni: "Tutti i giorni, anche domenica",
+    sabato: true, festivi: true,
     note: "Collega Cassano e Treviglio alla metro M2, ed è attiva anche la domenica quando T10/B812/Z309 non garantiscono corse.",
   },
 ];
@@ -144,34 +149,34 @@ const PLACES = [
 // meglio considerare l'alternativa), "change" (serve un cambio bus).
 // Chiave nel formato "chiave1-chiave2": la ricerca è comunque bidirezionale (vedi getConnection in script.js).
 const CONNECTIONS = {
-  "fara-vaprio": { type: "direct", lines: ["t10", "b812"], freq: "molto frequente, lun-sab", note: "Passa anche da Canonica d'Adda." },
-  "fara-canonica": { type: "direct", lines: ["t10", "b812"], freq: "molto frequente, lun-sab" },
-  "fara-treviglio": { type: "direct", lines: ["t10", "b812"], freq: "molto frequente, lun-sab" },
-  "fara-trezzo": { type: "direct", lines: ["t10"], freq: "regolare, lun-sab", note: "Passa da Vaprio e Canonica." },
+  "fara-vaprio": { type: "direct", lines: ["t10", "b812"], freq: "Passa spesso, dal lunedì al sabato", note: "Passa anche da Canonica d'Adda." },
+  "fara-canonica": { type: "direct", lines: ["t10", "b812"], freq: "Passa spesso, dal lunedì al sabato" },
+  "fara-treviglio": { type: "direct", lines: ["t10", "b812"], freq: "Passa spesso, dal lunedì al sabato" },
+  "fara-trezzo": { type: "direct", lines: ["t10"], freq: "Passa regolarmente, dal lunedì al sabato", note: "Passa da Vaprio e Canonica." },
   "fara-cassano": {
     type: "limited", lines: ["t10"],
-    freq: "solo poche corse dirette al giorno (ramo T10 via Badalasco / Bivio Colonnella)",
-    alt: { via: "vaprio", legs: [["b812", "t10"], ["z309"]], desc: "Alternativa più affidabile: cambio a Vaprio — B812 o T10 fino a Vaprio, poi Z309 fino a Cassano FS (circa 35-40 minuti totali)." }
+    freq: "Poche corse al giorno, sul ramo che passa da Badalasco e dal Bivio Colonnella",
+    alt: { via: "vaprio", legs: [["b812", "t10"], ["z309"]], desc: "Prendi la B812 o la T10 fino a Vaprio, poi la Z309 fino alla stazione di Cassano. Circa 35-40 minuti in tutto." }
   },
-  "fara-gessate": { type: "change", via: "vaprio", legs: [["b812", "t10"], ["z311"]], desc: "Cambio a Vaprio: B812 o T10 fino a Vaprio, poi Z311 fino a Gessate M2." },
+  "fara-gessate": { type: "change", via: "vaprio", legs: [["b812", "t10"], ["z311"]], desc: "Prendi la B812 o la T10 fino a Vaprio, poi la Z311 fino a Gessate, dove c'è la metro." },
 
-  "vaprio-canonica": { type: "direct", lines: ["t10", "b812"], freq: "molto frequente, lun-sab" },
-  "vaprio-treviglio": { type: "direct", lines: ["t10", "b812"], freq: "molto frequente, lun-sab" },
-  "vaprio-cassano": { type: "direct", lines: ["z309"], freq: "regolare, lun-ven e sabato, nessuna corsa festiva" },
-  "vaprio-trezzo": { type: "direct", lines: ["t10", "z309"], freq: "regolare, lun-sab (Z309 anche il sabato)" },
-  "vaprio-gessate": { type: "direct", lines: ["z311"], freq: "molto frequente, tutti i giorni anche festivi" },
+  "vaprio-canonica": { type: "direct", lines: ["t10", "b812"], freq: "Passa spesso, dal lunedì al sabato" },
+  "vaprio-treviglio": { type: "direct", lines: ["t10", "b812"], freq: "Passa spesso, dal lunedì al sabato" },
+  "vaprio-cassano": { type: "direct", lines: ["z309"], freq: "Passa regolarmente dal lunedì al sabato" },
+  "vaprio-trezzo": { type: "direct", lines: ["t10", "z309"], freq: "Passa regolarmente, dal lunedì al sabato" },
+  "vaprio-gessate": { type: "direct", lines: ["z311"], freq: "Passa spesso, tutti i giorni" },
 
-  "canonica-treviglio": { type: "direct", lines: ["t10", "b812"], freq: "molto frequente, lun-sab" },
-  "canonica-cassano": { type: "change", via: "vaprio", legs: [["b812", "t10"], ["z309"]], desc: "Cambio a Vaprio: B812 o T10 fino a Vaprio, poi Z309 fino a Cassano FS." },
-  "canonica-trezzo": { type: "direct", lines: ["t10"], freq: "regolare, lun-sab" },
-  "canonica-gessate": { type: "change", via: "vaprio", legs: [["b812", "t10"], ["z311"]], desc: "Cambio a Vaprio: B812 o T10 fino a Vaprio, poi Z311 fino a Gessate M2." },
+  "canonica-treviglio": { type: "direct", lines: ["t10", "b812"], freq: "Passa spesso, dal lunedì al sabato" },
+  "canonica-cassano": { type: "change", via: "vaprio", legs: [["b812", "t10"], ["z309"]], desc: "Prendi la B812 o la T10 fino a Vaprio, poi la Z309 fino alla stazione di Cassano." },
+  "canonica-trezzo": { type: "direct", lines: ["t10"], freq: "Passa regolarmente, dal lunedì al sabato" },
+  "canonica-gessate": { type: "change", via: "vaprio", legs: [["b812", "t10"], ["z311"]], desc: "Prendi la B812 o la T10 fino a Vaprio, poi la Z311 fino a Gessate, dove c'è la metro." },
 
-  "treviglio-cassano": { type: "direct", lines: ["z405"], freq: "frequente, tutti i giorni anche domenica", note: "Alternativa: ramo T10 via Badalasco/Fara/Bivio Colonnella, corse molto limitate." },
-  "treviglio-trezzo": { type: "direct", lines: ["t10"], freq: "regolare, lun-sab" },
-  "treviglio-gessate": { type: "direct", lines: ["z405"], freq: "frequente, tutti i giorni anche domenica" },
+  "treviglio-cassano": { type: "direct", lines: ["z405"], freq: "Passa spesso, tutti i giorni", note: "C'è anche il ramo della T10 via Badalasco, Fara e Bivio Colonnella, ma con pochissime corse." },
+  "treviglio-trezzo": { type: "direct", lines: ["t10"], freq: "Passa regolarmente, dal lunedì al sabato" },
+  "treviglio-gessate": { type: "direct", lines: ["z405"], freq: "Passa spesso, tutti i giorni" },
 
-  "cassano-trezzo": { type: "direct", lines: ["z309"], freq: "regolare, lun-ven e sabato, nessuna corsa festiva" },
-  "cassano-gessate": { type: "direct", lines: ["z405"], freq: "frequente, tutti i giorni anche domenica" },
+  "cassano-trezzo": { type: "direct", lines: ["z309"], freq: "Passa regolarmente dal lunedì al sabato" },
+  "cassano-gessate": { type: "direct", lines: ["z405"], freq: "Passa spesso, tutti i giorni" },
 
-  "trezzo-gessate": { type: "change", via: "vaprio", legs: [["z309"], ["z311"]], desc: "Cambio a Vaprio: Z309 fino a Vaprio, poi Z311 fino a Gessate M2. Alternativa: cambio a Cassano (Z309 + z405)." },
+  "trezzo-gessate": { type: "change", via: "vaprio", legs: [["z309"], ["z311"]], desc: "Prendi la Z309 fino a Vaprio, poi la Z311 fino a Gessate. In alternativa cambi a Cassano, con Z309 e poi z405." },
 };

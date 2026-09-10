@@ -6,3 +6,6 @@ node_modules/
 
 # config locale degli strumenti
 .claude/
+
+# i libretti dei gestori: si consultano, non si ripubblicano
+*.pdf

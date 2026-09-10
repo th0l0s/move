@@ -528,6 +528,9 @@ const SOURCES = [
   { name: 'SAI, libretto della linea T10 in vigore dal 14/09/2026', url: 'https://www.saiautolinee.it/uploads/lines/LINEA-T10-in-vigore-dal-14-09-2026-6a9e7f382df8b.pdf', op: 'SAI' },
   { name: 'SAI, libretto della linea B812 in vigore dal 14/09/2026', url: 'https://www.saiautolinee.it/uploads/lines/LINEA-B812-in-vigore-dal-14-09-2026-6a8e15811eec3.pdf', op: 'SAI' },
   { name: 'NET, libretto della Z309, servizio invernale dal 14/09/2026', url: 'https://www.nordesttrasporti.it/media/2636/z309_20260914.pdf', op: 'NET' },
+  { name: "SAI, polo scolastico di Cassano d'Adda 2026/2027", url: 'https://www.saiautolinee.it/uploads/lines/POLO-SCOLSTICO-2026-2027-CASSANO-6a8dea1d16bb3.pdf', op: 'SAI' },
+  { name: 'SAI, polo scolastico degli istituti di Treviglio 2026/2027', url: 'https://www.saiautolinee.it/uploads/lines/POLO-SCOLSTICO-2026-2027-TREVIGLIO-ISTITUTI-REV-01-6aa165204af30.pdf', op: 'SAI' },
+  { name: 'SAI, polo scolastico di Treviglio viale De Gasperi 2026/2027', url: 'https://www.saiautolinee.it/uploads/lines/POLO-SCOLSTICO-2026-2027-TREVIGLIO-VIALE-REV-01-6aa1650912045.pdf', op: 'SAI' },
   { name: 'Bergamo Trasporti, linee e orari', url: 'https://www.bergamotrasporti.it', op: 'SAI / Bergamo Trasporti' },
   { name: 'Nord Est Trasporti, orari di Z309 e Z311', url: 'https://www.nordesttrasporti.it', op: 'NET' },
   { name: 'Autoguidovie Milano Sud Est, linea z405', url: 'https://milanosudest.autoguidovie.it', op: 'Autoguidovie' },
@@ -633,9 +636,24 @@ if (sourcesList) {
   }
 })();
 
+// ===== Il file degli orari, caricato una volta sola =====
+/* orari.js pesa una ottantina di kilobyte fra libretti e tratte: si scarica alla
+   prima sezione che lo chiede, e le altre riusano la stessa promessa. */
+let promessaOrari = null;
+function caricaOrari() {
+  if (promessaOrari) return promessaOrari;
+  promessaOrari = new Promise((ok, ko) => {
+    /* ORARI e' un const del file: sta fra i globali lessicali, non su window. */
+    if (typeof ORARI !== 'undefined') return ok();
+    const s = document.createElement('script');
+    s.src = 'orari.js';
+    s.onload = ok; s.onerror = ko;
+    document.head.appendChild(s);
+  });
+  return promessaOrari;
+}
+
 // ===== Orari e fermate: i libretti dei gestori, fascia per fascia =====
-/* Il file orari.js pesa una cinquantina di kilobyte: si carica solo quando
-   apri la sezione, cosi' chi cerca solo "che bus prendo" non se lo scarica. */
 (function () {
   const box = document.getElementById('orari-box');
   const btn = document.getElementById('orari-load');
@@ -643,16 +661,7 @@ if (sourcesList) {
   let avviata = false;
   let linea = 't10', tavola = 0, comune = '';
 
-  function caricaDati() {
-    return new Promise((ok, ko) => {
-      /* ORARI e' un const del file: sta fra i globali lessicali, non su window. */
-      if (typeof ORARI !== 'undefined') return ok();
-      const s = document.createElement('script');
-      s.src = 'orari.js';
-      s.onload = ok; s.onerror = ko;
-      document.head.appendChild(s);
-    });
-  }
+  const caricaDati = caricaOrari;
 
   const oraMin = (o) => { const [h, m] = o.split(':').map(Number); return h * 60 + m; };
   function fasciaDi(ora) {
@@ -747,3 +756,129 @@ if (sourcesList) {
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => { /* niente offline: la pagina funziona lo stesso */ }));
 }
+
+// ===== Le cinque tratte di tutti i giorni, corsa per corsa =====
+/* Qui non si ragiona per fermata ma per viaggio: parti alle e mezza, arrivi alle
+   meno un quarto, con questa linea. Le fasce sono quelle di chi va a scuola,
+   perche' e' il motivo per cui quasi tutti prendono questi bus. */
+(function () {
+  const box = document.getElementById('scuola-box');
+  if (!box) return;
+  let avviata = false;
+  let tratta = 'fara-treviglio', verso = 0, ruolo = 'scuole';
+
+  const FASCE_SCUOLA = [
+    { id: 'entrata', label: 'Per arrivare a scuola', sotto: 'arrivo entro le 8.30', tieni: (c) => ora(c[2]) <= 510 },
+    { id: 'uscita', label: 'Uscita di mattina', sotto: 'partenza fra le 11.30 e le 15', tieni: (c) => ora(c[0]) >= 690 && ora(c[0]) < 900 },
+    { id: 'pomeriggio', label: 'Pomeriggio e sera', sotto: 'partenza dalle 15 in poi', tieni: (c) => ora(c[0]) >= 900 },
+    { id: 'resto', label: 'Le altre corse', sotto: 'quello che resta della giornata', tieni: () => true },
+  ];
+  function ora(o) { const [h, m] = o.split(':').map(Number); return h * 60 + m; }
+
+  const RUOLI = { scuole: 'Alle scuole', stazione: 'Alla stazione FS' };
+  const POLO_NOME = {
+    cassano: "Come lo riassume SAI, per il polo scolastico di Cassano d'Adda",
+    istituti: 'Come lo riassume SAI, per gli istituti di Treviglio',
+    viale: 'Come lo riassume SAI, per la stazione di Treviglio',
+  };
+  const POLO_FERMATA = {
+    cassano: 'via Papa Giovanni XXIII, davanti al liceo Giordano Bruno',
+    istituti: 'la SS11 in viale Merisio, lato Agraria',
+    viale: 'viale De Gasperi, alla stazione centrale',
+  };
+
+  function dati() { return TRATTE_SCUOLA.find((t) => t.id === tratta) || TRATTE_SCUOLA[0]; }
+
+  /* Una corsa in una riga: [partenza, fermata, arrivo, fermata, linea, sigle, minuti] */
+  function riga(c) {
+    return `
+      <li class="sc-corsa">
+        <span class="sc-ore"><strong>${esc(c[0])}</strong><span class="sc-freccia" aria-hidden="true">→</span><strong>${esc(c[2])}</strong></span>
+        <span class="sc-fermate">${esc(c[1])} <span aria-hidden="true">→</span> ${esc(c[3])}</span>
+        <span class="sc-coda">${lineChip(c[4])}<span class="sc-durata">${c[6]}′</span>${c[5] ? `<span class="sc-sigla">${esc(c[5].replace(/\+/g, ' '))}</span>` : ''}</span>
+      </li>`;
+  }
+
+  function bloccoPolo(t) {
+    if (!t.polo) return '';
+    /* Sul foglio del polo le righe portano il nome dell'altro paese, mai quello del
+       polo: si cerca sempre l'estremo che non e' il polo, e si guarda l'andata o il
+       ritorno a seconda di dove si sta andando. */
+    const v = t.versi[verso];
+    const altro = v.da === t.polo ? v.a : v.da;
+    const paese = { fara: "FARA GERA D'ADDA", vaprio: "VAPRIO D'ADDA", cassano: "CASSANO D'ADDA", trezzo: "TREZZO SULL'ADDA" }[altro];
+    const cerca = t.polo === 'cassano' ? ['cassano'] : (ruolo === 'scuole' ? ['istituti'] : ['viale']);
+    const schede = POLI.filter((p) => cerca.includes(p.id)).map((p) => {
+      const versoIlPolo = v.a === t.polo;
+      const usa = p.righe.find((x) => x.paese === paese && x.verso === (versoIlPolo ? 'verso' : 'da'));
+      if (!usa || !usa.ore.length) return '';
+      const stella = usa.ore.some((o) => o.includes('*'));
+      return `
+        <div class="sc-polo">
+          <p class="sc-polo-tit">${esc(POLO_NOME[p.id] || p.polo)}</p>
+          <p class="sc-polo-rif">La sua fermata di riferimento è ${esc(POLO_FERMATA[p.id] || p.fermata)}, servita da ${esc(usa.linee)}. Gli orari qui sotto sono presi da lì, quindi possono scostarsi di un minuto o due da quelli in alto, che partono da un'altra fermata.</p>
+          <p class="sc-polo-ore">${usa.ore.map((o) => `<span class="or-ora has-sigla">${esc(o)}</span>`).join('')}</p>
+          ${stella ? '<p class="sc-polo-rif">L\'asterisco segna le corse per cui devi cambiare bus a Treviglio, in viale De Gasperi.</p>' : ''}
+        </div>`;
+    }).join('');
+    return schede;
+  }
+
+  function disegna() {
+    const t = dati();
+    const v = t.versi[verso];
+    let lista = v.liste.find((l) => l.ruolo === ruolo) || v.liste[0];
+    ruolo = lista.ruolo;
+
+    const restanti = [...lista.corse];
+    const gruppi = FASCE_SCUOLA.map((f) => {
+      const prese = restanti.filter(f.tieni);
+      prese.forEach((c) => restanti.splice(restanti.indexOf(c), 1));
+      return { f, corse: prese };
+    }).filter((g) => g.corse.length);
+
+    box.innerHTML = `
+      <div class="when-row" role="group" aria-label="Scegli la tratta">
+        ${TRATTE_SCUOLA.map((x) => `<button type="button" class="when-btn${x.id === tratta ? ' is-on' : ''}" data-tratta="${esc(x.id)}">${esc(x.nome)}</button>`).join('')}
+      </div>
+      <div class="when-row" role="group" aria-label="Scegli il verso">
+        ${t.versi.map((x, i) => `<button type="button" class="when-btn${i === verso ? ' is-on' : ''}" data-verso="${i}">${esc(x.titolo)}</button>`).join('')}
+      </div>
+      ${v.liste.length > 1 ? `<div class="when-row" role="group" aria-label="Scegli dove arrivi">
+        ${v.liste.map((l) => `<button type="button" class="when-btn${l.ruolo === ruolo ? ' is-on' : ''}" data-ruolo="${esc(l.ruolo)}">${esc(RUOLI[l.ruolo] || 'Tutte')}</button>`).join('')}
+      </div>` : ''}
+
+      <p class="sc-conta">${lista.corse.length} corse, dal libretto in vigore dal 14 settembre 2026.</p>
+
+      ${gruppi.map((g) => `
+        <section class="sc-fascia">
+          <h3>${esc(g.f.label)} <span>${esc(g.f.sotto)}</span></h3>
+          <ul class="sc-lista">${g.corse.map(riga).join('')}</ul>
+        </section>`).join('')}
+
+      ${bloccoPolo(t)}
+
+      <p class="sc-nota"><strong>Le sigle.</strong> S5, S6 e SSab sono corse che si effettuano solo nei giorni di scuola. NS5, NS6 e NSSab solo fuori dal periodo scolastico. F5 e F6 sono feriali, tutto l'anno. AGO vuol dire che la corsa c'è anche in agosto. Senza sigla la corsa passa sempre, dal lunedì al sabato.</p>`;
+
+    box.querySelectorAll('[data-tratta]').forEach((b) => b.addEventListener('click', () => {
+      tratta = b.dataset.tratta; verso = 0; ruolo = 'scuole'; disegna();
+    }));
+    box.querySelectorAll('[data-verso]').forEach((b) => b.addEventListener('click', () => { verso = +b.dataset.verso; disegna(); }));
+    box.querySelectorAll('[data-ruolo]').forEach((b) => b.addEventListener('click', () => { ruolo = b.dataset.ruolo; disegna(); }));
+  }
+
+  function avvia() {
+    if (avviata) return;
+    avviata = true;
+    box.innerHTML = '<p class="or-attesa">Carico le corse…</p>';
+    caricaOrari().then(disegna).catch(() => {
+      box.innerHTML = '<p class="map-error">Le corse non si sono caricate. I libretti ufficiali sono linkati in fondo alla pagina, nelle fonti.</p>';
+    });
+  }
+
+  /* Questa sezione e' il motivo per cui la pagina esiste, quindi si carica da sola.
+     Non subito pero': prima si disegna la pagina, poi, appena il browser ha un
+     momento libero, arrivano gli 80 kilobyte degli orari. */
+  if (window.requestIdleCallback) requestIdleCallback(avvia, { timeout: 2500 });
+  else setTimeout(avvia, 400);
+})();

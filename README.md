@@ -43,8 +43,15 @@ Si dà del tu, le frasi sono corte, i termini da addetti ai lavori non ci sono: 
 - **Le cinque linee**, con percorso, giorni di servizio, validità dell'orario e gestore
 - **Orari e fermate**: le partenze di ogni fermata di T10, B812 e Z309, ricopiate dai libretti
   dei gestori e divise in quattro fasce della giornata (5-9, 10-15, 16-21, 22-5). Si scelgono
-  linea, verso e comune, e ogni ora porta la sigla che dice quando quella corsa si effettua.
-  Sono 2.463 orari, in `orari.js`, che si scarica solo quando apri la sezione
+  linea, verso e comune, e ogni ora porta la sigla che dice quando quella corsa si effettua
+- **Le tratte di tutti i giorni**: le cinque che si fanno davvero da qui, corsa per corsa e non
+  fermata per fermata. Fara–Vaprio, Fara–Cassano, Vaprio–Cassano, Fara–Treviglio e Fara–Trezzo,
+  nei due versi, con partenza, arrivo, durata, linea e sigla. Le fasce sono quelle di chi va
+  alle superiori: per arrivare a scuola, uscita di mattina, pomeriggio e sera. A Treviglio e a
+  Cassano si sceglie fra le scuole e la stazione, che sono fermate diverse e ore diverse. Sotto,
+  come controprova, il riassunto dei fogli dei poli scolastici SAI con la loro fermata di
+  riferimento. Orari e tratte stanno insieme in `orari.js`, che si scarica subito dopo il
+  primo disegno della pagina
 - **Tutte le tratte**: le 42 combinazioni, in liste per luogo di partenza. Andata e ritorno sono voci
   distinte, perché il verso conta
 - **Riepilogo senza JavaScript**: un blocco `noscript` con linee, gestori e fonti, così la
@@ -73,7 +80,7 @@ Sito statico, nessun framework, nessun tracker, nessuna pubblicità.
 index.html             struttura della pagina
 style.css              token e layout, mobile-first, tema chiaro e scuro
 data.js                fermate, linee con gli elenchi fermate per direzione, orari dei treni
-orari.js               orari e fermate di T10, B812 e Z309, caricato solo a richiesta
+orari.js               orari, tratte locali e fogli dei poli scolastici; si carica a parte
 script.js              motore dei collegamenti, strumento, tratte salvate, mappa, liste, orari
 sw.js                  service worker: rete per prima, cache come riserva
 manifest.webmanifest   dati per l'installazione come app
@@ -95,27 +102,33 @@ Le voci che invecchiano più in fretta, in ordine:
 
 1. **Orari dei bus** — SAI e NET cambiano libretto a metà settembre (invernale e scolastico) e
    a giugno (estivo). In pagina ci sono i libretti in vigore dal 14/09/2026 per T10, B812 e
-   Z309, in `orari.js`: una voce per fermata e per verso, con tutte le partenze e la sigla di
-   ogni corsa. Vanno ricopiati dai PDF dei gestori a ogni cambio orario, mai a memoria. Gli
-   arrivi usati per le coincidenze coi treni stanno invece in `data.js`, in
-   `BUS_ARRIVI_TREVIGLIO` e `BUS_ARRIVI_CASSANO`
-2. **Orari dei treni** — `TRAINS` in `data.js`, dai quadri orario RFI delle due stazioni
-3. **Percorsi delle linee** — `LINES` in `data.js`. Il campo `rotte` porta gli elenchi fermate
+   Z309, in `orari.js`, in due forme: `ORARI` tiene una voce per fermata e per verso, con tutte
+   le partenze; `TRATTE_SCUOLA` tiene le cinque tratte locali corsa per corsa, con partenza e
+   arrivo. Vanno ricopiati dai PDF dei gestori a ogni cambio orario, mai a memoria
+2. **Fogli dei poli scolastici** — `POLI` in `orari.js`, dai PDF SAI «polo scolastico» di
+   Cassano d'Adda, degli istituti di Treviglio e della stazione di Treviglio. Cambiano a ogni
+   anno scolastico e in corso d'anno escono revisioni: la rev. 01 del 09/09/2026 è quella usata
+   qui. Sono un riassunto del gestore, con una fermata di riferimento diversa da quella dei
+   libretti, quindi gli orari scostano di un minuto o due: è normale, non è un errore
+3. **Arrivi per le coincidenze coi treni** — `BUS_ARRIVI_TREVIGLIO` e `BUS_ARRIVI_CASSANO` in
+   `data.js`
+4. **Orari dei treni** — `TRAINS` in `data.js`, dai quadri orario RFI delle due stazioni
+5. **Percorsi delle linee** — `LINES` in `data.js`. Il campo `rotte` porta gli elenchi fermate
    ufficiali, una voce per direzione: è da lì che nascono i collegamenti, quindi va ricopiato
    dallo schema di linea del gestore ogni volta che cambia. I campi `sabato` e `festivi`
    pilotano gli avvisi sulla domenica. La rete è stata riorganizzata il 3 agosto 2026, con la
    linea F diventata B812 e prolungata a Verdellino: riassetti così vanno rifatti a mano
-4. **Tratte possibili** — non si scrivono più a mano. `risolvi()` in `script.js` le calcola
+6. **Tratte possibili** — non si scrivono più a mano. `risolvi()` in `script.js` le calcola
    dalle rotte: diretto se una direzione tocca prima la partenza e poi l'arrivo, altrimenti un
    cambio nel primo posto utile fra quelli elencati in `HUBS`. Le note editoriali di singole
    tratte stanno in `NOTE_TRATTE`
-5. **Avviso del cambio orario** — la data sta in `script.js`, nella sezione «Avviso del cambio
+7. **Avviso del cambio orario** — la data sta in `script.js`, nella sezione «Avviso del cambio
    orario». Va spostata al cambio successivo
-6. **Service worker** — a ogni pubblicazione va alzato `CACHE` in `sw.js`, altrimenti chi ha
+8. **Service worker** — a ogni pubblicazione va alzato `CACHE` in `sw.js`, altrimenti chi ha
    già visitato il sito continua a vedere la versione vecchia
 
 Ultima verifica delle fonti: **10 settembre 2026**, sui libretti in vigore dal 14/09/2026 di
-T10 e B812 (SAI) e di Z309 (NET).
+T10 e B812 (SAI) e di Z309 (NET), e sui fogli dei poli scolastici 2026/2027 rev. 01.
 
 ---
 

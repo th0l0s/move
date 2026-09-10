@@ -452,3 +452,44 @@ footer p + p { margin-top: var(--sp-3); }
 .or-piede { display: grid; gap: var(--sp-2); padding-top: var(--sp-2); border-top: 1px solid var(--divider); }
 .or-legenda, .or-fonte { margin: 0; font-size: 0.86rem; color: var(--text-muted); }
 .or-attesa { color: var(--text-faint); }
+
+/* ===== Le cinque tratte, corsa per corsa =====
+   Ogni riga e' un viaggio: le due ore in evidenza, le fermate sotto in piccolo,
+   linea e sigla in coda. Su telefono la riga va a capo invece di stringersi. */
+.scuola-box { display: grid; gap: var(--sp-4); }
+.sc-conta { margin: 0; font-size: 0.9rem; color: var(--text-faint); }
+
+.sc-fascia h3 {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--sp-2);
+  margin-bottom: var(--sp-2); font-size: 1rem;
+}
+.sc-fascia h3 span { font-family: var(--font); font-size: 0.85rem; font-weight: 400; color: var(--text-faint); }
+.sc-fascia + .sc-fascia { margin-top: var(--sp-5); }
+
+.sc-lista { display: grid; gap: var(--sp-2); }
+.sc-corsa {
+  display: grid; gap: var(--sp-1) var(--sp-3);
+  grid-template-columns: 1fr auto; align-items: center;
+  padding: var(--sp-3); border: 1px solid var(--border); border-radius: var(--r-md); background: var(--surface);
+}
+.sc-ore { display: flex; align-items: center; gap: var(--sp-2); font-family: var(--font-mono); font-size: 1.05rem; font-variant-numeric: tabular-nums; }
+.sc-ore strong { font-weight: 600; }
+.sc-freccia { color: var(--text-faint); }
+.sc-fermate { grid-column: 1 / -1; order: 3; font-size: 0.85rem; color: var(--text-muted); }
+.sc-coda { display: flex; align-items: center; gap: var(--sp-2); }
+.sc-durata { font-family: var(--font-mono); font-size: 0.82rem; color: var(--text-faint); }
+.sc-sigla {
+  padding: 2px 7px; border-radius: var(--r-full); background: var(--warn-soft); color: var(--warn);
+  font-size: 0.72rem; font-weight: 700; letter-spacing: .03em;
+}
+
+.sc-polo { padding: var(--sp-4); border-radius: var(--r-md); background: var(--offset); border-left: 4px solid var(--accent); }
+.sc-polo-tit { margin: 0; font-weight: 700; }
+.sc-polo-rif { margin: var(--sp-1) 0 var(--sp-2); font-size: 0.88rem; color: var(--text-muted); }
+.sc-polo-ore { display: flex; flex-wrap: wrap; gap: var(--sp-1); margin: 0; }
+.sc-nota { font-size: 0.86rem; color: var(--text-muted); }
+
+@media (min-width: 640px) {
+  .sc-corsa { grid-template-columns: auto 1fr auto; }
+  .sc-fermate { grid-column: auto; order: 0; }
+}

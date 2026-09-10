@@ -413,3 +413,42 @@ section > .container > h2 { margin-bottom: var(--sp-2); }
 footer { padding-block: var(--sp-6); border-top: 1px solid var(--divider); color: var(--text-faint); font-size: 0.88rem; }
 footer p + p { margin-top: var(--sp-3); }
 .footer-twin a { font-weight: 600; }
+
+/* ===== Orari e fermate =====
+   Le partenze stanno in blocchi chiusi, una fermata per riga: aprendo solo
+   quella che ti serve la lista resta corta anche con centinaia di orari. */
+.orari-box { display: grid; gap: var(--sp-4); }
+.or-scelte { display: grid; gap: var(--sp-3); }
+.or-scelte .field { max-width: 420px; }
+
+.or-testata { display: flex; align-items: center; flex-wrap: wrap; gap: var(--sp-2); margin: 0; }
+.or-validita { margin: 0; font-size: 0.9rem; color: var(--text-faint); }
+
+.or-lista { display: grid; gap: var(--sp-2); }
+.or-fermata { border: 1px solid var(--border); border-radius: var(--r-md); background: var(--surface); overflow: hidden; }
+.or-fermata > summary {
+  display: flex; align-items: center; gap: var(--sp-3); min-height: var(--tap);
+  padding-inline: var(--sp-3); cursor: pointer; list-style: none;
+}
+.or-fermata > summary::-webkit-details-marker { display: none; }
+.or-fermata > summary::after { content: '+'; margin-left: auto; font-size: 1.3rem; color: var(--text-faint); }
+.or-fermata[open] > summary::after { content: '\2212'; }
+.or-fermata[open] { border-color: var(--accent); }
+.or-nome { font-size: 0.94rem; }
+.or-nome strong { display: block; font-size: 0.78rem; letter-spacing: .05em; text-transform: uppercase; color: var(--text-faint); }
+.or-conta { flex: 0 0 auto; font-size: 0.8rem; color: var(--text-faint); }
+
+.or-fascia { padding: var(--sp-2) var(--sp-3); border-top: 1px solid var(--divider); }
+.or-fascia-nome { display: block; margin-bottom: var(--sp-1); font-size: 0.78rem; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: var(--text-faint); }
+.or-ore { display: flex; flex-wrap: wrap; gap: var(--sp-1); }
+.or-ora {
+  display: inline-flex; align-items: baseline; gap: 4px;
+  padding: 4px 8px; border-radius: var(--r-sm); background: var(--offset);
+  font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.9rem; font-variant-numeric: tabular-nums;
+}
+.or-ora.has-sigla { background: var(--accent-soft); }
+.or-ora em { font-family: inherit; font-size: 0.7rem; font-style: normal; color: var(--text-faint); }
+
+.or-piede { display: grid; gap: var(--sp-2); padding-top: var(--sp-2); border-top: 1px solid var(--divider); }
+.or-legenda, .or-fonte { margin: 0; font-size: 0.86rem; color: var(--text-muted); }
+.or-attesa { color: var(--text-faint); }

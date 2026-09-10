@@ -525,8 +525,9 @@ if (criticalList) {
 
 const SOURCES = [
   { name: 'SAI Autolinee, orari e schemi di linea', url: 'https://www.saiautolinee.it/orari-e-linee', op: 'SAI / Bergamo Trasporti' },
-  { name: 'SAI, schema della linea B812 con le fermate direzione per direzione', url: 'https://www.saiautolinee.it/uploads/lines/B812-6a6ca54baa0c3.webp', op: 'SAI' },
-  { name: 'SAI, schema della linea T10 con le fermate direzione per direzione', url: 'https://www.saiautolinee.it/uploads/lines/LINEA-T10-6a992274d6a4c.webp', op: 'SAI' },
+  { name: 'SAI, libretto della linea T10 in vigore dal 14/09/2026', url: 'https://www.saiautolinee.it/uploads/lines/LINEA-T10-in-vigore-dal-14-09-2026-6a9e7f382df8b.pdf', op: 'SAI' },
+  { name: 'SAI, libretto della linea B812 in vigore dal 14/09/2026', url: 'https://www.saiautolinee.it/uploads/lines/LINEA-B812-in-vigore-dal-14-09-2026-6a8e15811eec3.pdf', op: 'SAI' },
+  { name: 'NET, libretto della Z309, servizio invernale dal 14/09/2026', url: 'https://www.nordesttrasporti.it/media/2636/z309_20260914.pdf', op: 'NET' },
   { name: 'Bergamo Trasporti, linee e orari', url: 'https://www.bergamotrasporti.it', op: 'SAI / Bergamo Trasporti' },
   { name: 'Nord Est Trasporti, orari di Z309 e Z311', url: 'https://www.nordesttrasporti.it', op: 'NET' },
   { name: 'Autoguidovie Milano Sud Est, linea z405', url: 'https://milanosudest.autoguidovie.it', op: 'Autoguidovie' },
@@ -630,6 +631,116 @@ if (sourcesList) {
     }, { rootMargin: '200px' });
     io.observe(box);
   }
+})();
+
+// ===== Orari e fermate: i libretti dei gestori, fascia per fascia =====
+/* Il file orari.js pesa una cinquantina di kilobyte: si carica solo quando
+   apri la sezione, cosi' chi cerca solo "che bus prendo" non se lo scarica. */
+(function () {
+  const box = document.getElementById('orari-box');
+  const btn = document.getElementById('orari-load');
+  if (!box) return;
+  let avviata = false;
+  let linea = 't10', tavola = 0, comune = '';
+
+  function caricaDati() {
+    return new Promise((ok, ko) => {
+      /* ORARI e' un const del file: sta fra i globali lessicali, non su window. */
+      if (typeof ORARI !== 'undefined') return ok();
+      const s = document.createElement('script');
+      s.src = 'orari.js';
+      s.onload = ok; s.onerror = ko;
+      document.head.appendChild(s);
+    });
+  }
+
+  const oraMin = (o) => { const [h, m] = o.split(':').map(Number); return h * 60 + m; };
+  function fasciaDi(ora) {
+    const h = Math.floor(oraMin(ora) / 60);
+    return FASCE.find((f) => (f.da < f.a ? h >= f.da && h < f.a : h >= f.da || h < f.a)) || FASCE[0];
+  }
+
+  function datiLinea() { return ORARI.find((l) => l.linea === linea) || ORARI[0]; }
+
+  /* Una fermata: il nome, quante corse in tutto, e le partenze divise per fascia. */
+  function bloccoFermata(f) {
+    const gruppi = FASCE.map((fa) => ({
+      fa,
+      ore: f.ore.filter((o) => fasciaDi(o.split('|')[0]).id === fa.id),
+    })).filter((g) => g.ore.length);
+    const righe = gruppi.map((g) => `
+      <div class="or-fascia">
+        <span class="or-fascia-nome">${esc(g.fa.label)}</span>
+        <span class="or-ore">${g.ore.map((o) => {
+          const [ora, sigle] = o.split('|');
+          return `<span class="or-ora${sigle ? ' has-sigla' : ''}">${esc(ora)}${sigle ? `<em>${esc(sigle.replace(/\+/g, ' '))}</em>` : ''}</span>`;
+        }).join('')}</span>
+      </div>`).join('');
+    return `
+      <details class="or-fermata">
+        <summary>
+          <span class="or-nome"><strong>${esc(f.comune)}</strong> ${esc(f.nome)}</span>
+          <span class="or-conta">${f.ore.length} ${f.ore.length === 1 ? 'corsa' : 'corse'}</span>
+        </summary>
+        ${righe}
+      </details>`;
+  }
+
+  function disegna() {
+    const L = datiLinea();
+    const tav = L.tavole[tavola] || L.tavole[0];
+    const comuni = [...new Set(tav.fermate.map((f) => f.comune))];
+    if (comune && !comuni.includes(comune)) comune = '';
+    const fermate = comune ? tav.fermate.filter((f) => f.comune === comune) : tav.fermate;
+
+    box.innerHTML = `
+      <div class="or-scelte">
+        <div class="when-row" role="group" aria-label="Scegli la linea">
+          ${ORARI.map((l) => `<button type="button" class="when-btn${l.linea === linea ? ' is-on' : ''}" data-linea="${esc(l.linea)}">${esc(lineCode(l.linea))}</button>`).join('')}
+        </div>
+        <div class="when-row" role="group" aria-label="Scegli il verso">
+          ${L.tavole.map((t, i) => `<button type="button" class="when-btn${i === tavola ? ' is-on' : ''}" data-tavola="${i}">${esc(t.titolo)}${t.giorni ? ' · ' + esc(t.giorni) : ''}</button>`).join('')}
+        </div>
+        <div class="field">
+          <label for="or-comune">Filtra per comune</label>
+          <select id="or-comune">
+            <option value="">Tutti i comuni della linea</option>
+            ${comuni.map((c) => `<option value="${esc(c)}"${c === comune ? ' selected' : ''}>${esc(c)}</option>`).join('')}
+          </select>
+        </div>
+      </div>
+
+      <p class="or-testata">${lineChip(L.linea)} <strong>${esc(tav.titolo)}</strong> — ${esc(tav.sotto)}</p>
+      <p class="or-validita">${esc(L.validita)}. ${esc(L.giorni)}.</p>
+
+      <div class="or-lista">${fermate.map(bloccoFermata).join('')}</div>
+
+      <div class="or-piede">
+        <p class="or-legenda"><strong>Le sigle.</strong> F5 e F6 sono le corse feriali, da lunedì a venerdì e da lunedì a sabato. S5, S6 e SSab si effettuano solo nei giorni di scuola. NS5, NS6 e NSSab solo fuori dal periodo scolastico. AGO vuol dire che la corsa c'è anche in agosto. Senza sigla la corsa vale per tutti i giorni della tavola.</p>
+        <p class="or-fonte">Ricopiati da <a href="${esc(L.fonte.url)}" target="_blank" rel="noopener">${esc(L.fonte.nome)}</a>. Prima di una coincidenza stretta, controlla il libretto: gli orari cambiano più in fretta di questa pagina.</p>
+      </div>`;
+
+    box.querySelectorAll('[data-linea]').forEach((b) => b.addEventListener('click', () => {
+      linea = b.dataset.linea; tavola = 0; comune = ''; disegna();
+    }));
+    box.querySelectorAll('[data-tavola]').forEach((b) => b.addEventListener('click', () => {
+      tavola = +b.dataset.tavola; disegna();
+    }));
+    const sel = box.querySelector('#or-comune');
+    if (sel) sel.addEventListener('change', () => { comune = sel.value; disegna(); });
+  }
+
+  function avvia() {
+    if (avviata) return;
+    avviata = true;
+    if (btn) btn.remove();
+    box.innerHTML = '<p class="or-attesa">Carico gli orari…</p>';
+    caricaDati().then(disegna).catch(() => {
+      box.innerHTML = '<p class="map-error">Gli orari non si sono caricati. I libretti ufficiali sono linkati in fondo alla pagina, nelle fonti.</p>';
+    });
+  }
+
+  if (btn) btn.addEventListener('click', avvia);
 })();
 
 // ===== App installabile =====

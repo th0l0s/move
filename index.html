@@ -38,6 +38,7 @@
       <li><a href="#mie">Le mie tratte</a></li>
       <li><a href="#mappa">Mappa</a></li>
       <li><a href="#linee">Le linee</a></li>
+      <li><a href="#orari">Orari e fermate</a></li>
       <li><a href="#tutte">Tutte le tratte</a></li>
       <li><a href="#treni">Treni</a></li>
       <li><a href="#sapere">Da sapere</a></li>
@@ -56,6 +57,7 @@
       <li><a href="#mie">Le mie tratte</a></li>
       <li><a href="#mappa">Mappa</a></li>
       <li><a href="#linee">Le linee</a></li>
+      <li><a href="#orari">Orari e fermate</a></li>
       <li><a href="#tutte">Tutte le tratte</a></li>
       <li><a href="#treni">Treni</a></li>
       <li><a href="#sapere">Da sapere</a></li>
@@ -70,7 +72,7 @@
         <h2>Le cinque linee, in breve</h2>
         <p>Lo strumento ha bisogno di JavaScript. Senza, resta questo riepilogo, con gli stessi dati.</p>
         <ul>
-          <li><strong>T10</strong> — SAI / Bergamo Trasporti. Trezzo sull'Adda, Vaprio d'Adda, Canonica d'Adda, Pontirolo Nuovo, Castel Cerreto, Treviglio. Ferma a Fara Gera d'Adda solo nelle corse verso Treviglio; pochissime corse toccano Badalasco e Cassano d'Adda. Da lunedì a sabato, la domenica no.</li>
+          <li><strong>T10</strong> — SAI / Bergamo Trasporti. Trezzo sull'Adda, Vaprio d'Adda, Canonica d'Adda, Pontirolo Nuovo, Castel Cerreto, Geromina, Treviglio. Dentro Fara Gera d'Adda entrano pochissime corse; il resto del servizio su Fara è il giro Treviglio–Badalasco–Fara–Cassano d'Adda, quasi tutto scolastico. Da lunedì a sabato, la domenica no.</li>
           <li><strong>B812</strong>, la ex linea F — SAI / Bergamo Trasporti. Treviglio, Badalasco, Fara Gera d'Adda, Canonica d'Adda, Vaprio d'Adda, Pontirolo Nuovo, Ciserano, Zingonia, Verdellino. Ferma a Fara, Canonica e Vaprio in tutte e due le direzioni. Nel periodo scolastico alcune corse proseguono per Verdello, Levate, Stezzano e Bergamo, senza passare da Vaprio. Da lunedì a sabato, la domenica no.</li>
           <li><strong>Z309</strong> — NET, Nord Est Trasporti. Cassano d'Adda, Groppello, Vaprio d'Adda, Trezzo sull'Adda. Dal lunedì al sabato, la domenica no.</li>
           <li><strong>Z311</strong> — NET, Nord Est Trasporti. Vaprio d'Adda, Pozzo d'Adda, Gessate M2. Tutti i giorni, domenica compresa.</li>
@@ -155,6 +157,17 @@
       <h2>Le cinque linee</h2>
       <p class="section-sub">Ogni linea ha il suo colore: lo ritrovi identico nei risultati, nella mappa e nell'elenco delle tratte.</p>
       <div id="lines-list" class="lines-grid"></div>
+    </div>
+  </section>
+
+  <!-- ORARI E FERMATE -->
+  <section id="orari">
+    <div class="container">
+      <h2>Orari e fermate</h2>
+      <p class="section-sub">Le partenze di ogni fermata, ricopiate dai libretti dei gestori, divise in quattro fasce della giornata. Scegli la linea, poi il verso in cui viaggi.</p>
+      <div id="orari-box" class="orari-box">
+        <button type="button" class="map-load" id="orari-load">Carica gli orari</button>
+      </div>
     </div>
   </section>
 

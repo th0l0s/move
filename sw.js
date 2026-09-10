@@ -2,13 +2,14 @@
    si apre anche senza rete. Le tile della mappa restano online, quindi
    offline la mappa non c'e': tutto il resto si'.
    Alza CACHE a ogni pubblicazione, altrimenti resta la versione vecchia. */
-const CACHE = 'adda-transit-v4';
+const CACHE = 'adda-transit-v5';
 const FILES = [
   './',
   'index.html',
   'style.css',
   'data.js',
   'script.js',
+  'orari.js',
   'icon.svg',
   'manifest.webmanifest',
   'vendor/maplibre-gl.css',

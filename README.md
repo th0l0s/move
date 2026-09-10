@@ -1,7 +1,7 @@
 # Adda Transit — che bus prendo
 ### Fara Gera d'Adda · Vaprio d'Adda · Canonica d'Adda · Treviglio · Cassano d'Adda
 
-Scegli da dove parti e dove vai: la pagina dice che linea prendere, se serve cambiare e nei
+Dove ti trovi, dove vuoi andare: la pagina dice che linea prendere, se serve cambiare e nei
 giorni in cui quel bus non passa. Copre i cinque comuni più **Trezzo sull'Adda** e **Gessate M2**.
 
 Sito pubblicato su **https://move.privix.org** via GitHub Pages + GitHub Actions.
@@ -18,14 +18,16 @@ Si dà del tu, le frasi sono corte, i termini da addetti ai lavori non ci sono: 
 
 ## Cosa contiene
 
-- **«Che bus prendo?»**, in cima alla pagina: due tendine, il pulsante per invertirle e la
-  risposta in una schermata. Nessuna tabella da leggere per arrivarci
-- **Filtri di contesto**: *Vado a scuola*, *Torno a casa* (inverte partenza e arrivo) e
-  *Weekend*, che verifica se quelle linee circolano di domenica
+- **«Che bus prendo?»**, in cima alla pagina: *dove ti trovi*, *dove vuoi andare*, il pulsante
+  per invertirle e la risposta in una schermata. Nessuna tabella da leggere per arrivarci
+- **Scelta del giorno**: *da lunedì a sabato* oppure *la domenica*. Non è un'etichetta: la
+  risposta viene ricalcolata sulle sole linee che circolano quel giorno, cambio compreso
+- **Collegamenti verificati sugli elenchi fermate ufficiali**, direzione per direzione. Se una
+  linea in un senso non ferma in un paese, in quel senso non lo collega e la pagina lo dice
 - **Avvisi dentro il risultato**, non sepolti in una guida: se la domenica quella tratta non
   è coperta, lo dice lì
-- **Coincidenze col treno nel risultato**: se scendi a Treviglio o a Cassano, il risultato
-  mostra quanto aspetti in media per Milano, Bergamo o Treviglio
+- **Il treno in secondo piano**: se scendi a Treviglio o a Cassano trovi quanto aspetti in
+  media, ma chiuso e su fondo spento. Questa è una pagina di bus
 - **«Le mie tratte»**: le salvi con un tocco, restano in `localStorage` su quel dispositivo,
   dentro try/catch. Nessun server, nessun account
 - **Condivisione**: usa la condivisione di sistema dove c'è, altrimenti apre WhatsApp. Il link
@@ -39,7 +41,8 @@ Si dà del tu, le frasi sono corte, i termini da addetti ai lavori non ci sono: 
 - **Mappa** MapLibre con tile OpenFreeMap, caricata solo quando serve: su desktop quando ti
   avvicini scorrendo, su telefono solo se tocchi il pulsante, per non consumare dati
 - **Le cinque linee**, con percorso, giorni di servizio, validità dell'orario e gestore
-- **Tutte le tratte**: le 21 coppie di luoghi, in liste per luogo di partenza
+- **Tutte le tratte**: le 42 combinazioni, in liste per luogo di partenza. Andata e ritorno sono voci
+  distinte, perché il verso conta
 - **Riepilogo senza JavaScript**: un blocco `noscript` con linee, gestori e fonti, così la
   pagina resta leggibile e indicizzabile anche se lo script non parte
 
@@ -64,8 +67,8 @@ Sito statico, nessun framework, nessun tracker, nessuna pubblicità.
 ```
 index.html             struttura della pagina
 style.css              token e layout, mobile-first, tema chiaro e scuro
-data.js                fermate, linee, orari dei treni, matrice delle connessioni
-script.js              strumento, tratte salvate, mappa, liste, coincidenze
+data.js                fermate, linee con gli elenchi fermate per direzione, orari dei treni
+script.js              motore dei collegamenti, strumento, tratte salvate, mappa, liste
 sw.js                  service worker: rete per prima, cache come riserva
 manifest.webmanifest   dati per l'installazione come app
 icon.svg               icona di app e scheda del browser
@@ -89,17 +92,21 @@ Le voci che invecchiano più in fretta, in ordine:
    scolastico 2025/26 già pubblicato per la T10. Stanno in `data.js`, in `BUS_ARRIVI_TREVIGLIO`
    e `BUS_ARRIVI_CASSANO`
 2. **Orari dei treni** — `TRAINS` in `data.js`, dai quadri orario RFI delle due stazioni
-3. **Percorsi delle linee** — `LINES` in `data.js`, con i campi `sabato` e `festivi` che
+3. **Percorsi delle linee** — `LINES` in `data.js`. Il campo `rotte` porta gli elenchi fermate
+   ufficiali, una voce per direzione: è da lì che nascono i collegamenti, quindi va ricopiato
+   dallo schema di linea del gestore ogni volta che cambia. I campi `sabato` e `festivi`
    pilotano gli avvisi sulla domenica. La rete è stata riorganizzata il 3 agosto 2026, con la
    linea F diventata B812 e prolungata a Verdellino: riassetti così vanno rifatti a mano
-4. **Matrice delle connessioni** — `CONNECTIONS` in `data.js`, da rivedere quando cambia un
-   percorso
+4. **Tratte possibili** — non si scrivono più a mano. `risolvi()` in `script.js` le calcola
+   dalle rotte: diretto se una direzione tocca prima la partenza e poi l'arrivo, altrimenti un
+   cambio nel primo posto utile fra quelli elencati in `HUBS`. Le note editoriali di singole
+   tratte stanno in `NOTE_TRATTE`
 5. **Avviso del cambio orario** — la data sta in `script.js`, nella sezione «Avviso del cambio
    orario». Va spostata al cambio successivo
 6. **Service worker** — a ogni pubblicazione va alzato `CACHE` in `sw.js`, altrimenti chi ha
    già visitato il sito continua a vedere la versione vecchia
 
-Ultima verifica delle fonti: **9 settembre 2026**.
+Ultima verifica delle fonti: **10 settembre 2026**, sugli schemi di linea SAI di T10 e B812.
 
 ---
 

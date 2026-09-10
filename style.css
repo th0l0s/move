@@ -204,6 +204,8 @@ section > .container > h2 { margin-bottom: var(--sp-2); }
 .swap-btn svg { width: 20px; height: 20px; }
 .swap-btn:active { background: var(--accent-soft); color: var(--accent); }
 
+.when-group { display: grid; gap: var(--sp-1); }
+.when-label { font-size: 0.8rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--text-faint); }
 .when-row { display: flex; gap: var(--sp-2); overflow-x: auto; padding-bottom: var(--sp-1); scrollbar-width: none; }
 .when-row::-webkit-scrollbar { display: none; }
 .when-btn {
@@ -340,6 +342,29 @@ section > .container > h2 { margin-bottom: var(--sp-2); }
 .mx-change { font-size: 0.85rem; color: var(--text-muted); }
 .mx-none { font-size: 0.85rem; color: var(--text-faint); }
 .mx-star { color: var(--warn); font-weight: 700; }
+
+/* ===== Treni, in secondo piano =====
+   La pagina parla di bus: la parte ferroviaria resta chiusa, su fondo spento e con
+   titoli piu' piccoli, cosi' non ruba l'occhio a chi cerca la linea del bus. */
+.dim-section { background: var(--offset); }
+.dim-section > .container > h2 { font-size: clamp(1.2rem, 3.4vw, 1.5rem); color: var(--text-muted); }
+.dim-section .section-sub { font-size: 0.94rem; }
+.dim-section .cn-card { background: var(--surface-2); }
+.dim-body { padding: 0 var(--sp-4) var(--sp-4); }
+
+/* Un blocco che sta apposta in secondo piano: titolo piu' piccolo e spento,
+   col segno + al posto della freccia. Lo apre solo chi lo sta cercando. */
+.dim-block > summary {
+  display: flex; align-items: center; cursor: pointer; list-style: none;
+  font-size: 0.94rem; font-weight: 600; color: var(--text-muted);
+}
+.dim-block > summary::-webkit-details-marker { display: none; }
+.dim-block > summary::after { content: '+'; margin-left: auto; font-size: 1.3rem; color: var(--text-faint); }
+.dim-block[open] > summary::after { content: '\2212'; }
+
+.result-treni { margin-top: var(--sp-5); padding-top: var(--sp-3); border-top: 1px solid var(--divider); }
+.result-treni > summary { min-height: 44px; }
+.result-treni .mini-list { color: var(--text-muted); }
 
 /* ===== Treni ===== */
 .tabs { display: flex; gap: var(--sp-2); margin-bottom: var(--sp-4); }

@@ -70,8 +70,8 @@
         <h2>Le cinque linee, in breve</h2>
         <p>Lo strumento ha bisogno di JavaScript. Senza, resta questo riepilogo, con gli stessi dati.</p>
         <ul>
-          <li><strong>T10</strong> — SAI / Bergamo Trasporti. Trezzo sull'Adda, Vaprio d'Adda, Canonica d'Adda, Fara Gera d'Adda, Badalasco, Treviglio, più un ramo per Cassano d'Adda con pochissime corse. Da lunedì a sabato, la domenica no.</li>
-          <li><strong>B812</strong>, la ex linea F — SAI / Bergamo Trasporti. Treviglio, Badalasco, Fara Gera d'Adda, Canonica d'Adda, Vaprio d'Adda, Pontirolo Nuovo, Ciserano, Verdellino. Da lunedì a sabato, la domenica no.</li>
+          <li><strong>T10</strong> — SAI / Bergamo Trasporti. Trezzo sull'Adda, Vaprio d'Adda, Canonica d'Adda, Pontirolo Nuovo, Castel Cerreto, Treviglio. Ferma a Fara Gera d'Adda solo nelle corse verso Treviglio; pochissime corse toccano Badalasco e Cassano d'Adda. Da lunedì a sabato, la domenica no.</li>
+          <li><strong>B812</strong>, la ex linea F — SAI / Bergamo Trasporti. Treviglio, Badalasco, Fara Gera d'Adda, Canonica d'Adda, Vaprio d'Adda, Pontirolo Nuovo, Ciserano, Zingonia, Verdellino. Ferma a Fara, Canonica e Vaprio in tutte e due le direzioni. Nel periodo scolastico alcune corse proseguono per Verdello, Levate, Stezzano e Bergamo, senza passare da Vaprio. Da lunedì a sabato, la domenica no.</li>
           <li><strong>Z309</strong> — NET, Nord Est Trasporti. Cassano d'Adda, Groppello, Vaprio d'Adda, Trezzo sull'Adda. Dal lunedì al sabato, la domenica no.</li>
           <li><strong>Z311</strong> — NET, Nord Est Trasporti. Vaprio d'Adda, Pozzo d'Adda, Gessate M2. Tutti i giorni, domenica compresa.</li>
           <li><strong>z405</strong> — Autoguidovie Milano Sud Est. Gessate M2, Cassano d'Adda, Treviglio. Tutti i giorni, domenica compresa.</li>
@@ -94,27 +94,29 @@
       <div id="change-banner" class="change-banner" hidden></div>
 
       <h1>Che bus prendo?</h1>
-      <p class="tool-sub">Scegli da dove parti e dove vai. Ti dico che linea prendere, se devi cambiare e nei giorni in cui non passa.</p>
+      <p class="tool-sub">Dove ti trovi, dove vuoi andare. Ti dico che linea prendere, se devi cambiare e nei giorni in cui non passa.</p>
 
       <div class="picker">
         <div class="picker-row">
           <div class="field">
-            <label for="route-from">Da</label>
+            <label for="route-from">Dove ti trovi</label>
             <select id="route-from"></select>
           </div>
-          <button class="swap-btn" id="route-swap" type="button" aria-label="Inverti partenza e arrivo" title="Inverti">
+          <button class="swap-btn" id="route-swap" type="button" aria-label="Inverti i due posti" title="Inverti">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 16V4M7 4 3 8M17 8v12m0 0 4-4"/></svg>
           </button>
           <div class="field">
-            <label for="route-to">A</label>
+            <label for="route-to">Dove vuoi andare</label>
             <select id="route-to"></select>
           </div>
         </div>
 
-        <div class="when-row" role="group" aria-label="Quando viaggi">
-          <button type="button" class="when-btn is-on" data-when="scuola">Vado a scuola</button>
-          <button type="button" class="when-btn" data-when="casa">Torno a casa</button>
-          <button type="button" class="when-btn" data-when="weekend">Weekend</button>
+        <div class="when-group">
+          <span class="when-label" id="when-label">In che giorno</span>
+          <div class="when-row" role="group" aria-labelledby="when-label">
+            <button type="button" class="when-btn is-on" data-when="feriale">Da lunedì a sabato</button>
+            <button type="button" class="when-btn" data-when="domenica">La domenica</button>
+          </div>
         </div>
       </div>
 
@@ -160,22 +162,27 @@
   <section id="tutte">
     <div class="container">
       <h2>Tutte le tratte</h2>
-      <p class="section-sub">Le 21 coppie di luoghi, una per una. Tocca il posto da cui parti.</p>
+      <p class="section-sub">Tutte e 42 le combinazioni, una per una. Andata e ritorno stanno separati, perché una linea può fermare in un senso e non nell'altro. Tocca il posto da cui parti.</p>
       <div class="matrix-list" id="matrix-list"></div>
     </div>
   </section>
 
-  <!-- TRENI -->
-  <section id="treni">
+  <!-- TRENI — volutamente in secondo piano: questa pagina parla di bus -->
+  <section id="treni" class="dim-section">
     <div class="container">
-      <h2>E poi il treno</h2>
-      <p class="section-sub">Se scendi a Treviglio o a Cassano d'Adda e prosegui in treno, qui c'è quanto aspetti. A Treviglio arrivano la B812, con l'orario estivo, e la T10 da Vaprio. A Cassano arriva la Z309 da Trezzo e Vaprio.</p>
-      <div class="tabs" role="tablist">
-        <button class="tab-btn is-on" data-target="tbl-treviglio" role="tab" aria-selected="true">Treviglio</button>
-        <button class="tab-btn" data-target="tbl-cassano" role="tab" aria-selected="false">Cassano d'Adda</button>
-      </div>
-      <div id="tbl-treviglio" class="coinc-list"></div>
-      <div id="tbl-cassano" class="coinc-list" hidden></div>
+      <h2>E poi, se serve, il treno</h2>
+      <p class="section-sub">Questa è una pagina di bus. Il treno sta qui sotto, per quando scendi a Treviglio o a Cassano d'Adda e prosegui in ferrovia. A Treviglio arrivano la B812 e la T10 da Vaprio, a Cassano la Z309 da Trezzo e Vaprio.</p>
+      <details class="more dim-block">
+        <summary>Mostra le coincidenze coi treni</summary>
+        <div class="dim-body">
+          <div class="tabs" role="tablist">
+            <button class="tab-btn is-on" data-target="tbl-treviglio" role="tab" aria-selected="true">Treviglio</button>
+            <button class="tab-btn" data-target="tbl-cassano" role="tab" aria-selected="false">Cassano d'Adda</button>
+          </div>
+          <div id="tbl-treviglio" class="coinc-list"></div>
+          <div id="tbl-cassano" class="coinc-list" hidden></div>
+        </div>
+      </details>
     </div>
   </section>
 

@@ -1,40 +1,69 @@
 // Dati geografici, linee bus e orari treni — Bassa Bergamasca / Adda (Fara Gera d'Adda, Vaprio d'Adda,
 // Canonica d'Adda, Treviglio, Cassano d'Adda). Fonti: SAI/Bergamo Trasporti, NET (Nord Est Trasporti),
 // Autoguidovie Milano Sud Est, RFI (quadri orario ufficiali stazioni), Trenord.
+//
+// Le sequenze dentro "rotte" sono trascritte dagli ELENCHI FERMATE ufficiali, direzione per direzione:
+// schemi di linea SAI per T10 e B812, libretti NET per Z309 e Z311, Autoguidovie per la z405.
+// Da queste sequenze lo script ricava da solo quali tratte esistono: nessuna coppia scritta a mano.
+// Una linea che in una direzione non ferma in un paese, in quella direzione non lo collega: e' il caso
+// della T10, che ferma a Fara Gera d'Adda solo nelle corse verso Treviglio.
 
 const STOPS = {
-  fara: { name: "Fara Gera d'Adda", sub: "Via Locatelli / Via Udine", coord: [9.5333, 45.55], kind: "comune" },
-  vaprio: { name: "Vaprio d'Adda", sub: "Via Perego (ATM)", coord: [9.5297, 45.577], kind: "comune" },
-  canonica: { name: "Canonica d'Adda", sub: "Via Lodi 40 / Via Matteotti", coord: [9.5389, 45.5753], kind: "comune" },
+  fara: { name: "Fara Gera d'Adda", sub: "Via Locatelli · Via Bergamo · Via Crespi", coord: [9.5333, 45.55], kind: "comune" },
+  vaprio: { name: "Vaprio d'Adda", sub: "Via Perego 42/44 (ATM) · via Per Grezzago", coord: [9.5297, 45.577], kind: "comune" },
+  canonica: { name: "Canonica d'Adda", sub: "Via Lodi 40 (municipio) · Via Matteotti (chiesa)", coord: [9.5389, 45.5753], kind: "comune" },
   treviglio: { name: "Treviglio", sub: "V.le De Gasperi — Stazione FS", coord: [9.5928, 45.5195], kind: "stazione" },
   cassano: { name: "Cassano d'Adda", sub: "Stazione FS", coord: [9.523, 45.524], kind: "stazione" },
-  trezzo: { name: "Trezzo sull'Adda", sub: "Via Nenni / Via Biffi", coord: [9.521, 45.608], kind: "comune" },
-  pontirolo: { name: "Pontirolo Nuovo", sub: "Viale Italia", coord: [9.5672, 45.5692], kind: "comune" },
-  badalasco: { name: "Badalasco", sub: "fraz. Treviglio — Via Veneziana", coord: [9.552, 45.534], kind: "frazione" },
+  trezzo: { name: "Trezzo sull'Adda", sub: "Via Nenni (ITC) · Via Biffi · Concesa", coord: [9.521, 45.608], kind: "comune" },
+  pontirolo: { name: "Pontirolo Nuovo", sub: "Viale Italia (municipio) · Via Mazzini", coord: [9.5672, 45.5692], kind: "comune" },
+  badalasco: { name: "Badalasco", sub: "fraz. Fara Gera d'Adda — Via Veneziana", coord: [9.552, 45.534], kind: "frazione" },
+  castelcerreto: { name: "Castel Cerreto", sub: "fraz. Treviglio", coord: [9.5828, 45.5457], kind: "frazione" },
+  geromina: { name: "Geromina", sub: "fraz. Treviglio — Via Canonica", coord: [9.5806, 45.5321], kind: "frazione" },
   colonnella: { name: "Bivio Colonnella", sub: "fraz. Cassano d'Adda", coord: [9.531, 45.529], kind: "frazione" },
-  groppello: { name: "Groppello d'Adda", sub: "fraz. Cassano d'Adda", coord: [9.5231, 45.5433], kind: "frazione" },
-  verdellino: { name: "Verdellino", sub: "capolinea — interscambio E-BRT Bergamo", coord: [9.608, 45.601], kind: "comune" },
-  ciserano: { name: "Ciserano", sub: "", coord: [9.6011, 45.5879], kind: "comune" },
+  groppello: { name: "Groppello d'Adda", sub: "fraz. Cassano d'Adda — Via Cimbardi", coord: [9.5231, 45.5433], kind: "frazione" },
+  ciserano: { name: "Ciserano", sub: "Via Boltiere · Circonvallazione Sud", coord: [9.5989, 45.5872], kind: "comune" },
+  zingonia: { name: "Zingonia", sub: "corso Europa", coord: [9.601, 45.594], kind: "frazione" },
+  verdellino: { name: "Verdellino", sub: "Via Gramsci — interscambio E-BRT per Bergamo", coord: [9.606, 45.5985], kind: "comune" },
+  verdello: { name: "Verdello", sub: "Via Don Giavazzi", coord: [9.6247, 45.607], kind: "comune" },
+  levate: { name: "Levate", sub: "Via Santuario · Via Europa", coord: [9.6262, 45.6318], kind: "comune" },
+  stezzano: { name: "Stezzano", sub: "Circonvallazione Ovest", coord: [9.6395, 45.6607], kind: "comune" },
+  bergamo: { name: "Bergamo", sub: "Autolinee, pensilina 11", coord: [9.674, 45.6906], kind: "stazione" },
   pozzo: { name: "Pozzo d'Adda", sub: "", coord: [9.5004, 45.5757], kind: "comune" },
   gessate: { name: "Gessate", sub: "Metro M2 (capolinea)", coord: [9.4378, 45.5484], kind: "metro" },
-  inzago: { name: "Inzago", sub: "", coord: [9.4822, 45.5411], kind: "comune" },
+  inzago: { name: "Inzago", sub: "SS11 Via Verdi", coord: [9.4822, 45.5411], kind: "comune" },
 };
 
-// Linee bus: id, nome, gestore, colore, stops (chiavi STOPS in ordine), descrizione, validità, giorni
+// Linee bus.
+//   percorso  = tratto principale: serve a disegnare la mappa e a raccontare la linea
+//   rami      = tratti serviti da poche corse o solo in una direzione, disegnati tratteggiati
+//   rotte     = elenchi fermate ufficiali, una voce per direzione. Da qui nascono i collegamenti.
+//               limitata: poche corse — solo: "scolastico" = solo nel periodo scolastico
 const LINES = [
   {
     id: "t10",
     code: "T10",
-    name: "Trezzo – Vaprio – Canonica – Fara – Treviglio (+ ramo Cassano)",
+    name: "Treviglio – Pontirolo – Canonica – Vaprio – Trezzo",
     gestore: "SAI / Bergamo Trasporti",
     color: "#0f5da3",
-    stops: ["trezzo", "vaprio", "canonica", "fara", "badalasco", "treviglio"],
-    branch: ["fara", "badalasco", "colonnella", "cassano"],
-    branchLabel: "ramo Treviglio–Badalasco–Fara–Cassano (corse limitate)",
-    validita: "Orario estivo dal 03/08/2026. L'ultimo libretto scolastico pubblicato resta quello del 2025/26; il nuovo è atteso a metà settembre 2026",
+    freq: "Passa regolarmente, dal lunedì al sabato",
+    percorso: ["trezzo", "vaprio", "canonica", "pontirolo", "castelcerreto", "geromina", "treviglio"],
+    rami: [
+      { stops: ["canonica", "fara"], label: "deviazione per Fara Gera d'Adda, solo nelle corse verso Treviglio" },
+      { stops: ["fara", "badalasco", "treviglio"], label: "passaggi da Badalasco, poche corse" },
+      { stops: ["treviglio", "colonnella", "cassano"], label: "passaggi per Cassano d'Adda, poche corse" },
+    ],
+    rotte: [
+      { dir: "verso Trezzo", stops: ["treviglio", "geromina", "castelcerreto", "pontirolo", "canonica", "vaprio", "trezzo"] },
+      { dir: "verso Treviglio", stops: ["trezzo", "vaprio", "canonica", "fara", "canonica", "pontirolo", "castelcerreto", "geromina", "treviglio"] },
+      { dir: "ramo di Badalasco", limitata: true, stops: ["fara", "badalasco", "treviglio"] },
+      { dir: "ramo di Badalasco", limitata: true, stops: ["treviglio", "badalasco", "fara"] },
+      { dir: "ramo di Cassano", limitata: true, stops: ["treviglio", "colonnella", "cassano"] },
+      { dir: "ramo di Cassano", limitata: true, stops: ["cassano", "colonnella", "treviglio"] },
+    ],
+    validita: "Schema di linea SAI in vigore; orario scolastico dal 14/09/2026",
     giorni: "Lun–Sab (nessuna corsa festiva)",
     sabato: true, festivi: false,
-    note: "Linea principale per collegare tutti e 5 i comuni della richiesta in un'unica dorsale.",
+    note: "Andando verso Trezzo non ferma a Fara Gera d'Adda: le fermate di Fara ci sono solo nelle corse verso Treviglio. Da Fara verso Trezzo prendi la B812 fino a Vaprio.",
   },
   {
     id: "b812",
@@ -43,22 +72,40 @@ const LINES = [
     name: "Treviglio – Badalasco – Fara – Canonica – Vaprio – Pontirolo – Ciserano – Verdellino",
     gestore: "SAI / Bergamo Trasporti",
     color: "#c0392b",
-    stops: ["treviglio", "badalasco", "fara", "canonica", "vaprio", "pontirolo", "ciserano", "verdellino"],
-    validita: "Riorganizzata il 3/08/2026 — orario estivo fino al 13/09/2026, poi scolastico dal 14/09/2026",
+    freq: "Passa spesso, dal lunedì al sabato",
+    percorso: ["treviglio", "badalasco", "fara", "canonica", "vaprio", "canonica", "pontirolo", "ciserano", "zingonia", "verdellino"],
+    rami: [
+      { stops: ["verdellino", "verdello", "levate", "stezzano", "bergamo"], label: "nel periodo scolastico alcune corse proseguono da e per Bergamo, senza passare da Vaprio" },
+    ],
+    rotte: [
+      { dir: "verso Verdellino", stops: ["treviglio", "badalasco", "fara", "canonica", "vaprio", "canonica", "pontirolo", "ciserano", "zingonia", "verdellino"] },
+      { dir: "verso Treviglio", stops: ["verdellino", "zingonia", "ciserano", "pontirolo", "canonica", "vaprio", "canonica", "fara", "badalasco", "treviglio"] },
+      { dir: "verso Bergamo", solo: "scolastico", stops: ["treviglio", "badalasco", "fara", "canonica", "pontirolo", "ciserano", "zingonia", "verdellino", "verdello", "levate", "stezzano", "bergamo"] },
+      { dir: "da Bergamo verso Treviglio", solo: "scolastico", stops: ["bergamo", "stezzano", "levate", "verdello", "verdellino", "zingonia", "ciserano", "pontirolo", "canonica", "fara", "badalasco", "treviglio"] },
+    ],
+    validita: "Nuova linea in vigore dal 03/08/2026, orario scolastico dal 14/09/2026",
     giorni: "Lun–Sab (nessuna corsa festiva indicata)",
     sabato: true, festivi: false,
-    note: "Storica linea \"F\": oggi prosegue fino a Verdellino, interscambio con il nuovo E-BRT per Bergamo. È la linea più frequente fra Fara, Canonica, Vaprio e Treviglio.",
+    note: "Storica linea \"F\". Ferma a Fara, Canonica e Vaprio in tutte e due le direzioni: a Vaprio entra ed esce passando da Canonica. È la linea più utile fra Fara, Canonica, Vaprio e Treviglio.",
   },
   {
     id: "z309",
     code: "Z309",
-    name: "Cassano FS – Groppello – Vaprio – Trezzo (alcune corse per Inzago)",
+    name: "Cassano FS – Groppello – Vaprio – Trezzo (alcune corse da e per Inzago)",
     gestore: "NET (Nord Est Trasporti)",
     color: "#2f8f4e",
-    stops: ["cassano", "groppello", "vaprio", "trezzo"],
-    branch: ["vaprio", "inzago"],
-    branchLabel: "alcune corse proseguono su Inzago",
-    validita: "Orario estivo dal 09/06/2026, sostituito dall'invernale il 14/09/2026 (il libretto estivo era stampato valido fino al 16/09)",
+    freq: "Passa regolarmente, dal lunedì al sabato",
+    percorso: ["cassano", "groppello", "vaprio", "trezzo"],
+    rami: [
+      { stops: ["inzago", "cassano"], label: "alcune corse partono da Inzago, sulla SS11" },
+    ],
+    rotte: [
+      { dir: "verso Trezzo", stops: ["cassano", "groppello", "vaprio", "trezzo"] },
+      { dir: "verso Cassano", stops: ["trezzo", "vaprio", "groppello", "cassano"] },
+      { dir: "prolungamento di Inzago", limitata: true, stops: ["inzago", "cassano"] },
+      { dir: "prolungamento di Inzago", limitata: true, stops: ["cassano", "inzago"] },
+    ],
+    validita: "Orario estivo dal 09/06/2026, sostituito dall'invernale il 14/09/2026",
     giorni: "Lun–Ven e Sabato (no festivi)",
     sabato: true, festivi: false,
     note: "Unico collegamento diretto e frequente fra Vaprio e la stazione FS di Cassano d'Adda.",
@@ -69,8 +116,13 @@ const LINES = [
     name: "Vaprio – Pozzo d'Adda – Gessate M2",
     gestore: "NET (Nord Est Trasporti)",
     color: "#7a4fb0",
-    stops: ["vaprio", "pozzo", "gessate"],
-    validita: "Orario estivo dal 09/06/2026, sostituito dall'invernale il 14/09/2026 (il libretto estivo era stampato valido fino al 16/09)",
+    freq: "Passa spesso, tutti i giorni",
+    percorso: ["vaprio", "pozzo", "gessate"],
+    rotte: [
+      { dir: "verso Gessate", stops: ["vaprio", "pozzo", "gessate"] },
+      { dir: "verso Vaprio", stops: ["gessate", "pozzo", "vaprio"] },
+    ],
+    validita: "Orario estivo dal 09/06/2026, sostituito dall'invernale il 14/09/2026",
     giorni: "Tutti i giorni, anche festivi",
     sabato: true, festivi: true,
     note: "Attiva anche la domenica: è l'unico bus della zona insieme alla z405 a garantire servizio festivo.",
@@ -81,13 +133,38 @@ const LINES = [
     name: "Gessate M2 – Cassano FS – Treviglio FS",
     gestore: "Autoguidovie Milano Sud Est",
     color: "#5b6577",
-    stops: ["gessate", "cassano", "treviglio"],
+    freq: "Passa spesso, tutti i giorni",
+    percorso: ["gessate", "cassano", "treviglio"],
+    rotte: [
+      { dir: "verso Treviglio", stops: ["gessate", "cassano", "treviglio"] },
+      { dir: "verso Gessate", stops: ["treviglio", "cassano", "gessate"] },
+    ],
     validita: "Variante estiva valida; orari scolastici invernali a parte",
     giorni: "Tutti i giorni, anche domenica",
     sabato: true, festivi: true,
-    note: "Collega Cassano e Treviglio alla metro M2, ed è attiva anche la domenica quando T10/B812/Z309 non garantiscono corse.",
+    note: "Collega Cassano e Treviglio alla metro M2, ed è attiva anche la domenica quando T10, B812 e Z309 non hanno corse.",
   },
 ];
+
+// I luoghi che si possono scegliere nelle due tendine.
+const PLACES = [
+  { key: "fara", name: "Fara Gera d'Adda" },
+  { key: "vaprio", name: "Vaprio d'Adda" },
+  { key: "canonica", name: "Canonica d'Adda" },
+  { key: "treviglio", name: "Treviglio" },
+  { key: "cassano", name: "Cassano d'Adda" },
+  { key: "trezzo", name: "Trezzo sull'Adda" },
+  { key: "gessate", name: "Gessate (M2)" },
+];
+
+// Dove conviene cambiare, in ordine di preferenza: vince il primo posto che regge tutte e due le gambe.
+const HUBS = ["vaprio", "canonica", "treviglio", "cassano", "pontirolo", "trezzo", "gessate", "badalasco", "groppello"];
+
+// Note scritte a mano per singola tratta. Il resto lo calcola lo script dalle rotte ufficiali.
+const NOTE_TRATTE = {
+  "fara-vaprio": "La B812 passa anche da Canonica d'Adda.",
+  "fara-cassano": "Sono circa 35-40 minuti in tutto, cambio compreso.",
+};
 
 // Orari ufficiali treni regionali — fonte RFI (quadri orario, validi 14/06–12/12/2026) e Trenord.
 // Feriale tipo (lun-ven). Sabato/festivi differiscono: vedi note nella guida.
@@ -130,53 +207,3 @@ const BUS_ARRIVI_CASSANO = [
   { line: "z309", ora: "18:40" }, { line: "z309", ora: "19:10" },
   { line: "z309", ora: "19:40" }, { line: "z309", ora: "20:10" },
 ];
-
-// ===== Rete bus del quadrangolo (Fara / Vaprio / Canonica / Treviglio / Cassano) + estensioni (Trezzo, Gessate) =====
-// PLACES: i nodi selezionabili nel "trova il bus giusto" e nella matrice delle combinazioni.
-// "group" serve solo per etichettare visivamente il tipo di nodo.
-const PLACES = [
-  { key: "fara", name: "Fara Gera d'Adda", group: "quadrangolo" },
-  { key: "vaprio", name: "Vaprio d'Adda", group: "quadrangolo" },
-  { key: "canonica", name: "Canonica d'Adda", group: "corridoio" },
-  { key: "treviglio", name: "Treviglio", group: "quadrangolo" },
-  { key: "cassano", name: "Cassano d'Adda", group: "quadrangolo" },
-  { key: "trezzo", name: "Trezzo sull'Adda", group: "estensione" },
-  { key: "gessate", name: "Gessate (M2)", group: "estensione" },
-];
-
-// CONNECTIONS: per ogni coppia di luoghi, quale/i linea/e serve/servono la tratta.
-// type: "direct" (collegamento diretto e regolare), "limited" (diretto ma con pochissime corse,
-// meglio considerare l'alternativa), "change" (serve un cambio bus).
-// Chiave nel formato "chiave1-chiave2": la ricerca è comunque bidirezionale (vedi getConnection in script.js).
-const CONNECTIONS = {
-  "fara-vaprio": { type: "direct", lines: ["t10", "b812"], freq: "Passa spesso, dal lunedì al sabato", note: "Passa anche da Canonica d'Adda." },
-  "fara-canonica": { type: "direct", lines: ["t10", "b812"], freq: "Passa spesso, dal lunedì al sabato" },
-  "fara-treviglio": { type: "direct", lines: ["t10", "b812"], freq: "Passa spesso, dal lunedì al sabato" },
-  "fara-trezzo": { type: "direct", lines: ["t10"], freq: "Passa regolarmente, dal lunedì al sabato", note: "Passa da Vaprio e Canonica." },
-  "fara-cassano": {
-    type: "limited", lines: ["t10"],
-    freq: "Poche corse al giorno, sul ramo che passa da Badalasco e dal Bivio Colonnella",
-    alt: { via: "vaprio", legs: [["b812", "t10"], ["z309"]], desc: "Prendi la B812 o la T10 fino a Vaprio, poi la Z309 fino alla stazione di Cassano. Circa 35-40 minuti in tutto." }
-  },
-  "fara-gessate": { type: "change", via: "vaprio", legs: [["b812", "t10"], ["z311"]], desc: "Prendi la B812 o la T10 fino a Vaprio, poi la Z311 fino a Gessate, dove c'è la metro." },
-
-  "vaprio-canonica": { type: "direct", lines: ["t10", "b812"], freq: "Passa spesso, dal lunedì al sabato" },
-  "vaprio-treviglio": { type: "direct", lines: ["t10", "b812"], freq: "Passa spesso, dal lunedì al sabato" },
-  "vaprio-cassano": { type: "direct", lines: ["z309"], freq: "Passa regolarmente dal lunedì al sabato" },
-  "vaprio-trezzo": { type: "direct", lines: ["t10", "z309"], freq: "Passa regolarmente, dal lunedì al sabato" },
-  "vaprio-gessate": { type: "direct", lines: ["z311"], freq: "Passa spesso, tutti i giorni" },
-
-  "canonica-treviglio": { type: "direct", lines: ["t10", "b812"], freq: "Passa spesso, dal lunedì al sabato" },
-  "canonica-cassano": { type: "change", via: "vaprio", legs: [["b812", "t10"], ["z309"]], desc: "Prendi la B812 o la T10 fino a Vaprio, poi la Z309 fino alla stazione di Cassano." },
-  "canonica-trezzo": { type: "direct", lines: ["t10"], freq: "Passa regolarmente, dal lunedì al sabato" },
-  "canonica-gessate": { type: "change", via: "vaprio", legs: [["b812", "t10"], ["z311"]], desc: "Prendi la B812 o la T10 fino a Vaprio, poi la Z311 fino a Gessate, dove c'è la metro." },
-
-  "treviglio-cassano": { type: "direct", lines: ["z405"], freq: "Passa spesso, tutti i giorni", note: "C'è anche il ramo della T10 via Badalasco, Fara e Bivio Colonnella, ma con pochissime corse." },
-  "treviglio-trezzo": { type: "direct", lines: ["t10"], freq: "Passa regolarmente, dal lunedì al sabato" },
-  "treviglio-gessate": { type: "direct", lines: ["z405"], freq: "Passa spesso, tutti i giorni" },
-
-  "cassano-trezzo": { type: "direct", lines: ["z309"], freq: "Passa regolarmente dal lunedì al sabato" },
-  "cassano-gessate": { type: "direct", lines: ["z405"], freq: "Passa spesso, tutti i giorni" },
-
-  "trezzo-gessate": { type: "change", via: "vaprio", legs: [["z309"], ["z311"]], desc: "Prendi la Z309 fino a Vaprio, poi la Z311 fino a Gessate. In alternativa cambi a Cassano, con Z309 e poi z405." },
-};

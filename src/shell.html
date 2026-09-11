@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Che bus prendo? Fara e Adda</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EAF0ED;--surface:#FFFFFF;--ink:#14201B;--muted:#56645F;--line:#D0DAD6;--accent:#0E6A53;--accent-ink:#FFFFFF;--signal:#F4C300;--signal-ink:#1D1A00;--gone:#9AA7A2;
+--num:"Barlow Condensed","Roboto Condensed","Arial Narrow",system-ui,sans-serif;--body:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1512;--surface:#17201C;--ink:#E4ECE8;--muted:#98A6A0;--line:#2A3631;--accent:#4DB293;--accent-ink:#06140F;--signal:#E6B800;--signal-ink:#191500;--gone:#5E6B66}}
+:root[data-theme="dark"]{--bg:#0E1512;--surface:#17201C;--ink:#E4ECE8;--muted:#98A6A0;--line:#2A3631;--accent:#4DB293;--accent-ink:#06140F;--signal:#E6B800;--signal-ink:#191500;--gone:#5E6B66}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.45 var(--body)}
+main{max-width:600px;margin:0 auto;padding:18px 14px 40px}
+h1{font:700 2rem/1 var(--num);margin:0 0 4px;letter-spacing:.2px}
+.sub{margin:0 0 16px;color:var(--muted);font-size:.9rem}
+button,select,input{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--signal);outline-offset:2px}
+.route{display:grid;grid-template-columns:1fr auto 1fr;gap:8px;align-items:end}
+label{display:block;font-size:.8rem;color:var(--muted);margin:0 0 3px}
+select,input[type=date]{width:100%;min-height:46px;padding:8px 10px;background:var(--surface);border:1px solid var(--line);border-radius:10px;font-weight:600}
+#swap{width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:var(--surface);display:grid;place-items:center;cursor:pointer}
+#swap svg{width:20px;height:20px}
+.day{display:grid;grid-template-columns:1fr auto;gap:8px;margin-top:12px;align-items:end}
+#today{min-height:46px;padding:0 14px;border-radius:10px;border:1px solid var(--line);background:var(--surface);cursor:pointer;font-weight:600}
+.dayrow{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;justify-content:space-between;margin-top:10px}
+#dayline{margin:0;font-size:.92rem}#dayline span{color:var(--muted)}
+#ov{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--surface)}
+#ov button{border:0;background:none;padding:6px 11px;font-size:.82rem;cursor:pointer}
+#ov button[aria-pressed=true]{background:var(--accent);color:var(--accent-ink);font-weight:600}
+#notice,.warnbox{margin:10px 0 0;padding:8px 12px;border-radius:10px;background:var(--surface);border-left:4px solid var(--signal);font-size:.9rem}
+#hero{margin:16px 0 0;background:var(--surface);border-radius:14px;padding:14px 16px 14px 20px;position:relative;overflow:hidden;border:1px solid var(--line)}
+#hero::before{content:"";position:absolute;left:0;top:0;bottom:0;width:7px;background:var(--signal)}
+#hero p{margin:0}
+#hero .k{font-size:.85rem;color:var(--muted);font-weight:500}
+#hero .big{font:700 3.6rem/1 var(--num);font-variant-numeric:tabular-nums;margin:2px 0}
+#hero .big .to{font-size:1.6rem;font-weight:600;color:var(--muted);margin-left:10px}
+#hero .s{font-weight:600}#hero .s2{color:var(--muted);font-size:.9rem}
+.link{border:0;background:none;color:var(--accent);font-weight:600;padding:4px 0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+#bands{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;margin:18px 0 8px;position:sticky;top:0;background:var(--bg);padding:6px 0;z-index:2}
+#bands button{border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:6px 2px;cursor:pointer;font:600 1rem/1.1 var(--num);display:flex;flex-direction:column;align-items:center}
+#bands small{font:500 .72rem var(--body);color:var(--muted)}
+#bands button[aria-selected=true]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+#bands button[aria-selected=true] small{color:inherit}
+#bands .empty{opacity:.55}
+#list{list-style:none;margin:0;padding:0}
+#list>li{background:var(--surface);border:1px solid var(--line);border-radius:12px;margin:0 0 6px}
+#list>li.next{border-color:var(--signal);box-shadow:inset 5px 0 0 var(--signal)}
+.row{width:100%;display:grid;grid-template-columns:auto 1fr auto;grid-template-areas:"dep mid arr" "meta meta meta";gap:0 10px;align-items:center;padding:10px 14px;border:0;background:none;text-align:left;cursor:pointer}
+.t{font:700 1.9rem/1 var(--num);font-variant-numeric:tabular-nums}
+.dep{grid-area:dep}.arr{grid-area:arr;color:var(--muted);font-weight:600}
+.mid{grid-area:mid;display:flex;flex-direction:column;align-items:center;gap:2px}
+.bar{height:2px;width:100%;background:repeating-linear-gradient(90deg,var(--accent) 0 8px,transparent 8px 12px)}
+.d{font-size:.78rem;color:var(--muted)}
+.meta{grid-area:meta;display:flex;flex-wrap:wrap;gap:4px 8px;margin-top:6px;font-size:.84rem;align-items:center}
+.ln{font:600 .85rem var(--num);background:var(--accent);color:var(--accent-ink);padding:1px 7px;border-radius:5px;letter-spacing:.3px}
+.chg{font-weight:600;color:var(--ink);border:1px dashed var(--muted);padding:0 6px;border-radius:5px}
+.from{color:var(--muted)}
+li.gone .t,li.gone .from{color:var(--gone)}li.gone .ln{opacity:.5}
+.detail{padding:4px 14px 14px;border-top:1px solid var(--line)}
+.legh{margin:10px 0 4px;font-size:.84rem;color:var(--muted)}.legh b{color:var(--ink)}
+.tl{list-style:none;margin:0;padding:0 0 0 14px;border-left:2px solid var(--line)}
+.tl li{display:grid;grid-template-columns:3.2em 1fr;gap:8px;padding:3px 0;position:relative;font-size:.9rem}
+.tl li::before{content:"";position:absolute;left:-19px;top:10px;width:8px;height:8px;border-radius:50%;background:var(--surface);border:2px solid var(--line)}
+.tl li.edge::before{background:var(--accent);border-color:var(--accent)}
+.tl li.edge{font-weight:600}
+.tl time{font:600 1rem var(--num);font-variant-numeric:tabular-nums}
+.tl em{font-style:normal;color:var(--muted)}
+.change{margin:10px 0;padding:8px 10px;border-radius:8px;background:var(--bg);font-size:.88rem}
+.backh{margin:14px 0 6px;font-weight:600;font-size:.9rem}.warn{color:var(--muted);font-weight:500}
+.chips{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.chips button{border:1px solid var(--accent);color:var(--accent);background:none;border-radius:999px;padding:3px 12px;font:600 1.05rem var(--num);cursor:pointer}
+.chips .last,.fine{font-size:.8rem;color:var(--muted);margin:4px 0 0}
+.hint{margin:0 0 8px;font-size:.88rem;color:var(--muted)}
+.none{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px;margin:0}
+footer{margin-top:24px;font-size:.8rem;color:var(--muted)}
+footer p{margin:0 0 6px}
+footer h2{font:700 1.15rem var(--num);color:var(--ink);margin:18px 0 6px}
+footer h3{font-size:.85rem;color:var(--ink);margin:12px 0 4px}
+footer ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:4px 14px}
+a{color:var(--accent);text-underline-offset:3px}
+footer a{font-weight:500}
+footer ul+ul{margin-top:8px}
+@media (max-width:380px){#hero .big{font-size:3rem}.t{font-size:1.65rem}#bands button{font-size:.9rem}}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<main>
+<h1>Che bus prendo?</h1>
+<p class="sub">Linee B812 e T10, orario in vigore dal 14 settembre 2026</p>
+
+<div class="route">
+  <div><label for="from">Da</label><select id="from"></select></div>
+  <button id="swap" aria-label="Inverti partenza e arrivo" title="Inverti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4v14M3 14l4 4 4-4M17 20V6M13 10l4-4 4 4"/></svg></button>
+  <div><label for="to">A</label><select id="to"></select></div>
+</div>
+
+<div class="day">
+  <div><label for="date">Giorno</label><input type="date" id="date" min="2026-09-14" max="2027-09-13"></div>
+  <button id="today">Oggi</button>
+</div>
+<div class="dayrow">
+  <p id="dayline"></p>
+  <div id="ov" role="group" aria-label="Tipo di giorno"><button data-v="auto">Auto</button><button data-v="S">Scol.</button><button data-v="NS">Non scol.</button></div>
+</div>
+<p id="notice" hidden></p>
+<p id="bridge" class="warnbox" hidden>Molte scuole superiori della provincia di Bergamo sospendono le lezioni in questo giorno: le corse scolastiche potrebbero non esserci. Controlla gli <a href="https://www.saiautolinee.it/notizie" target="_blank" rel="noopener noreferrer">avvisi SAI</a> o scegli Non scol.</p>
+
+<section id="hero" aria-live="polite" hidden></section>
+<div id="bands" role="tablist" aria-label="Fasce orarie"></div>
+<p id="hint" class="hint" hidden>Nessun bus diretto su questa tratta: sono indicate le soluzioni con un cambio.</p>
+<ul id="list"></ul>
+<section id="mappa" hidden></section>
+
+<footer>
+  <p>Orari indicativi: le corse possono subire ritardi. In caso di dubbio fanno fede le tabelle ufficiali e gli avvisi del gestore.</p>
+  <p>Dati estratti dai PDF ufficiali in vigore dal 14/09/2026: linea B812, linea T10 con servizio Treviglio–Fara–Cassano, poli scolastici di Treviglio e Cassano (rev. 09/09/2026).</p>
+  <p>Cambi: minimo 3 min alla stessa fermata, 8 min tra fermate diverse, attesa massima 30 min. Giorni scolastici secondo il calendario Lombardia 2026/27.</p>
+
+  <h2>Fonti ufficiali e contatti</h2>
+  <h3>S.A.I. Treviglio srl, gestore delle linee B812 e T10</h3>
+  <ul>
+    <li><a href="https://www.saiautolinee.it/orari-e-linee#lines" target="_blank" rel="noopener noreferrer">Orari e mappe (PDF)</a></li>
+    <li><a href="https://www.saiautolinee.it/notizie" target="_blank" rel="noopener noreferrer">Avvisi al pubblico</a></li>
+    <li><a href="https://www.saiautolinee.it/tariffe" target="_blank" rel="noopener noreferrer">Tariffe e rivenditori</a></li>
+    <li><a href="https://www.saiautolinee.it/mooneygo" target="_blank" rel="noopener noreferrer">Biglietti con MooneyGo</a></li>
+    <li><a href="https://www.saiautolinee.it/contatti" target="_blank" rel="noopener noreferrer">Contatti e reclami</a></li>
+  </ul>
+  <ul>
+    <li><a href="tel:+390363397250">0363 397250</a></li>
+    <li><a href="tel:+393405085907">340 5085907</a></li>
+    <li><a href="mailto:sai@saiautolinee.it">sai@saiautolinee.it</a></li>
+  </ul>
+  <h3>Bergamo Trasporti Sud, consorzio del trasporto extraurbano</h3>
+  <ul>
+    <li><a href="https://www.bergamotrasporti.it/" target="_blank" rel="noopener noreferrer">Portale Bergamo Trasporti</a></li>
+    <li><a href="https://www.bergamotrasporti.it/orari-stampabili-in-vigore/" target="_blank" rel="noopener noreferrer">Orari stampabili in vigore</a></li>
+    <li><a href="https://www.bergamotrasporti.it/info-point/informazioni/" target="_blank" rel="noopener noreferrer">Info point</a></li>
+    <li><a href="tel:800139392">800 139392</a> (da rete fissa)</li>
+  </ul>
+  <h3>Calendario scolastico</h3>
+  <ul>
+    <li><a href="https://www.mim.gov.it/web/usr-lombardia/calendario-scolastico-regionale" target="_blank" rel="noopener noreferrer">USR Lombardia, calendario regionale</a></li>
+    <li><a href="https://www.provincia.bergamo.it/cnvpbgrm/po/mostra_news.php?id=2630&amp;area=H" target="_blank" rel="noopener noreferrer">Provincia di Bergamo, sospensioni 2026/27</a></li>
+  </ul>
+</footer>
+</main>
+<script>
+const DATA=/*DATA*/;
+/*CORE*/
+/*UI*/
+</script>
+</body>
+</html>

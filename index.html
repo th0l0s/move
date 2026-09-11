@@ -1,259 +1,424 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-<title>Che bus prendo? — Fara, Vaprio, Canonica, Treviglio, Cassano</title>
-<meta name="description" content="Scegli da dove parti e dove vai: ti dice subito che bus prendere fra Fara Gera d'Adda, Vaprio d'Adda, Canonica d'Adda, Treviglio e Cassano d'Adda, più Trezzo sull'Adda e Gessate M2. Linee T10, B812, Z309, Z311 e z405, con le coincidenze dei treni." />
-<link rel="canonical" href="https://move.privix.org/" />
-<meta name="robots" content="index,follow" />
-<meta name="author" content="privix.org" />
-<meta property="og:title" content="Che bus prendo? — Adda Transit" />
-<meta property="og:description" content="Due tendine e sai che bus prendere fra Fara, Vaprio, Canonica, Treviglio, Cassano, Trezzo e Gessate M2." />
-<meta property="og:type" content="website" />
-<meta property="og:locale" content="it_IT" />
-<meta property="og:url" content="https://move.privix.org/" />
-<meta name="theme-color" content="#0f1520" />
-<link rel="manifest" href="manifest.webmanifest" />
-<link rel="icon" href="icon.svg" type="image/svg+xml" />
-<link rel="apple-touch-icon" href="icon.svg" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Che bus prendo? Fara e Adda</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://tiles.openfreemap.org" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EAF0ED;--surface:#FFFFFF;--ink:#14201B;--muted:#56645F;--line:#D0DAD6;--accent:#0E6A53;--accent-ink:#FFFFFF;--signal:#F4C300;--signal-ink:#1D1A00;--gone:#9AA7A2;
+--num:"Barlow Condensed","Roboto Condensed","Arial Narrow",system-ui,sans-serif;--body:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1512;--surface:#17201C;--ink:#E4ECE8;--muted:#98A6A0;--line:#2A3631;--accent:#4DB293;--accent-ink:#06140F;--signal:#E6B800;--signal-ink:#191500;--gone:#5E6B66}}
+:root[data-theme="dark"]{--bg:#0E1512;--surface:#17201C;--ink:#E4ECE8;--muted:#98A6A0;--line:#2A3631;--accent:#4DB293;--accent-ink:#06140F;--signal:#E6B800;--signal-ink:#191500;--gone:#5E6B66}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.45 var(--body)}
+main{max-width:600px;margin:0 auto;padding:18px 14px 40px}
+h1{font:700 2rem/1 var(--num);margin:0 0 4px;letter-spacing:.2px}
+.sub{margin:0 0 16px;color:var(--muted);font-size:.9rem}
+button,select,input{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--signal);outline-offset:2px}
+.route{display:grid;grid-template-columns:1fr auto 1fr;gap:8px;align-items:end}
+label{display:block;font-size:.8rem;color:var(--muted);margin:0 0 3px}
+select,input[type=date]{width:100%;min-height:46px;padding:8px 10px;background:var(--surface);border:1px solid var(--line);border-radius:10px;font-weight:600}
+#swap{width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:var(--surface);display:grid;place-items:center;cursor:pointer}
+#swap svg{width:20px;height:20px}
+.day{display:grid;grid-template-columns:1fr auto;gap:8px;margin-top:12px;align-items:end}
+#today{min-height:46px;padding:0 14px;border-radius:10px;border:1px solid var(--line);background:var(--surface);cursor:pointer;font-weight:600}
+.dayrow{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;justify-content:space-between;margin-top:10px}
+#dayline{margin:0;font-size:.92rem}#dayline span{color:var(--muted)}
+#ov{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--surface)}
+#ov button{border:0;background:none;padding:6px 11px;font-size:.82rem;cursor:pointer}
+#ov button[aria-pressed=true]{background:var(--accent);color:var(--accent-ink);font-weight:600}
+#notice,.warnbox{margin:10px 0 0;padding:8px 12px;border-radius:10px;background:var(--surface);border-left:4px solid var(--signal);font-size:.9rem}
+#hero{margin:16px 0 0;background:var(--surface);border-radius:14px;padding:14px 16px 14px 20px;position:relative;overflow:hidden;border:1px solid var(--line)}
+#hero::before{content:"";position:absolute;left:0;top:0;bottom:0;width:7px;background:var(--signal)}
+#hero p{margin:0}
+#hero .k{font-size:.85rem;color:var(--muted);font-weight:500}
+#hero .big{font:700 3.6rem/1 var(--num);font-variant-numeric:tabular-nums;margin:2px 0}
+#hero .big .to{font-size:1.6rem;font-weight:600;color:var(--muted);margin-left:10px}
+#hero .s{font-weight:600}#hero .s2{color:var(--muted);font-size:.9rem}
+.link{border:0;background:none;color:var(--accent);font-weight:600;padding:4px 0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+#bands{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;margin:18px 0 8px;position:sticky;top:0;background:var(--bg);padding:6px 0;z-index:2}
+#bands button{border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:6px 2px;cursor:pointer;font:600 1rem/1.1 var(--num);display:flex;flex-direction:column;align-items:center}
+#bands small{font:500 .72rem var(--body);color:var(--muted)}
+#bands button[aria-selected=true]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+#bands button[aria-selected=true] small{color:inherit}
+#bands .empty{opacity:.55}
+#list{list-style:none;margin:0;padding:0}
+#list>li{background:var(--surface);border:1px solid var(--line);border-radius:12px;margin:0 0 6px}
+#list>li.next{border-color:var(--signal);box-shadow:inset 5px 0 0 var(--signal)}
+.row{width:100%;display:grid;grid-template-columns:auto 1fr auto;grid-template-areas:"dep mid arr" "meta meta meta";gap:0 10px;align-items:center;padding:10px 14px;border:0;background:none;text-align:left;cursor:pointer}
+.t{font:700 1.9rem/1 var(--num);font-variant-numeric:tabular-nums}
+.dep{grid-area:dep}.arr{grid-area:arr;color:var(--muted);font-weight:600}
+.mid{grid-area:mid;display:flex;flex-direction:column;align-items:center;gap:2px}
+.bar{height:2px;width:100%;background:repeating-linear-gradient(90deg,var(--accent) 0 8px,transparent 8px 12px)}
+.d{font-size:.78rem;color:var(--muted)}
+.meta{grid-area:meta;display:flex;flex-wrap:wrap;gap:4px 8px;margin-top:6px;font-size:.84rem;align-items:center}
+.ln{font:600 .85rem var(--num);background:var(--accent);color:var(--accent-ink);padding:1px 7px;border-radius:5px;letter-spacing:.3px}
+.chg{font-weight:600;color:var(--ink);border:1px dashed var(--muted);padding:0 6px;border-radius:5px}
+.from{color:var(--muted)}
+li.gone .t,li.gone .from{color:var(--gone)}li.gone .ln{opacity:.5}
+.detail{padding:4px 14px 14px;border-top:1px solid var(--line)}
+.legh{margin:10px 0 4px;font-size:.84rem;color:var(--muted)}.legh b{color:var(--ink)}
+.tl{list-style:none;margin:0;padding:0 0 0 14px;border-left:2px solid var(--line)}
+.tl li{display:grid;grid-template-columns:3.2em 1fr;gap:8px;padding:3px 0;position:relative;font-size:.9rem}
+.tl li::before{content:"";position:absolute;left:-19px;top:10px;width:8px;height:8px;border-radius:50%;background:var(--surface);border:2px solid var(--line)}
+.tl li.edge::before{background:var(--accent);border-color:var(--accent)}
+.tl li.edge{font-weight:600}
+.tl time{font:600 1rem var(--num);font-variant-numeric:tabular-nums}
+.tl em{font-style:normal;color:var(--muted)}
+.change{margin:10px 0;padding:8px 10px;border-radius:8px;background:var(--bg);font-size:.88rem}
+.backh{margin:14px 0 6px;font-weight:600;font-size:.9rem}.warn{color:var(--muted);font-weight:500}
+.chips{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.chips button{border:1px solid var(--accent);color:var(--accent);background:none;border-radius:999px;padding:3px 12px;font:600 1.05rem var(--num);cursor:pointer}
+.chips .last,.fine{font-size:.8rem;color:var(--muted);margin:4px 0 0}
+.hint{margin:0 0 8px;font-size:.88rem;color:var(--muted)}
+.none{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px;margin:0}
+footer{margin-top:24px;font-size:.8rem;color:var(--muted)}
+footer p{margin:0 0 6px}
+footer h2{font:700 1.15rem var(--num);color:var(--ink);margin:18px 0 6px}
+footer h3{font-size:.85rem;color:var(--ink);margin:12px 0 4px}
+footer ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:4px 14px}
+a{color:var(--accent);text-underline-offset:3px}
+footer a{font-weight:500}
+footer ul+ul{margin-top:8px}
+@media (max-width:380px){#hero .big{font-size:3rem}.t{font-size:1.65rem}#bands button{font-size:.9rem}}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style>
 </head>
 <body>
+<main>
+<h1>Che bus prendo?</h1>
+<p class="sub">Linee B812 e T10, orario in vigore dal 14 settembre 2026</p>
 
-<a class="skip-link" href="#tool">Vai allo strumento</a>
+<div class="route">
+  <div><label for="from">Da</label><select id="from"></select></div>
+  <button id="swap" aria-label="Inverti partenza e arrivo" title="Inverti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4v14M3 14l4 4 4-4M17 20V6M13 10l4-4 4 4"/></svg></button>
+  <div><label for="to">A</label><select id="to"></select></div>
+</div>
 
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="#top">
-      <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M16 3c-6 0-9 3-9 9v9a4 4 0 0 0 4 4h1l-2 3v1h4l2-3h4l2 3h4v-1l-2-3h1a4 4 0 0 0 4-4v-9c0-6-3-9-9-9Z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="20" r="1.6" fill="currentColor"/><circle cx="20" cy="20" r="1.6" fill="currentColor"/><path d="M7 13h18" stroke="currentColor" stroke-width="1.8"/></svg>
-      <span>Adda Transit</span>
-    </a>
-    <ul class="nav-links">
-      <li><a href="#tool">Che bus prendo</a></li>
-      <li><a href="#scuola">Le tratte</a></li>
-      <li><a href="#mie">Le mie tratte</a></li>
-      <li><a href="#mappa">Mappa</a></li>
-      <li><a href="#linee">Le linee</a></li>
-      <li><a href="#orari">Orari e fermate</a></li>
-      <li><a href="#tutte">Tutte le tratte</a></li>
-      <li><a href="#treni">Treni</a></li>
-      <li><a href="#sapere">Da sapere</a></li>
-    </ul>
-    <div class="header-actions">
-      <button class="theme-toggle" data-theme-toggle type="button" aria-label="Cambia tema"></button>
-      <button class="nav-toggle" data-nav-toggle type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="mobile-nav">
-        <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg>
-      </button>
-    </div>
-  </div>
-  <nav id="mobile-nav" class="mobile-nav" data-mobile-nav>
-    <ul>
-      <li><a href="#tool">Che bus prendo</a></li>
-      <li><a href="#scuola">Le tratte</a></li>
-      <li><a href="#mie">Le mie tratte</a></li>
-      <li><a href="#mappa">Mappa</a></li>
-      <li><a href="#linee">Le linee</a></li>
-      <li><a href="#orari">Orari e fermate</a></li>
-      <li><a href="#tutte">Tutte le tratte</a></li>
-      <li><a href="#treni">Treni</a></li>
-      <li><a href="#sapere">Da sapere</a></li>
-    </ul>
-  </nav>
-</header>
+<div class="day">
+  <div><label for="date">Giorno</label><input type="date" id="date" min="2026-09-14" max="2027-09-13"></div>
+  <button id="today">Oggi</button>
+</div>
+<div class="dayrow">
+  <p id="dayline"></p>
+  <div id="ov" role="group" aria-label="Tipo di giorno"><button data-v="auto">Auto</button><button data-v="S">Scol.</button><button data-v="NS">Non scol.</button></div>
+</div>
+<p id="notice" hidden></p>
+<p id="bridge" class="warnbox" hidden>Molte scuole superiori della provincia di Bergamo sospendono le lezioni in questo giorno: le corse scolastiche potrebbero non esserci. Controlla gli <a href="https://www.saiautolinee.it/notizie" target="_blank" rel="noopener noreferrer">avvisi SAI</a> o scegli Non scol.</p>
 
-<main id="top">
-  <noscript>
-    <section class="noscript-fallback">
-      <div class="container">
-        <h2>Le cinque linee, in breve</h2>
-        <p>Lo strumento ha bisogno di JavaScript. Senza, resta questo riepilogo, con gli stessi dati.</p>
-        <ul>
-          <li><strong>T10</strong> — SAI / Bergamo Trasporti. Trezzo sull'Adda, Vaprio d'Adda, Canonica d'Adda, Pontirolo Nuovo, Castel Cerreto, Geromina, Treviglio. Dentro Fara Gera d'Adda entrano pochissime corse; il resto del servizio su Fara è il giro Treviglio–Badalasco–Fara–Cassano d'Adda, quasi tutto scolastico. Da lunedì a sabato, la domenica no.</li>
-          <li><strong>B812</strong>, la ex linea F — SAI / Bergamo Trasporti. Treviglio, Badalasco, Fara Gera d'Adda, Canonica d'Adda, Vaprio d'Adda, Pontirolo Nuovo, Ciserano, Zingonia, Verdellino. Ferma a Fara, Canonica e Vaprio in tutte e due le direzioni. Nel periodo scolastico alcune corse proseguono per Verdello, Levate, Stezzano e Bergamo, senza passare da Vaprio. Da lunedì a sabato, la domenica no.</li>
-          <li><strong>Z309</strong> — NET, Nord Est Trasporti. Cassano d'Adda, Groppello, Vaprio d'Adda, Trezzo sull'Adda. Dal lunedì al sabato, la domenica no.</li>
-          <li><strong>Z311</strong> — NET, Nord Est Trasporti. Vaprio d'Adda, Pozzo d'Adda, Gessate M2. Tutti i giorni, domenica compresa.</li>
-          <li><strong>z405</strong> — Autoguidovie Milano Sud Est. Gessate M2, Cassano d'Adda, Treviglio. Tutti i giorni, domenica compresa.</li>
-        </ul>
-        <p><strong>Quando serve cambiare, si cambia quasi sempre a Vaprio d'Adda</strong>: da lì parte la Z309 per Cassano e la Z311 per Gessate e la metro.</p>
-        <h3>Da dove vengono i dati</h3>
-        <ul>
-          <li><a href="https://www.saiautolinee.it">SAI Autolinee</a> e <a href="https://www.bergamotrasporti.it">Bergamo Trasporti</a>, per T10 e B812</li>
-          <li><a href="https://www.nordesttrasporti.it">Nord Est Trasporti</a>, per Z309 e Z311</li>
-          <li><a href="https://milanosudest.autoguidovie.it">Autoguidovie Milano Sud Est</a>, per la z405</li>
-          <li><a href="https://www.rfi.it/it/stazioni/pagine-stazioni/servizi-di-qualita/informazioni-al-pubblico/quadri-orario-on-line.html">RFI</a> e <a href="https://www.trenord.it/linee-e-orari/circolazione/orario-ferroviario/">Trenord</a>, per i treni</li>
-        </ul>
-      </div>
-    </section>
-  </noscript>
-
-  <!-- LO STRUMENTO, PRIMA DI TUTTO -->
-  <section id="tool" class="tool-section">
-    <div class="container">
-      <div id="change-banner" class="change-banner" hidden></div>
-
-      <h1>Che bus prendo?</h1>
-      <p class="tool-sub">Dove ti trovi, dove vuoi andare. Ti dico che linea prendere, se devi cambiare e nei giorni in cui non passa.</p>
-
-      <div class="picker">
-        <div class="picker-row">
-          <div class="field">
-            <label for="route-from">Dove ti trovi</label>
-            <select id="route-from"></select>
-          </div>
-          <button class="swap-btn" id="route-swap" type="button" aria-label="Inverti i due posti" title="Inverti">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 16V4M7 4 3 8M17 8v12m0 0 4-4"/></svg>
-          </button>
-          <div class="field">
-            <label for="route-to">Dove vuoi andare</label>
-            <select id="route-to"></select>
-          </div>
-        </div>
-
-        <div class="when-group">
-          <span class="when-label" id="when-label">In che giorno</span>
-          <div class="when-row" role="group" aria-labelledby="when-label">
-            <button type="button" class="when-btn is-on" data-when="feriale">Da lunedì a sabato</button>
-            <button type="button" class="when-btn" data-when="domenica">La domenica</button>
-          </div>
-        </div>
-      </div>
-
-      <div id="route-results" class="results" aria-live="polite"></div>
-    </div>
-  </section>
-
-  <!-- LE CINQUE TRATTE, CORSA PER CORSA -->
-  <section id="scuola">
-    <div class="container">
-      <h2>Le tratte di tutti i giorni</h2>
-      <p class="section-sub">Le cinque tratte che si fanno davvero da qui, corsa per corsa: a che ora parte, a che ora arriva, che linea è. A Treviglio e a Cassano scegli se vai a scuola o alla stazione, perché non sono la stessa fermata e non è la stessa ora.</p>
-      <div id="scuola-box" class="scuola-box"></div>
-    </div>
-  </section>
-
-  <!-- LE MIE TRATTE -->
-  <section id="mie" class="saved-section">
-    <div class="container">
-      <h2>Le mie tratte</h2>
-      <p class="section-sub">Quelle che salvi restano su questo telefono. Non le vede nessun altro e non finiscono su nessun server.</p>
-      <div id="saved-list" class="saved-list"></div>
-    </div>
-  </section>
-
-  <!-- MAPPA -->
-  <section id="mappa">
-    <div class="container">
-      <h2>Dove passano</h2>
-      <p class="section-sub">Tocca una fermata per il nome, spegni una linea dalla legenda per vedere meglio le altre. Il tracciato segue l'ordine delle fermate, non le curve esatte della strada.</p>
-      <div class="map-wrap">
-        <div id="map"><button type="button" class="map-load" id="map-load">Carica la mappa</button></div>
-        <aside class="map-legend">
-          <h3>Linee</h3>
-          <div id="legend-list"></div>
-          <p class="map-hint">I quadrati sono le stazioni dei treni, i cerchi le fermate nei paesi, i puntini le frazioni.</p>
-        </aside>
-      </div>
-    </div>
-  </section>
-
-  <!-- LE LINEE -->
-  <section id="linee">
-    <div class="container">
-      <h2>Le cinque linee</h2>
-      <p class="section-sub">Ogni linea ha il suo colore: lo ritrovi identico nei risultati, nella mappa e nell'elenco delle tratte.</p>
-      <div id="lines-list" class="lines-grid"></div>
-    </div>
-  </section>
-
-  <!-- ORARI E FERMATE -->
-  <section id="orari">
-    <div class="container">
-      <h2>Orari e fermate</h2>
-      <p class="section-sub">Le partenze di ogni fermata, ricopiate dai libretti dei gestori, divise in quattro fasce della giornata. Scegli la linea, poi il verso in cui viaggi.</p>
-      <div id="orari-box" class="orari-box">
-        <button type="button" class="map-load" id="orari-load">Carica gli orari</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- TUTTE LE TRATTE -->
-  <section id="tutte">
-    <div class="container">
-      <h2>Tutte le tratte</h2>
-      <p class="section-sub">Tutte e 42 le combinazioni, una per una. Andata e ritorno stanno separati, perché una linea può fermare in un senso e non nell'altro. Tocca il posto da cui parti.</p>
-      <div class="matrix-list" id="matrix-list"></div>
-    </div>
-  </section>
-
-  <!-- TRENI — volutamente in secondo piano: questa pagina parla di bus -->
-  <section id="treni" class="dim-section">
-    <div class="container">
-      <h2>E poi, se serve, il treno</h2>
-      <p class="section-sub">Questa è una pagina di bus. Il treno sta qui sotto, per quando scendi a Treviglio o a Cassano d'Adda e prosegui in ferrovia. A Treviglio arrivano la B812 e la T10 da Vaprio, a Cassano la Z309 da Trezzo e Vaprio.</p>
-      <details class="more dim-block">
-        <summary>Mostra le coincidenze coi treni</summary>
-        <div class="dim-body">
-          <div class="tabs" role="tablist">
-            <button class="tab-btn is-on" data-target="tbl-treviglio" role="tab" aria-selected="true">Treviglio</button>
-            <button class="tab-btn" data-target="tbl-cassano" role="tab" aria-selected="false">Cassano d'Adda</button>
-          </div>
-          <div id="tbl-treviglio" class="coinc-list"></div>
-          <div id="tbl-cassano" class="coinc-list" hidden></div>
-        </div>
-      </details>
-    </div>
-  </section>
-
-  <!-- DA SAPERE -->
-  <section id="sapere">
-    <div class="container">
-      <h2>Quattro cose da sapere</h2>
-      <div class="know-grid">
-        <article class="know-card">
-          <h3>La domenica quasi tutto si ferma</h3>
-          <p>T10, B812 e Z309 non passano. Restano solo la Z311 fra Vaprio e Gessate e la z405 fra Cassano, Gessate e Treviglio. Da Fara e da Canonica, la domenica, il bus non c'è: ti serve un passaggio fino a Vaprio o a Cassano.</p>
-        </article>
-        <article class="know-card">
-          <h3>Il biglietto fallo prima di salire</h3>
-          <p>Per T10 e B812 usa l'app MooneyGo o compralo in edicola: a bordo costa di più. Per Z309 e Z311 controlla i punti vendita in paese. Se hai una coincidenza stretta, farlo sul bus ti fa perdere tempo.</p>
-        </article>
-        <article class="know-card">
-          <h3>Controlla sempre la data del libretto</h3>
-          <p>Gli orari valgono per un periodo preciso. Quello estivo finisce il 13 settembre 2026, poi partono le corse scolastiche. Un orario giusto oggi può essere sbagliato fra una settimana.</p>
-        </article>
-        <article class="know-card">
-          <h3>I nomi delle linee non sono sbagliati</h3>
-          <p>Z309 e Z311 sono di NET e si scrivono con la Z maiuscola. La z405 è di Autoguidovie e si scrive con la z minuscola. È la grafia che usano loro sui libretti e alle paline.</p>
-        </article>
-      </div>
-
-      <details class="more">
-        <summary>Le tratte in cui è più facile restare a piedi</summary>
-        <div id="critical-list" class="critical-list"></div>
-      </details>
-
-      <details class="more">
-        <summary>Da dove vengono questi dati</summary>
-        <div id="sources-list" class="sources-list"></div>
-      </details>
-    </div>
-  </section>
-</main>
+<section id="hero" aria-live="polite" hidden></section>
+<div id="bands" role="tablist" aria-label="Fasce orarie"></div>
+<p id="hint" class="hint" hidden>Nessun bus diretto su questa tratta: sono indicate le soluzioni con un cambio.</p>
+<ul id="list"></ul>
+<section id="mappa" hidden></section>
 
 <footer>
-  <div class="container">
-    <p>Dati dai libretti ufficiali di SAI e Bergamo Trasporti, NET, Autoguidovie Milano Sud Est, RFI e Trenord, settembre 2026. Se c'è uno sciopero o un cantiere, gli orari saltano: controlla il giorno stesso.</p>
-    <p class="footer-twin">Progetto gemello: <a href="https://edu.privix.org/">edu.privix.org</a>, la guida per scegliere la scuola superiore in zona.</p>
-  </div>
-</footer>
+  <p>Orari indicativi: le corse possono subire ritardi. In caso di dubbio fanno fede le tabelle ufficiali e gli avvisi del gestore.</p>
+  <p>Dati estratti dai PDF ufficiali in vigore dal 14/09/2026: linea B812, linea T10 con servizio Treviglio–Fara–Cassano, poli scolastici di Treviglio e Cassano (rev. 09/09/2026).</p>
+  <p>Cambi: minimo 3 min alla stessa fermata, 8 min tra fermate diverse, attesa massima 30 min. Giorni scolastici secondo il calendario Lombardia 2026/27.</p>
 
-<script src="data.js" defer></script>
-<script src="script.js" defer></script>
+  <h2>Fonti ufficiali e contatti</h2>
+  <h3>S.A.I. Treviglio srl, gestore delle linee B812 e T10</h3>
+  <ul>
+    <li><a href="https://www.saiautolinee.it/orari-e-linee#lines" target="_blank" rel="noopener noreferrer">Orari e mappe (PDF)</a></li>
+    <li><a href="https://www.saiautolinee.it/notizie" target="_blank" rel="noopener noreferrer">Avvisi al pubblico</a></li>
+    <li><a href="https://www.saiautolinee.it/tariffe" target="_blank" rel="noopener noreferrer">Tariffe e rivenditori</a></li>
+    <li><a href="https://www.saiautolinee.it/mooneygo" target="_blank" rel="noopener noreferrer">Biglietti con MooneyGo</a></li>
+    <li><a href="https://www.saiautolinee.it/contatti" target="_blank" rel="noopener noreferrer">Contatti e reclami</a></li>
+  </ul>
+  <ul>
+    <li><a href="tel:+390363397250">0363 397250</a></li>
+    <li><a href="tel:+393405085907">340 5085907</a></li>
+    <li><a href="mailto:sai@saiautolinee.it">sai@saiautolinee.it</a></li>
+  </ul>
+  <h3>Bergamo Trasporti Sud, consorzio del trasporto extraurbano</h3>
+  <ul>
+    <li><a href="https://www.bergamotrasporti.it/" target="_blank" rel="noopener noreferrer">Portale Bergamo Trasporti</a></li>
+    <li><a href="https://www.bergamotrasporti.it/orari-stampabili-in-vigore/" target="_blank" rel="noopener noreferrer">Orari stampabili in vigore</a></li>
+    <li><a href="https://www.bergamotrasporti.it/info-point/informazioni/" target="_blank" rel="noopener noreferrer">Info point</a></li>
+    <li><a href="tel:800139392">800 139392</a> (da rete fissa)</li>
+  </ul>
+  <h3>Calendario scolastico</h3>
+  <ul>
+    <li><a href="https://www.mim.gov.it/web/usr-lombardia/calendario-scolastico-regionale" target="_blank" rel="noopener noreferrer">USR Lombardia, calendario regionale</a></li>
+    <li><a href="https://www.provincia.bergamo.it/cnvpbgrm/po/mostra_news.php?id=2630&amp;area=H" target="_blank" rel="noopener noreferrer">Provincia di Bergamo, sospensioni 2026/27</a></li>
+  </ul>
+</footer>
+</main>
+<script>
+const DATA={"stops":[["Pontirolo","Viale Italia"],["Pontirolo","Via Mazzini"],["Ciserano","Via Circonvallazione Sud fronte civ. 10"],["Ciserano","SP122 Francesca"],["Zingonia","corso Europa c/o Fai Da Te"],["Verdellino","Corso Africa"],["Verdellino","Via Gramsci civ. 22"],["Verdellino","Via Morletta, FS Nodo V1"],["Verdello","Via Don Giavazzi, banca"],["Levate","Corso Europa, parcheggio"],["Stezzano","Via Papa Giovanni XXIII 7"],["Treviglio","Stazione FS (V.le De Gasperi)"],["Treviglio","Piazza del Popolo"],["Treviglio","Stazione Ovest (P.le Mazzini)"],["Treviglio","V.le Montegrappa"],["Treviglio","Via Buonarroti"],["Treviglio","Via Isser (SAME)"],["Badalasco","Via Veneziana"],["Fara","Via Locatelli"],["Fara","Via Bergamo (distributore)"],["Canonica","Via Lodi 40"],["Canonica","Via Bergamo (edicola)"],["Bergamo","Colognola Chiesa"],["Bergamo","Stazione Autolinee, pensilina 11"],["Canonica","Via Matteotti (chiesa)"],["Vaprio","Via Perego (ATM)"],["Verdellino","E-BRT"],["Treviglio","Piazza Mentana"],["Castel Rozzone","Piazza Castello"],["Arcene","Corso Europa SS42"],["Verdello","Via Papa Giovanni XXIII, distributore"],["Caravaggio","Via Zenale e Butinone"],["Treviglio","Ospedale / ITIS"],["Treviglio","V.le Merisio (Agraria)"],["Caravaggio","Via Mazzini, Autostazione"],["Castel Rozzone","C.so Europa"],["Stezzano","Via Zanchi, Hotel Albi"],["Verdello","Via Giovanni XXIII - fronte distrib."],["Zingonia","corso Europa, 29/33"],["Ciserano","S.P.122, Via Francesca"],["Ciserano","Via Circonvallazione Sud 10"],["Arcene","Via Alcide De Gasperi 11"],["Arcene","Corso Europa, S.S.42"],["Verdellino","F.S. Via Gramsci, 15"],["Verdellino","Corso Africa, 16"],["Bergamo","stazione Autolinee,pensilina 11"],["Bergamo","Colognola Edicola"],["Verdello","Via Don Giavazzi"],["Verdellino","Via Morletta, lato Park, FS"],["Comun Nuovo","Via Duca D'Aosta 16"],["Castel Rozzone","Via Nazioni Unite"],["Vaprio","Via per Grezzago"],["Trezzo","Via Nenni (ITC)"],["Geromina","Via Canonica"],["Castel Cerreto","Frazione"],["Fara","Via Udine"],["Trezzo","Via Biffi (edicola)"],["Cassano","Liceo (C.so Europa)"],["Cassano","Bv. Colonnella"],["Cassano","Stazione FS"]],"runs":[["B812","S5",0,"",[[0,365],[1,366],[2,373],[3,373],[4,374],[5,376],[6,378],[7,379],[8,381],[9,386],[10,395]]],["B812","S6",0,"",[[11,374],[12,376],[13,370],[14,371],[15,375],[16,378],[17,384],[18,391],[19,392],[20,396],[21,398],[0,404],[1,405],[2,416],[3,416],[4,417],[5,418],[6,420],[7,422],[8,423],[9,431],[10,443],[22,448],[23,460]]],["B812","NS6",1,"",[[11,375],[12,377],[13,378],[15,379],[16,382],[17,386],[18,393],[19,395],[20,398],[24,399],[25,405],[24,410],[21,411],[0,416],[1,417],[2,422],[3,424],[4,425],[5,426],[6,428],[26,430]]],["B812","S6",0,"",[[11,404],[12,406],[13,400],[14,401],[27,407],[28,415],[29,420],[30,425],[9,436],[10,444],[22,453],[23,465]]],["B812","S6",0,"",[[18,410],[19,411],[20,414],[21,415],[2,422]]],["B812","NS6",1,"",[[11,420],[12,422],[13,423],[15,424],[16,427],[17,431],[18,438],[19,440],[20,443],[24,444],[25,450],[24,455],[21,456],[0,461],[1,462],[2,467],[3,469],[4,470],[5,471],[6,473],[26,475]]],["B812","S6",0,"",[[11,480],[12,482],[13,483],[15,484],[16,487],[17,491],[18,498],[19,500],[20,503],[24,504],[25,510],[24,515],[21,516],[0,521],[1,522],[2,527],[3,529],[4,530],[5,531],[6,533],[26,535]]],["B812","NS6",1,"",[[11,495],[12,497],[13,498],[15,499],[16,502],[17,506],[18,513],[19,515],[20,518],[24,519],[25,525],[24,530],[21,531],[0,536],[1,537],[2,542],[3,544],[4,545],[5,546],[6,548],[26,550]]],["B812","NS6",1,"",[[11,540],[12,542],[13,543],[15,544],[16,547],[17,551],[18,558],[19,560],[20,563],[24,564],[25,570],[24,575],[21,576],[0,581],[1,582],[2,587],[3,589],[4,590],[5,591],[6,593],[26,595]]],["B812","S6",0,"",[[11,555],[12,557],[13,558],[15,559],[16,562],[17,566],[18,573],[19,575],[20,578],[24,579],[25,585],[24,590],[21,591],[0,596],[1,597],[2,602],[3,604],[4,605],[5,606],[6,608],[26,610]]],["B812","NS5",0,"",[[11,645],[12,647],[13,648],[15,649],[16,652],[17,656],[18,663],[19,665],[20,668],[24,669],[25,675],[24,680],[21,681],[0,686],[1,687],[2,692],[3,694],[4,695],[5,696],[6,698],[26,700]]],["B812","S6",0,"",[[11,664],[12,666],[13,660],[14,661],[15,667],[16,670],[17,673],[18,678],[19,679],[20,681],[21,685],[0,690],[1,691],[2,696],[3,697],[4,700],[5,701],[6,703],[7,704],[8,706],[9,713],[10,719],[22,725],[23,730]]],["B812","NS6",1,"",[[11,675],[12,677],[13,678],[15,679],[16,682],[17,686],[18,693],[19,695],[20,698],[24,699],[25,705],[24,710],[21,711],[0,716],[1,717],[2,722],[3,724],[4,725],[5,726],[6,728],[26,730]]],["B812","S6",0,"",[[11,724],[12,726],[13,720],[14,721],[15,728],[16,730],[17,733],[18,738],[19,739],[20,743],[21,745],[0,750],[1,751],[2,758],[3,760],[4,762],[5,763],[6,765],[7,766],[8,768],[9,773],[10,779],[22,786],[23,792]]],["B812","S5",0,"",[[31,725],[32,729],[33,735],[11,739],[12,741],[27,743],[28,750],[29,755],[30,760],[10,769],[22,776],[23,785]]],["B812","SSAB",0,"",[[33,732],[11,737],[12,739],[13,741],[15,743],[16,744],[17,747],[18,751],[19,756],[21,760]]],["B812","SSAB",0,"",[[33,732],[11,739],[12,741],[27,742],[28,750],[29,755],[30,760],[10,769],[22,776],[23,785]]],["B812","NS6",1,"",[[11,750],[12,752],[13,753],[15,754],[16,757],[17,761],[18,768],[19,770],[20,773],[24,774],[25,780],[24,785],[21,786],[0,791],[1,792],[2,797],[3,799],[4,800],[5,801],[6,803],[26,805]]],["B812","S6",0,"",[[11,754],[12,756],[13,750],[14,751],[15,758],[16,759],[17,762],[18,766],[19,767],[20,771],[21,772],[0,778],[1,779],[2,786],[3,787],[4,790],[5,792],[6,794],[7,795],[8,796],[9,801],[10,808],[22,814],[23,820]]],["B812","S6",0,"",[[34,785],[35,798],[29,803],[2,808],[3,809],[4,811],[5,812],[6,814],[7,815],[8,815],[30,816]]],["B812","S6",0,"",[[31,785],[32,790],[33,793],[11,798],[12,800],[13,802],[15,803],[16,805],[17,809],[18,813],[19,814],[20,817],[21,820],[0,824],[1,825],[2,832],[3,834],[4,836],[5,837],[6,839],[7,840],[8,842],[9,847],[10,855],[22,860],[23,870]]],["B812","S6",0,"",[[31,790],[32,793],[33,795],[11,800],[12,802],[27,804],[0,814],[1,813],[2,821],[3,823],[4,825],[5,826],[6,828],[30,830],[9,834]]],["B812","NS6",1,"",[[11,795],[12,797],[13,798],[15,799],[16,802],[17,806],[18,813],[19,815],[20,818],[24,819],[25,825],[24,830],[21,831],[0,836],[1,837],[2,842],[3,844],[4,845],[5,846],[6,848],[26,850]]],["B812","S5",0,"",[[34,845],[35,858],[29,863],[2,868],[3,869],[4,871],[5,872],[6,874],[26,875],[7,875],[8,876]]],["B812","S5",0,"",[[31,845],[32,848],[33,850],[11,860],[12,862],[15,863],[16,866],[17,870],[18,875],[19,876],[20,879],[21,880],[0,885],[1,887],[2,893],[3,895],[4,897],[5,898],[6,900],[7,901],[8,902],[9,909],[10,916],[22,921],[23,927]]],["B812","NS6",1,"",[[11,870],[12,872],[13,873],[15,874],[16,877],[17,881],[18,888],[19,890],[20,893],[24,894],[25,900],[24,905],[21,906],[0,911],[1,912],[2,917],[3,919],[4,920],[5,921],[6,923],[26,925]]],["B812","SSAB",0,"",[[11,885],[12,887],[13,888],[15,889],[16,892],[17,896],[18,903],[19,905],[20,908],[24,909],[25,915],[24,920],[21,921],[0,926],[1,927],[2,932],[3,934],[4,935],[5,936],[6,938],[26,940]]],["B812","S5",0,"",[[31,905],[32,908],[33,910],[11,915],[12,917],[13,920],[15,923],[16,924],[17,928],[18,932],[19,933],[20,936],[21,939],[0,942],[1,945],[2,952],[3,954],[4,956],[5,957],[6,959],[26,962],[7,960],[8,967],[9,972],[10,975],[22,981],[23,987]]],["B812","F6",1,"",[[11,990],[12,992],[13,993],[15,994],[16,997],[17,1001],[18,1008],[19,1010],[20,1013],[24,1014],[25,1020],[24,1025],[21,1026],[0,1031],[1,1032],[2,1037],[3,1039],[4,1040],[5,1041],[6,1043],[26,1045]]],["B812","NS5",0,"",[[11,1050],[12,1052],[13,1053],[15,1054],[16,1057],[17,1061],[18,1068],[19,1070],[20,1073],[24,1074],[25,1080],[24,1085],[21,1086],[0,1091],[1,1092],[2,1097],[3,1099],[4,1100],[5,1101],[6,1103],[26,1105]]],["B812","S6",0,"",[[11,1050],[12,1052],[13,1053],[15,1054],[16,1057],[17,1061],[18,1068],[19,1070],[20,1073],[24,1074],[25,1080],[24,1085],[21,1086],[0,1091],[1,1092],[2,1097],[3,1099],[4,1100],[5,1101],[6,1103],[26,1105]]],["B812","F6",1,"",[[11,1110],[12,1112],[13,1113],[15,1114],[16,1117],[17,1121],[18,1128],[19,1130],[20,1133],[24,1134],[25,1140],[24,1145],[21,1146],[0,1151],[1,1152],[2,1157],[3,1159],[4,1160],[5,1161],[6,1163],[26,1165]]],["B812","NS6",1,"",[[11,1155],[12,1157],[13,1158],[15,1159],[16,1162],[17,1166],[18,1173],[19,1175],[20,1178],[24,1179],[25,1185],[24,1190],[21,1191],[0,1196],[1,1197],[2,1202],[3,1204],[4,1205],[5,1206],[6,1208],[26,1210]]],["B812","NS6",1,"",[[21,338],[24,340],[25,345],[24,350],[20,351],[19,354],[18,355],[17,362],[16,367],[15,370],[13,371],[14,372],[11,374]]],["B812","NS6",1,"",[[21,380],[24,382],[25,387],[24,392],[20,393],[19,396],[18,397],[17,404],[16,409],[15,412],[13,413],[14,414],[11,416]]],["B812","S6",0,"",[[19,399],[18,401],[17,405],[16,410],[15,412],[13,413]]],["B812","S6",0,"",[[36,400],[9,408],[37,412],[38,420],[39,422],[34,450],[27,468],[12,472],[13,475]]],["B812","S6",0,"",[[40,422],[41,430],[42,431],[35,439],[34,458],[27,473],[12,474],[11,476]]],["B812","NS6",1,"",[[26,430],[43,431],[44,433],[38,434],[40,438],[1,444],[0,445],[21,449],[24,451],[25,456],[24,461],[20,462],[19,465],[18,466],[17,473],[16,478],[15,481],[13,482],[14,483],[11,485]]],["B812","S6",0,"",[[45,460],[46,470],[36,476],[9,485],[47,492],[48,493],[43,494],[44,496],[38,498],[40,500],[1,506],[0,507],[21,510],[20,512],[19,515],[18,516],[17,525],[16,529],[15,532],[13,533],[14,534],[11,535]]],["B812","NS6",1,"",[[26,480],[43,481],[44,483],[38,484],[40,488],[1,494],[0,495],[21,499],[24,501],[25,506],[24,511],[20,512],[19,515],[18,516],[17,523],[16,528],[15,531],[13,532],[14,533],[11,535]]],["B812","S5",0,"",[[45,500],[46,510],[36,516],[9,525],[47,532],[48,533],[43,534],[44,536],[38,538],[40,540],[1,546],[0,547],[21,550],[20,552],[19,555],[18,556],[17,564],[16,569],[15,572],[13,573],[14,574],[11,575]]],["B812","NS6",1,"",[[26,555],[43,556],[44,558],[38,559],[40,563],[1,569],[0,570],[21,574],[24,576],[25,581],[24,586],[20,587],[19,590],[18,591],[17,598],[16,603],[15,606],[13,607],[14,608],[11,610]]],["B812","NS6",1,"",[[26,595],[43,596],[44,598],[38,599],[40,603],[1,609],[0,610],[21,614],[24,616],[25,621],[24,626],[20,627],[19,630],[18,631],[17,638],[16,643],[15,646],[13,647],[14,648],[11,650]]],["B812","S6",0,"",[[26,610],[43,611],[44,613],[38,614],[40,618],[1,624],[0,625],[21,629],[24,631],[25,636],[24,641],[20,642],[19,645],[18,646],[17,653],[16,658],[15,661],[13,662],[14,663],[11,665]]],["B812","NS5",0,"",[[26,700],[43,701],[44,703],[38,704],[40,708],[1,714],[0,715],[21,719],[24,721],[25,726],[24,731],[20,732],[19,735],[18,736],[17,743],[16,748],[15,751],[13,752],[14,753],[11,755]]],["B812","NS6",1,"",[[26,730],[43,731],[44,733],[38,734],[40,738],[1,744],[0,745],[21,749],[24,751],[25,756],[24,761],[20,762],[19,765],[18,766],[17,773],[16,778],[15,781],[13,782],[14,783],[11,785]]],["B812","S6",0,"",[[45,735],[46,745],[36,751],[9,760],[47,767],[48,768],[43,769],[44,771],[38,773],[40,775],[1,781],[0,782],[21,785],[20,787],[19,790],[18,791],[17,796],[16,802],[15,806],[13,807],[14,808],[11,810]]],["B812","S6",0,"",[[45,795],[46,801],[36,807],[49,813],[37,817],[41,821],[42,822],[50,825],[35,827],[27,834],[12,835],[13,845],[11,840]]],["B812","S6",0,"",[[45,800],[46,810],[36,816],[9,825],[47,832],[48,833],[43,834],[44,836],[38,838],[40,840],[1,846],[0,847],[21,850],[20,852],[19,855],[18,856],[17,862],[16,869],[15,872],[13,873],[14,874],[11,875]]],["B812","NS6",1,"",[[26,810],[43,811],[44,813],[38,814],[40,818],[1,824],[0,825],[21,829],[24,831],[25,836],[24,841],[20,842],[19,845],[18,846],[17,853],[16,858],[15,861],[13,862],[14,863],[11,865]]],["B812","S5",0,"",[[37,816],[41,821],[42,822],[50,825]]],["B812","SSAB",0,"",[[37,816],[41,821],[42,821],[50,825],[27,836],[12,839],[13,840]]],["B812","NS6",1,"",[[26,850],[43,851],[44,853],[38,854],[40,858],[1,864],[0,865],[21,869],[24,871],[25,876],[24,881],[20,882],[19,885],[18,886],[17,893],[16,898],[15,901],[13,902],[14,903],[11,905]]],["B812","S6",0,"",[[45,850],[46,860],[36,863],[9,868],[37,873],[40,890],[41,878],[42,880],[1,895],[0,896],[21,901],[20,902],[19,906],[18,908],[17,913],[16,916],[15,919],[13,920]]],["B812","S6",0,"",[[45,875],[46,882],[36,887],[9,892],[47,897],[48,898],[43,959],[44,901],[38,903],[40,908],[1,913],[0,914],[21,918],[20,919],[19,923],[18,924],[17,930],[16,934],[15,937],[13,940],[14,941],[11,942]]],["B812","S5",0,"",[[37,876],[41,882],[42,883],[13,906]]],["B812","NS6",1,"",[[26,930],[43,931],[44,933],[38,934],[40,938],[1,944],[0,945],[21,949],[24,951],[25,956],[24,961],[20,962],[19,965],[18,966],[17,973],[16,978],[15,981],[13,982],[14,983],[11,985]]],["B812","SSAB",0,"",[[26,940],[43,941],[44,943],[38,944],[40,948],[1,954],[0,955],[21,959],[24,961],[25,966],[24,971],[20,972],[19,975],[18,976],[17,983],[16,988],[15,991],[13,992],[14,993],[11,995]]],["B812","S5",0,"",[[45,950],[46,956],[36,962],[9,967],[47,972],[48,973],[43,974],[44,977],[38,978],[40,983],[1,990],[0,992],[21,995],[20,997],[19,1000],[18,1001],[17,1007],[16,1012],[15,1015],[13,1017],[14,1018],[11,1019]]],["B812","F6",1,"",[[26,1050],[43,1051],[44,1053],[38,1054],[40,1058],[1,1064],[0,1065],[21,1069],[24,1071],[25,1076],[24,1081],[20,1082],[19,1085],[18,1086],[17,1093],[16,1098],[15,1101],[13,1102],[14,1103],[11,1105]]],["B812","NS5",0,"",[[26,1105],[43,1106],[44,1108],[38,1109],[40,1113],[1,1119],[0,1120],[21,1124],[24,1126],[25,1131],[24,1136],[20,1137],[19,1140],[18,1141],[17,1148],[16,1153],[15,1156],[13,1157],[14,1158],[11,1160]]],["B812","S6",0,"",[[26,1115],[43,1116],[44,1118],[38,1119],[40,1123],[1,1129],[0,1130],[21,1134],[24,1136],[25,1141],[24,1146],[20,1147],[19,1150],[18,1151],[17,1158],[16,1163],[15,1166],[13,1167],[14,1168],[11,1170]]],["B812","F6",1,"",[[26,1165],[43,1166],[44,1168],[38,1169],[40,1173],[1,1179],[0,1180],[21,1184],[24,1186],[25,1191],[24,1196],[20,1197],[19,1200],[18,1201],[17,1208],[16,1213],[15,1216],[13,1217],[14,1218],[11,1220]]],["B812","NS6",1,"",[[26,1210],[43,1211],[44,1213],[38,1214],[40,1218],[1,1224],[0,1225],[21,1229],[24,1231],[25,1236],[24,1241]]],["T10","S6",0,"",[[21,382],[24,384],[51,388],[52,400]]],["T10","NS6",1,"",[[11,388],[12,389],[13,385],[15,391],[53,394],[54,397],[0,402],[21,405],[24,406],[51,409],[25,412]]],["T10","S5",0,"",[[21,400],[24,401],[51,404],[25,406]]],["T10","S5",0,"",[[11,408],[12,410],[13,405],[15,412],[53,416],[54,421],[0,425],[21,430],[55,438],[24,444],[51,450],[25,452],[56,464],[52,468]]],["T10","S5",0,"",[[11,490],[12,492],[13,494],[15,496],[53,499],[54,503],[0,509],[21,513],[24,514],[51,518],[25,520]]],["T10","NS6",1,"",[[11,510],[12,512],[13,514],[15,516],[53,519],[54,523],[0,528],[21,532],[24,533],[51,537],[25,539]]],["T10","S5",0,"",[[11,540],[12,542],[13,544],[15,546],[53,549],[54,554],[0,560],[21,564],[24,565],[51,568],[25,570]]],["T10","S5",0,"",[[11,600],[12,602],[13,604],[15,606],[53,609],[54,614],[0,620],[21,624],[24,625],[51,628],[25,630]]],["T10","S5",0,"",[[31,725],[32,729],[33,731],[11,735],[12,737],[13,739],[15,741],[53,744],[54,748],[0,753],[21,757],[24,758],[51,762],[25,764],[56,774],[52,777]]],["T10","SSAB",0,"",[[33,732],[11,739],[12,741],[13,743],[15,745],[53,748],[54,752],[0,757],[21,762],[24,763],[51,767],[25,769],[56,778],[52,783]]],["T10","S6",0,"Y",[[31,785],[32,790],[33,792],[11,800],[12,802],[27,804],[53,809],[54,813],[0,819],[21,823],[24,824],[51,828],[25,830],[52,845]]],["T10","S5",0,"Y",[[31,850],[32,855],[33,857],[11,860],[12,862],[27,864],[53,872],[54,878],[0,885],[21,889],[24,890],[51,894],[25,896],[52,895]]],["T10","S5",0,"W",[[31,850],[32,855],[33,857],[11,865],[12,867],[0,878],[21,883],[24,884],[51,888],[25,890]]],["T10","S5",0,"",[[13,860],[15,861],[54,870]]],["T10","S5",0,"",[[31,905],[32,910],[33,912],[11,920],[12,922],[13,924],[15,926],[53,929],[54,935],[0,940],[21,945],[24,946],[51,950],[25,952],[56,962],[52,965]]],["T10","NS6",1,"",[[11,970],[12,972],[13,974],[15,976],[53,979],[54,983],[0,988],[21,992],[24,993],[51,997],[25,999]]],["T10","S5",0,"Y",[[11,973],[12,974],[27,976],[13,970],[15,972],[53,979],[54,983],[0,988],[21,994],[24,995],[51,999],[25,1001],[56,1010]]],["T10","S5",0,"",[[11,1040],[12,1042],[13,1044],[15,1046],[53,1049],[54,1053],[0,1059],[21,1063],[24,1064],[51,1068],[25,1070]]],["T10","S5",0,"",[[11,1100],[12,1102],[13,1104],[15,1106],[53,1109],[54,1113],[0,1119],[21,1123],[24,1124],[51,1128],[25,1130]]],["T10","S5",0,"",[[11,1133],[12,1134],[13,1130],[15,1136],[53,1141],[54,1145],[0,1150],[21,1160]]],["T10","F6",1,"",[[11,1160],[12,1162],[13,1164],[15,1166],[53,1169],[54,1173],[0,1178],[21,1182],[24,1183],[51,1187],[25,1189]]],["T10","S5",0,"",[[20,375],[21,376],[55,370],[0,380],[54,385],[53,388],[15,392],[13,393],[11,397]]],["T10","S5",0,"C",[[52,400],[56,408],[51,412],[24,413],[0,420],[13,435],[14,438],[11,440]]],["T10","SSAB",0,"C",[[52,405],[56,413],[25,418],[51,420],[24,424],[21,425],[0,429],[54,433],[53,436],[15,437],[13,440],[14,442],[11,444]]],["T10","S5",0,"C",[[25,410],[51,412],[24,413],[54,430],[53,433],[15,438],[13,440],[14,441],[11,445]]],["T10","NS6",1,"",[[25,415],[51,417],[24,418],[21,420],[0,425],[54,429],[53,432],[15,433],[13,437],[14,439],[11,440]]],["T10","S6",0,"",[[20,420],[21,422],[0,425],[54,430],[53,435],[15,439],[13,440]]],["T10","S5",0,"",[[52,470],[56,473],[25,478],[51,480],[24,484],[21,485],[0,492],[54,498],[53,502],[15,504],[13,505],[14,507],[11,510]]],["T10","S5",0,"",[[25,520],[51,522],[24,526],[21,527],[0,531],[54,535],[53,538],[15,539],[13,542],[14,544],[11,545]]],["T10","NS6",1,"",[[25,540],[51,542],[24,546],[21,547],[0,551],[54,555],[53,558],[15,559],[13,562],[14,564],[11,565]]],["T10","S5",0,"",[[25,575],[51,577],[24,581],[21,582],[0,586],[54,590],[53,593],[15,594],[13,597],[14,599],[11,600]]],["T10","S5",0,"",[[25,635],[51,637],[24,641],[21,642],[0,646],[54,650],[53,653],[15,654],[13,657],[14,659],[11,660]]],["T10","S6",0,"",[[52,785],[56,788],[25,793],[51,795],[24,799],[20,800],[55,803],[0,811],[54,815],[53,818],[15,820],[13,821],[14,823],[11,827]]],["T10","S6",0,"",[[52,850],[56,853],[25,858],[51,860],[24,864],[20,865],[55,869],[0,875],[54,879],[53,882],[15,883],[13,886],[14,888],[11,890]]],["T10","S5",0,"",[[54,875],[53,878],[15,882],[13,883],[14,885],[11,887]]],["T10","S5",0,"",[[25,890],[51,892],[24,894],[21,895]]],["T10","S5",0,"",[[52,915],[56,918],[25,923],[51,925],[24,929],[20,930],[55,935],[0,945],[54,949],[53,953],[15,957],[13,958],[14,960],[11,963]]],["T10","S5",0,"",[[52,965],[56,968],[25,973],[51,975],[24,979],[20,980],[55,984],[0,988],[54,992],[53,995],[15,996],[13,999],[14,1001],[11,1003]]],["T10","NS6",1,"",[[25,1000],[51,1002],[24,1006],[21,1007],[0,1011],[54,1015],[53,1018],[15,1022],[13,1023],[14,1025],[11,1028]]],["T10","S5",0,"",[[56,1020],[25,1028],[51,1030],[24,1034],[21,1035],[0,1039],[54,1047],[53,1049],[15,1050],[13,1053],[14,1055],[11,1056]]],["T10","S5",0,"",[[25,1070],[51,1072],[24,1076],[21,1077],[0,1081],[54,1085],[53,1088],[15,1089],[13,1092],[14,1094],[11,1095]]],["T10","S5",0,"",[[25,1130],[51,1132],[24,1136],[21,1137],[0,1143],[54,1147],[53,1152],[15,1154],[13,1155],[14,1157],[11,1160]]],["T10","F6",1,"",[[25,1190],[51,1192],[24,1196],[21,1197]]],["T10","S6",0,"",[[57,755],[58,761],[17,771],[18,765],[55,766],[13,780]]],["B812","S5",0,"",[[11,790],[12,792],[16,800],[17,805],[18,810],[55,812]]],["T10","S6",0,"",[[57,815],[58,822],[17,834],[18,828],[55,829],[13,840]]],["B812","S5",0,"",[[57,852],[58,859],[13,865]]],["T10","S5",0,"",[[57,872],[58,879],[17,889],[18,884],[55,885],[13,895]]],["T10","S5",0,"",[[13,874],[11,870],[12,872],[16,875],[17,879],[18,883],[19,885]]],["T10","S5",0,"",[[13,905],[16,908],[17,911],[18,919],[55,920]]],["T10","S5",0,"",[[59,1105],[58,1110],[18,1119],[55,1120]]],["T10","S6",0,"",[[13,1111],[11,1108],[12,1109],[16,1114],[17,1118],[18,1123],[19,1125]]],["T10","S5",0,"",[[11,1135],[12,1137],[16,1141],[17,1145],[18,1149],[55,1150]]],["T10","S5",0,"",[[13,1165],[11,1168],[12,1169],[16,1171],[17,1175],[18,1178],[55,1179]]],["T10","S5",0,"",[[59,1165],[58,1170],[18,1179],[19,1181]]],["T10","F6",1,"",[[19,364],[55,365],[18,366],[17,370],[16,373],[13,376],[11,380]]],["T10","S6",0,"",[[19,396],[55,397],[18,398],[17,405],[16,408],[13,410]]],["T10","S5",0,"",[[17,395],[16,398],[13,405]]],["T10","F5",1,"",[[55,405],[18,406],[59,427]]],["T10","S5",0,"",[[19,412],[55,413],[18,415],[17,420],[16,424],[13,427]]],["T10","S6",0,"",[[19,412],[55,413],[18,415],[17,420],[16,424],[13,427],[11,429]]],["T10","S6",0,"YCG",[[57,420],[13,445],[11,450]]],["T10","S5",0,"YCG",[[57,420],[13,445],[11,450]]],["T10","S6",0,"",[[55,425],[18,426],[17,430],[16,434],[13,440]]],["T10","S6",0,"",[[13,440],[11,445],[12,446],[17,455],[55,460],[18,461],[57,475]]],["T10","S5",0,"",[[55,1120],[18,1121],[17,1126],[16,1129],[13,1133],[11,1135]]],["T10","S5",0,"",[[55,1145],[18,1146],[17,1151],[16,1155],[13,1158],[11,1160]]]]};
+// ---- core: pure functions, no DOM (testable with node) ----
+const START = '2026-09-14';
+const HUBS=['Fara','Vaprio','Canonica','Treviglio','Pontirolo','Cassano','Trezzo'];
+const MIN_SAME=3, MIN_WALK=8, MAX_WAIT=30, MAX_TRIP=90;
+const PLACES = ['Fara','Vaprio','Cassano','Trezzo','Treviglio'];
+const ROUTES = {Fara:['Vaprio','Cassano','Trezzo','Treviglio'],Vaprio:['Fara','Cassano'],Cassano:['Fara','Vaprio'],Trezzo:['Fara'],Treviglio:['Fara']};
+const PLACE_NAME = {Fara:"Fara Gera d'Adda",Vaprio:"Vaprio d'Adda",Cassano:"Cassano d'Adda",Trezzo:"Trezzo sull'Adda",Treviglio:'Treviglio'};
+const BANDS = [[300,600,'5–10'],[600,900,'10–15'],[900,1200,'15–20'],[1200,1440,'20–24']];
+const CODE_TXT = {F6:'Feriale lun–sab',F5:'Feriale lun–ven',S6:'Scolastica lun–sab',S5:'Scolastica lun–ven',SSAB:'Scolastica sabato',NS6:'Non scolastica lun–sab',NS5:'Non scolastica lun–ven',NSSAB:'Non scolastica sabato'};
+const NOTE_TXT = {Y:'transita da P.za Mentana',W:'diretta Pontirolo–Canonica',C:'prosegue per ITIS e Caravaggio',X:'proviene da ITIS',YC:'transita da P.za Mentana, prosegue per ITIS e Caravaggio',G:'proviene da Groppello'};
+// Calendario scolastico Lombardia 2026/27 (lezioni 14/09/2026 – 08/06/2027)
+const SCHOOL_FROM = '2026-09-14', SCHOOL_TO = '2027-06-08';
+const SCHOOL_OFF = [['2026-12-23','2027-01-05'],['2027-02-08','2027-02-09'],['2027-03-25','2027-03-30']];
+// Provincia di Bergamo: sospensioni piu condivise dalle scuole superiori (non obbligatorie per tutte)
+const BRIDGES_BG = ['2026-11-02','2026-12-07','2027-03-31'];
+const FIXED_HOLIDAYS = ['01-01','01-06','04-25','05-01','06-02','08-15','11-01','12-08','12-25','12-26'];
+
+function iso(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+function parseIso(s){const [y,m,d]=s.split('-').map(Number);return new Date(y,m-1,d);}
+function addDays(s,n){const d=parseIso(s);d.setDate(d.getDate()+n);return iso(d);}
+function easterMonday(y){ // Meeus/Jones/Butcher
+  const a=y%19,b=Math.floor(y/100),c=y%100,d=Math.floor(b/4),e=b%4,f=Math.floor((b+8)/25),g=Math.floor((b-f+1)/3),
+  h=(19*a+b-d-g+15)%30,i=Math.floor(c/4),k=c%4,l=(32+2*e+2*i-h-k)%7,m=Math.floor((a+11*h+22*l)/451),
+  mo=Math.floor((h+l-7*m+114)/31),da=((h+l-7*m+114)%31)+1;
+  return addDays(iso(new Date(y,mo-1,da)),1);
+}
+function dayInfo(s, override){ // override: 'auto' | 'S' | 'NS'
+  const d=parseIso(s), dow=d.getDay(); // 0=dom
+  const holiday = dow===0 || FIXED_HOLIDAYS.includes(s.slice(5)) || s===easterMonday(d.getFullYear());
+  let school = s>=SCHOOL_FROM && s<=SCHOOL_TO && !SCHOOL_OFF.some(([a,b])=>s>=a&&s<=b);
+  if(override==='S') school=true; else if(override==='NS') school=false;
+  return {date:s,dow,holiday,school,august:d.getMonth()===7,bridge:BRIDGES_BG.includes(s)};
+}
+function runsOn(code, ago, di){
+  if(di.holiday) return false;
+  if(di.august && !ago) return false;
+  const sat=di.dow===6;
+  switch(code){
+    case 'F6': return true;           case 'F5': return !sat;
+    case 'S6': return di.school;      case 'S5': return di.school && !sat;
+    case 'SSAB': return di.school && sat;
+    case 'NS6': return !di.school;    case 'NS5': return !di.school && !sat;
+    case 'NSSAB': return !di.school && sat;
+  }
+  return false;
+}
+function hm(t){return Math.floor(t/60)+':'+String(t%60).padStart(2,'0');}
+
+function model(D){
+  const stops=D.stops.map(([loc,name])=>({loc,name}));
+  const runs=D.runs.map(([line,code,ago,notes,st],id)=>{
+    const seq=st.map(([s,t])=>({loc:stops[s].loc,name:stops[s].name,t}));
+    const segs=[]; // contiguous stops of the same locality, sorted by time
+    for(const x of seq){ const last=segs[segs.length-1]; if(last&&last.loc===x.loc) last.stops.push(x); else segs.push({loc:x.loc,stops:[x]}); }
+    for(const g of segs) g.stops.sort((a,b)=>a.t-b.t);
+    return {id,line,code,ago:!!ago,notes:notes?notes.match(/YC|./g):[],segs};
+  });
+  return {stops,runs};
+}
+// direct leg of a run from A to B: first A segment, first B segment after it
+function leg(run,A,B){
+  const i=run.segs.findIndex(g=>g.loc===A); if(i<0) return null;
+  const j=run.segs.findIndex((g,k)=>k>i&&g.loc===B); if(j<0) return null;
+  const d=run.segs[j].stops, dep=run.segs[i].stops[0].t;
+  // Treviglio: arrivo al capolinea/stazione (ultima fermata); altrove: prima fermata del paese
+  const arr=(B==='Treviglio'?d[d.length-1]:d[0]).t;
+  if(arr<=dep) return null;
+  return {run,i,j,dep,arr};
+}
+function journeys(M,A,B,di){
+  const act=M.runs.filter(r=>runsOn(r.code,r.ago,di));
+  const out=[];
+  // direct: merge identical dep/arr (duplicated S5/S6 columns)
+  const seen=new Map();
+  for(const r of act){ const l=leg(r,A,B); if(!l) continue;
+    const k=l.dep+'-'+r.line+'-'+r.segs[l.i].stops[0].name; // stesso bus in colonne S5/S6 diverse
+    if(seen.has(k)){ const p=seen.get(k); p.alt.push(r); if(l.arr<p.arr){p.arr=l.arr;p.legs=[l];} continue; }
+    const j={dep:l.dep,arr:l.arr,legs:[l],alt:[],x:0}; seen.set(k,j); out.push(j);
+  }
+  // one change, anywhere except A/B
+  for(const r1 of act){
+    for(let i=0;i<r1.segs.length;i++){ if(r1.segs[i].loc!==A) continue;
+      let best=null;
+      for(let x=i+1;x<r1.segs.length;x++){ const X=r1.segs[x].loc; if(X===A||X===B||!HUBS.includes(X)) continue;
+        for(const r2 of act){ if(r2===r1) continue;
+          for(let y=0;y<r2.segs.length;y++){ if(r2.segs[y].loc!==X) continue;
+            const l2=leg(r2,X,B); if(!l2||l2.i!==y) continue;
+            // cambio fattibile: stessa fermata >=3', fermata diversa >=8', attesa <=30'
+            let tr=null;
+            for(const s1 of r1.segs[x].stops) for(const s2 of r2.segs[y].stops){
+              const w=s2.t-s1.t, need=s1.name===s2.name?MIN_SAME:MIN_WALK;
+              if(w>=need&&w<=MAX_WAIT&&(!tr||w<tr.wait)) tr={off:s1,on:s2,wait:w,loc:X};
+            }
+            if(!tr) continue;
+            const dep=r1.segs[i].stops[0].t, arr=l2.arr;
+            if(tr.off.t<=dep||arr<=tr.on.t||arr-dep>MAX_TRIP) continue; // scarta refusi orari
+            if(!best||arr<best.arr) best={dep,arr,x:1,alt:[],change:tr,legs:[{run:r1,i,j:x,dep,arr:tr.off.t},{run:r2,i:y,j:l2.j,dep:tr.on.t,arr}]};
+          }
+        }
+      }
+      if(best) out.push(best);
+      break;
+    }
+  }
+  // soluzioni con cambio: solo se utili (niente diretta vicina, oppure non molto piu lenta)
+  const directs=out.filter(j=>j.x===0);
+  const dur=directs.map(j=>j.arr-j.dep).sort((a,b)=>a-b), typical=dur.length?dur[dur.length>>1]:0;
+  const res=out.filter(J=>{
+    if(J.x===0) return true;
+    if(out.some(K=>K!==J&&K.dep>=J.dep&&K.arr<=J.arr&&K.x<=J.x&&(K.dep>J.dep||K.arr<J.arr||K.x<J.x))) return false;
+    if(typical&&J.arr-J.dep>Math.max(typical*3,typical+30)) return false; // troppo lunga rispetto alla diretta
+    const near=directs.some(K=>K.dep>=J.dep-10&&K.dep<=J.dep+60);
+    if(!near) return true;
+    return J.arr-J.dep<=typical+15 && !directs.some(K=>K.dep>=J.dep&&K.arr<=J.arr+10);
+  });
+  // dedupe change journeys with same dep/arr
+  const u=new Map(); for(const j of res){const k=j.dep+'-'+j.arr+'-'+j.x; if(!u.has(k)||j.x===0) u.set(k,j);}
+  return [...u.values()].sort((a,b)=>a.dep-b.dep||a.arr-b.arr);
+}
+function nextServiceDay(M,A,B,from,override,maxDays=14){
+  for(let n=1;n<=maxDays;n++){ const s=addDays(from,n); const di=dayInfo(s,override); const js=journeys(M,A,B,di); if(js.length) return {date:s,j:js[0]}; }
+  return null;
+}
+
+
+// ---- UI ----
+const FEATURES={mappa:false}; // mappa disattivata: impostare true per riattivare lo schema linea
+const M=model(DATA);
+const DOW=['domenica','lunedì','martedì','mercoledì','giovedì','venerdì','sabato'];
+const MON=['gennaio','febbraio','marzo','aprile','maggio','giugno','luglio','agosto','settembre','ottobre','novembre','dicembre'];
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fmtDate=s=>{const d=parseIso(s);return DOW[d.getDay()]+' '+d.getDate()+' '+MON[d.getMonth()];};
+const dur=m=>m<60?m+' min':Math.floor(m/60)+' h '+String(m%60).padStart(2,'0');
+const nowMin=()=>{const d=new Date();return d.getHours()*60+d.getMinutes();};
+const todayIso=()=>iso(new Date());
+
+let st={A:'Fara',B:'Vaprio',date:todayIso(),ov:'auto',band:null,open:null,notice:''};
+try{const s=JSON.parse(localStorage.getItem('busadda:v1')||'{}'); if(ROUTES[s.A]&&ROUTES[s.A].includes(s.B)){st.A=s.A;st.B=s.B;} if(['auto','S','NS'].includes(s.ov)) st.ov=s.ov;}catch(e){}
+if(st.date<START){st.date=START;st.notice='Questi orari partono da lunedì 14 settembre: ti mostro quel giorno.';}
+const save=()=>{try{localStorage.setItem('busadda:v1',JSON.stringify({A:st.A,B:st.B,ov:st.ov}));}catch(e){}};
+
+function fillSelects(){
+  const a=$('#from'), b=$('#to');
+  a.innerHTML=PLACES.map(p=>`<option value="${p}"${p===st.A?' selected':''}>${p}</option>`).join('');
+  b.innerHTML=ROUTES[st.A].map(p=>`<option value="${p}"${p===st.B?' selected':''}>${p}</option>`).join('');
+}
+const bandOf=t=>BANDS.findIndex(([a,b])=>t>=a&&t<b);
+const isToday=()=>st.date===todayIso();
+const lineTxt=j=>[...new Set(j.legs.map(l=>l.run.line))].join(' + ');
+
+function render(){
+  fillSelects();
+  const di=dayInfo(st.date,st.ov);
+  const js=journeys(M,st.A,st.B,di);
+  const now=isToday()?nowMin():-1;
+  if(st.band===null){ const nx=now>=0?js.find(j=>j.dep>=now):null; st.band = nx ? bandOf(nx.dep) : -1; }
+  // giorno
+  const kind = di.holiday ? (di.dow===0?'domenica, nessun servizio':'festivo, nessun servizio')
+    : (di.school?'giorno scolastico':'giorno non scolastico')+(di.august?', agosto: solo corse estive':'');
+  $('#dayline').innerHTML=`<strong>${esc(fmtDate(st.date))}</strong> <span>${esc(kind)}</span>`;
+  $('#notice').textContent=st.notice; $('#notice').hidden=!st.notice;
+  $('#bridge').hidden=!(di.bridge&&!di.holiday&&st.ov==='auto');
+  $('#date').value=st.date;
+  document.querySelectorAll('#ov button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.v===st.ov));
+  renderHero(js,di,now);
+  // fasce
+  const counts=BANDS.map(([a,b])=>js.filter(j=>j.dep>=a&&j.dep<b).length);
+  $('#bands').innerHTML=[['Tutte',-1,js.length],...BANDS.map((b,i)=>[b[2],i,counts[i]])]
+    .map(([t,i,n])=>`<button role="tab" aria-selected="${st.band===i}" data-b="${i}" ${n||st.band===i?'':'class="empty"'}>${t}<small>${n}</small></button>`).join('');
+  // lista
+  const list=st.band<0?js:js.filter(j=>bandOf(j.dep)===st.band);
+  const nextIdx=now<0?-1:js.findIndex(j=>j.dep>=now);
+  $('#hint').hidden=!(js.length&&js.every(j=>j.x));
+  if(!js.length){ $('#list').innerHTML=emptyDay(di); bindEmpty(); return; }
+  if(!list.length){
+    const before=[...js].reverse().find(j=>j.dep<BANDS[st.band][0]), after=js.find(j=>j.dep>=BANDS[st.band][1]);
+    $('#list').innerHTML=`<p class="none">Nessun bus in questa fascia.${before?` Prima: <b>${hm(before.dep)}</b>.`:''}${after?` Dopo: <b>${hm(after.dep)}</b>.`:''}</p>`;
+    return;
+  }
+  $('#list').innerHTML=list.map(j=>{
+    const k=js.indexOf(j), gone=now>=0&&j.dep<now, key=j.dep+'-'+j.arr+'-'+j.x;
+    const o=j.legs[0].run.segs[j.legs[0].i].stops[0];
+    const open=st.open===key;
+    return `<li class="${gone?'gone':''}${k===nextIdx?' next':''}">
+      <button class="row" aria-expanded="${open}" data-k="${key}">
+        <span class="t dep">${hm(j.dep)}</span>
+        <span class="mid"><span class="bar"></span><span class="d">${dur(j.arr-j.dep)}</span></span>
+        <span class="t arr">${hm(j.arr)}</span>
+        <span class="meta"><span class="ln">${esc(lineTxt(j))}</span>${j.x?`<span class="chg">cambio a ${esc(j.change.loc)}</span>`:''}<span class="from">da ${esc(o.name)}</span></span>
+      </button>${open?detail(j,di):''}</li>`;
+  }).join('');
+  bindList();
+}
+
+function renderHero(js,di,now){
+  const h=$('#hero');
+  if(!js.length){h.hidden=true;return;}
+  h.hidden=false;
+  let j,label,sub='';
+  if(now>=0){
+    j=js.find(x=>x.dep>=now);
+    if(!j){
+      const n=nextServiceDay(M,st.A,st.B,st.date,st.ov);
+      h.innerHTML=`<p class="k">Per oggi le corse sono finite</p>${n?`<p class="big">${hm(n.j.dep)}</p><p class="s">primo bus ${esc(fmtDate(n.date))}</p><button class="link" data-go="${n.date}">Mostra ${esc(fmtDate(n.date))}</button>`:''}`;
+      bindGo(h);return;
+    }
+    const w=j.dep-now; label='Prossimo bus'; sub= w===0?'parte adesso':'tra '+dur(w);
+    if(js[js.length-1]===j) sub+=', ultimo della giornata';
+  } else { j=js[0]; label='Primo bus del giorno'; sub='ultimo alle '+hm(js[js.length-1].dep); }
+  const o=j.legs[0].run.segs[j.legs[0].i].stops[0];
+  h.innerHTML=`<p class="k">${label}</p>
+    <p class="big">${hm(j.dep)}<span class="to">→ ${hm(j.arr)}</span></p>
+    <p class="s">${esc(sub)}</p>
+    <p class="s2">${esc(lineTxt(j))} da ${esc(o.name)}${j.x?`, cambio a ${esc(j.change.loc)}`:''}</p>`;
+}
+
+function segStops(run,i,j){ // fermate dall'origine alla destinazione, ordinate per tempo dentro ogni paese
+  const out=[]; for(let k=i;k<=j;k++) for(const s of run.segs[k].stops) out.push({...s,edge:k===i||k===j});
+  return out;
+}
+function legHtml(l){
+  const r=l.run;
+  const stops=segStops(r,l.i,l.j);
+  const tags=[CODE_TXT[r.code]||r.code, ...(r.ago?['anche ad agosto']:[]), ...r.notes.map(n=>NOTE_TXT[n]).filter(Boolean)];
+  return `<div class="leg"><p class="legh"><b>${esc(r.line)}</b> ${esc(tags.join(', '))}</p><ol class="tl">${
+    stops.map(s=>`<li class="${s.edge?'edge':''}"><time>${hm(s.t)}</time><span>${esc(s.loc)} <em>${esc(s.name)}</em></span></li>`).join('')}</ol></div>`;
+}
+function detail(j,di){
+  let body=legHtml(j.legs[0]);
+  if(j.x){
+    const c=j.change;
+    body+=`<p class="change">Cambio a ${esc(c.loc)}: scendi a <b>${esc(c.off.name)}</b> (${hm(c.off.t)}), riparti da <b>${esc(c.on.name)}</b> alle ${hm(c.on.t)}. Attesa ${c.wait} min${c.off.name!==c.on.name?', a piedi tra due fermate':''}.</p>`+legHtml(j.legs[1]);
+  }
+  // ritorno
+  const back=journeys(M,st.B,st.A,di).filter(r=>r.dep>=j.arr+10);
+  const backHtml=back.length
+    ? `<p class="backh">Ritorno da ${esc(PLACE_NAME[st.B])}</p><div class="chips">${back.slice(0,4).map(r=>`<button data-back="${r.dep}-${r.arr}-${r.x}">${hm(r.dep)}${r.x?'*':''}</button>`).join('')}${back.length>4?`<span class="last">ultimo ${hm(back[back.length-1].dep)}</span>`:''}</div>${back.slice(0,4).some(r=>r.x)?'<p class="fine">* con cambio</p>':''}`
+    : `<p class="backh warn">Nessun ritorno per ${esc(PLACE_NAME[st.A])} dopo l'arrivo, in questo giorno.</p>`;
+  return `<div class="detail">${body}${backHtml}</div>`;
+}
+function emptyDay(di){
+  const n=nextServiceDay(M,st.A,st.B,st.date,st.ov,30);
+  const why=di.holiday?'Nessun servizio la domenica e nei festivi.':`Nessuna corsa ${esc(PLACE_NAME[st.A])} → ${esc(PLACE_NAME[st.B])} in un ${di.school?'giorno scolastico':'giorno non scolastico'} ${di.dow===6?'di sabato':''}.`;
+  return `<p class="none">${why}${n?` Prima corsa utile: <b>${esc(fmtDate(n.date))} alle ${hm(n.j.dep)}</b>. <button class="link" data-go="${n.date}">Vai a quel giorno</button>`:''}</p>`;
+}
+function bindGo(root){root.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>{st.date=b.dataset.go;st.band=-1;st.open=null;st.notice='';render();});}
+function bindEmpty(){bindGo($('#list'));}
+function bindList(){
+  document.querySelectorAll('#list .row').forEach(b=>b.onclick=()=>{st.open=st.open===b.dataset.k?null:b.dataset.k;render();
+    const el=document.querySelector(`#list .row[data-k="${st.open}"]`); if(el) el.scrollIntoView({block:'nearest'});});
+  document.querySelectorAll('#list [data-back]').forEach(b=>b.onclick=()=>{
+    [st.A,st.B]=[st.B,st.A]; st.open=b.dataset.back; st.band=-1; save(); render();
+    const el=document.querySelector(`#list .row[data-k="${st.open}"]`); if(el) el.scrollIntoView({block:'center'});});
+}
+
+$('#from').onchange=e=>{st.A=e.target.value; if(!ROUTES[st.A].includes(st.B)) st.B=ROUTES[st.A][0]; st.open=null; st.band=null; save(); render();};
+$('#to').onchange=e=>{st.B=e.target.value; st.open=null; st.band=null; save(); render();};
+$('#swap').onclick=()=>{[st.A,st.B]=[st.B,st.A]; st.open=null; st.band=null; save(); render();};
+$('#date').onchange=e=>{ if(!e.target.value) return; st.date=e.target.value; st.band=null; st.open=null; st.notice=st.date<START?'Attenzione: prima del 14 settembre vale l\'orario precedente, non incluso qui.':''; render();};
+$('#today').onclick=()=>{st.date=todayIso(); st.band=null; st.open=null; st.notice=st.date<START?'Oggi vale ancora l\'orario precedente: questi orari partono dal 14 settembre.':''; render();};
+$('#ov').onclick=e=>{const v=e.target.closest('button')?.dataset.v; if(!v) return; st.ov=v; st.open=null; save(); render();};
+$('#bands').onclick=e=>{const b=e.target.closest('button'); if(!b) return; st.band=+b.dataset.b; st.open=null; render();};
+if(FEATURES.mappa){ const m=$('#mappa'); m.hidden=false; m.innerHTML='<p class="none">Schema linea: Treviglio, Badalasco, Fara, Canonica, Vaprio, Trezzo; Cassano via Fara.</p>'; }
+render();
+setInterval(()=>{ const a=document.activeElement; if(isToday()&&!document.hidden&&!(a&&/SELECT|INPUT/.test(a.tagName))) render(); },30000);
+
+</script>
 </body>
 </html>

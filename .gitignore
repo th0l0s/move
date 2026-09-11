@@ -9,3 +9,7 @@ node_modules/
 
 # i libretti dei gestori: si consultano, non si ripubblicano
 *.pdf
+
+# artefatti degli strumenti di estrazione
+__pycache__/
+*.png

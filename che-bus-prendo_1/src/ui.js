@@ -36,8 +36,6 @@ function render(){
   $('#dayline').innerHTML=`<strong>${esc(fmtDate(st.date))}</strong> <span>${esc(kind)}</span>`;
   $('#notice').textContent=st.notice; $('#notice').hidden=!st.notice;
   $('#bridge').hidden=!(di.bridge&&!di.holiday&&st.ov==='auto');
-  $('#stagione').hidden = st.date < SUMMER_WARN_FROM;
-  renderFare();
   $('#date').value=st.date;
   document.querySelectorAll('#ov button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.v===st.ov));
   renderHero(js,di,now);
@@ -68,19 +66,6 @@ function render(){
       </button>${open?detail(j,di):''}</li>`;
   }).join('');
   bindList();
-}
-
-function renderFare(){
-  const el=$('#tariffa'), f=fare(st.A,st.B);
-  if(!f){ el.hidden=true; return; }
-  el.hidden=false;
-  const head=`Biglietto ${esc(PLACE_NAME[st.A])} \u2192 ${esc(PLACE_NAME[st.B])}: `;
-  el.innerHTML = f.band
-    ? head+`<b>${f.text}</b> (fascia ${f.band}), <b>${f.onboardText}</b> se lo compri a bordo.`+(f.note?' '+esc(f.note)+'.':'')
-      +' <button class="link" data-tk>Come si compra</button>'
-    : head+esc(f.note)+'. <button class="link" data-tk>Come si compra</button>';
-  const b=el.querySelector('[data-tk]');
-  if(b) b.onclick=()=>{const d=$('#biglietti'); d.open=true; d.scrollIntoView({block:'start',behavior:'smooth'});};
 }
 
 function renderHero(js,di,now){

@@ -76,22 +76,6 @@ li.gone .t,li.gone .from{color:var(--gone)}li.gone .ln{opacity:.5}
 .chips button{border:1px solid var(--accent);color:var(--accent);background:none;border-radius:999px;padding:3px 12px;font:600 1.05rem var(--num);cursor:pointer}
 .chips .last,.fine{font-size:.8rem;color:var(--muted);margin:4px 0 0}
 .hint{margin:0 0 8px;font-size:.88rem;color:var(--muted)}
-#tariffa{margin:8px 0 0;font-size:.9rem;color:var(--muted)}
-#tariffa b{color:var(--ink)}
-#biglietti{margin:22px 0 0;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:0 14px}
-#biglietti>summary{cursor:pointer;padding:12px 0;font:700 1.15rem var(--num);list-style:none}
-#biglietti>summary::-webkit-details-marker{display:none}
-#biglietti>summary::before{content:"\25B8";display:inline-block;margin-right:8px;transition:transform .15s}
-#biglietti[open]>summary::before{transform:rotate(90deg)}
-#biglietti .bx{border-top:1px solid var(--line);padding:10px 0 14px;font-size:.9rem}
-#biglietti h3{font:600 .85rem var(--body);color:var(--ink);margin:12px 0 4px;text-transform:uppercase;letter-spacing:.4px}
-#biglietti h3:first-child{margin-top:0}
-#biglietti ul,#biglietti ol{margin:0;padding-left:18px}
-#biglietti li{margin:0 0 5px}
-#biglietti p{margin:0 0 6px;color:var(--muted)}
-#biglietti .tot{font-weight:600;color:var(--ink)}
-#biglietti ul.src{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.85rem}
-#biglietti ul.src li{margin:0}
 .none{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px;margin:0}
 footer{margin-top:24px;font-size:.8rem;color:var(--muted)}
 footer p{margin:0 0 6px}
@@ -127,50 +111,15 @@ footer ul+ul{margin-top:8px}
 <p id="notice" hidden></p>
 <p id="bridge" class="warnbox" hidden>Molte scuole superiori della provincia di Bergamo sospendono le lezioni in questo giorno: le corse scolastiche potrebbero non esserci. Controlla gli <a href="https://www.saiautolinee.it/notizie" target="_blank" rel="noopener noreferrer">avvisi SAI</a> o scegli Non scol.</p>
 
-<p id="stagione" class="warnbox" hidden>Periodo estivo: questi sono gli orari invernali in vigore dal 14/09/2026. In estate S.A.I. pubblica un orario ridotto (l'edizione precedente era in vigore dal 3 agosto): prima di partire controlla il <a href="https://www.saiautolinee.it/orari-e-linee#lines" target="_blank" rel="noopener noreferrer">PDF in vigore</a>.</p>
-
 <section id="hero" aria-live="polite" hidden></section>
-<p id="tariffa"></p>
 <div id="bands" role="tablist" aria-label="Fasce orarie"></div>
 <p id="hint" class="hint" hidden>Nessun bus diretto su questa tratta: sono indicate le soluzioni con un cambio.</p>
 <ul id="list"></ul>
 <section id="mappa" hidden></section>
 
-<details id="biglietti">
-<summary>Biglietti: quanto costa e dove si compra</summary>
-<div class="bx">
-<h3>Quanto costa</h3>
-<p>Corsa semplice, tariffe S.A.I. in vigore dal 1&deg; settembre 2026.</p>
-<ul>
-<li>Fara &harr; Vaprio, Cassano, Trezzo centro, Treviglio centro: <b>3,00 &euro;</b> (fascia B)</li>
-<li>Fara &harr; Trezzo I.T.C. o Treviglio istituti (ITIS, Agraria): <b>3,60 &euro;</b> (fascia C)</li>
-<li>Vaprio &harr; Trezzo, Canonica &harr; Fara o Vaprio: <b>2,40 &euro;</b> (fascia A)</li>
-<li>Vaprio &harr; Cassano: non presente nel tariffario S.A.I., chiedi all&#39;autista</li>
-</ul>
-<h3>Come si compra</h3>
-<ol>
-<li><b>App MooneyGo</b> &mdash; Acquista &rarr; Trasporto pubblico &rarr; S.A.I. Treviglio, scegli partenza e destinazione: la tariffa &egrave; calcolata da sola. Il biglietto di corsa semplice va aperto e <b>attivato</b> nell&#39;app subito prima di salire; lo screenshot non vale.</li>
-<li><b>Rivendite</b> &mdash; Fara: Edicola-Tabaccheria Piazzalunga, Via Gerundio 2 (chiuso mar. pom.); Effeg, Via Locatelli 17 (chiuso sab. pom. e dom.). Vaprio: Edicola Lunetta, Via Perego; Edicola Centrale, P.zza Chiesa 4. Canonica: Edicola Marcandalli, Via Bergamo. Trezzo: Tabaccheria Meroni, Via Biffi 10. Badalasco: Bar Italia, Via Veneziana.</li>
-<li><b>A bordo</b> &mdash; solo corsa semplice, con <b>sovrapprezzo di 1,80 &euro;</b>: la tratta da 3,00 &euro; costa <span class="tot">4,80 &euro;</span>. Serve moneta.</li>
-</ol>
-<h3>Ragazzi e bambini</h3>
-<ul>
-<li><b>Sotto il metro di altezza</b>: gratis, accompagnati da un adulto, senza occupare un posto a sedere e nel limite di un bambino per adulto.</li>
-<li><b>Fino a 14 anni</b>: gratis con <b>Io Viaggio in Famiglia</b>, se accompagnati da un familiare (genitore, fratello, zio, nonno) con biglietto valido per la stessa tratta. Non &egrave; automatico: serve la tessera con foto o il modulo di autocertificazione, valido al massimo 60 giorni.</li>
-<li>Fuori da questi due casi il ragazzo paga la tariffa intera: non esiste una soglia di et&agrave; che dia la gratuit&agrave; da sola.</li>
-</ul>
-<ul class="src">
-<li><a href="https://www.saiautolinee.it/tariffe" target="_blank" rel="noopener noreferrer">Calcolatore tariffe S.A.I.</a></li>
-<li><a href="https://www.saiautolinee.it/mooneygo" target="_blank" rel="noopener noreferrer">Guida MooneyGo</a></li>
-<li><a href="https://www.bergamotrasporti.it/regole-di-viaggio/" target="_blank" rel="noopener noreferrer">Regole di viaggio</a></li>
-<li><a href="https://www.bergamotrasporti.it/titoli-di-viaggio/io-viaggio/" target="_blank" rel="noopener noreferrer">Io Viaggio in Famiglia</a></li>
-</ul>
-</div>
-</details>
-
 <footer>
   <p>Orari indicativi: le corse possono subire ritardi. In caso di dubbio fanno fede le tabelle ufficiali e gli avvisi del gestore.</p>
-  <p>Dati estratti dai PDF ufficiali S.A.I. in vigore dal 14/09/2026: linea B812 e linea T10, quest'ultima con il servizio Treviglio–Badalasco–Fara–Cassano. Le tabelle dei poli scolastici 2026/27 (Treviglio rev. 01 del 09/09/2026, Cassano rev. 00 del 24/08/2026, dichiarata provvisoria) riepilogano le stesse corse e sono state usate solo come riscontro.</p><p>Orario invernale/scolastico: vale dal 14 settembre 2026 fino alla prossima edizione. In agosto circolano solo le corse marcate AGO; per il periodo estivo S.A.I. pubblica un orario a sé.</p>
+  <p>Dati estratti dai PDF ufficiali in vigore dal 14/09/2026: linea B812, linea T10 con servizio Treviglio–Fara–Cassano, poli scolastici di Treviglio e Cassano (rev. 09/09/2026).</p>
   <p>Cambi: minimo 3 min alla stessa fermata, 8 min tra fermate diverse, attesa massima 30 min. Giorni scolastici secondo il calendario Lombardia 2026/27.</p>
 
   <h2>Fonti ufficiali e contatti</h2>

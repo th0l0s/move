@@ -14,28 +14,6 @@ const SCHOOL_OFF = [['2026-12-23','2027-01-05'],['2027-02-08','2027-02-09'],['20
 // Provincia di Bergamo: sospensioni piu condivise dalle scuole superiori (non obbligatorie per tutte)
 const BRIDGES_BG = ['2026-11-02','2026-12-07','2027-03-31'];
 const FIXED_HOLIDAYS = ['01-01','01-06','04-25','05-01','06-02','08-15','11-01','12-08','12-25','12-26'];
-// Stagionalita: questo e' l'orario invernale/scolastico in vigore dal 14/09/2026.
-// S.A.I. pubblica un orario estivo distinto (l'edizione precedente era "in vigore dal 03/08/2026").
-// Dopo la fine delle lezioni gli orari qui riportati vanno riverificati sul PDF in vigore.
-const SUMMER_WARN_FROM = '2027-06-09';
-// Tariffe S.A.I. in vigore dal 1 settembre 2026 (fasce chilometriche Bergamo).
-const FARE_BANDS = {A1:1.80, A:2.40, B:3.00, C:3.60, D:4.20, E:4.80};
-const FARE_ONBOARD = 1.80; // sovrapprezzo per il biglietto acquistato a bordo
-const FARE_PAIRS = { // chiave: localita ordinate alfabeticamente
-  'Cassano|Fara':{band:'B'},
-  'Fara|Vaprio':{band:'B'},
-  'Fara|Trezzo':{band:'B',note:'3,60 € (fascia C) se scendi al polo scolastico I.T.C. di via Nenni'},
-  'Fara|Treviglio':{band:'B',note:'3,60 € (fascia C) se scendi alla zona istituti (ITIS, Agraria)'},
-  'Cassano|Vaprio':{band:null,note:'tariffa non presente nel tariffario S.A.I., chiedi all\'autista o usa il calcolatore ufficiale'}
-};
-const eur = v => v.toFixed(2).replace('.',',')+' \u20ac';
-function fare(A,B){
-  const f=FARE_PAIRS[[A,B].sort().join('|')];
-  if(!f) return null;
-  if(!f.band) return {band:null,note:f.note};
-  const p=FARE_BANDS[f.band];
-  return {band:f.band,price:p,onboard:p+FARE_ONBOARD,text:eur(p),onboardText:eur(p+FARE_ONBOARD),note:f.note||''};
-}
 
 function iso(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
 function parseIso(s){const [y,m,d]=s.split('-').map(Number);return new Date(y,m-1,d);}
@@ -143,4 +121,4 @@ function nextServiceDay(M,A,B,from,override,maxDays=14){
   for(let n=1;n<=maxDays;n++){ const s=addDays(from,n); const di=dayInfo(s,override); const js=journeys(M,A,B,di); if(js.length) return {date:s,j:js[0]}; }
   return null;
 }
-if(typeof module!=='undefined') module.exports={model,journeys,dayInfo,hm,nextServiceDay,easterMonday,ROUTES,runsOn,fare,SUMMER_WARN_FROM};
+if(typeof module!=='undefined') module.exports={model,journeys,dayInfo,hm,nextServiceDay,easterMonday,ROUTES,runsOn};

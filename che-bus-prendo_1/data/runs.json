@@ -1,0 +1,8090 @@
+[
+{
+"line": "B812",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"PONTIROLO NUOVO - Viale Italia (municipio)",
+365
+],
+[
+"PONTIROLO NUOVO - Viale Mazzini fronte civ. 63",
+366
+],
+[
+"CISERANO - Via Circonvallazione Sud fronte civ. 10",
+373
+],
+[
+"CISERANO - SP122 Francesca",
+373
+],
+[
+"ZINGONIA - corso Europa c/o Fai Da Te",
+374
+],
+[
+"VERDELLINO - Corso Africa",
+376
+],
+[
+"VERDELLINO Via Gramsci civ. 22",
+378
+],
+[
+"VERDELLINO - Via Morletta, FS Nodo V1",
+379
+],
+[
+"VERDELLO - Via Don Giavazzi, banca",
+381
+],
+[
+"LEVATE - Corso Europa, parcheggio",
+386
+],
+[
+"STEZZANO - Via Papa Giovanni XXIII 7",
+395
+]
+]
+},
+{
+"line": "B812",
+"code": "S6",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+374
+],
+[
+"TREVIGLIO - P.zza del Popolo",
+376
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+370
+],
+[
+"TREVIGLIO - V.le Montegrappa, CINEMA",
+371
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+375
+],
+[
+"TREVIGLIO - Via Isser, 14 - SAME",
+378
+],
+[
+"BADALASCO - Via Veneziana Bar Italia",
+384
+],
+[
+"FARA GERA D'ADDA - Via Locatelli 11",
+391
+],
+[
+"FARA GERA D'ADDA - Via Bergamo civ. 305",
+392
+],
+[
+"CANONICA D'ADDA - Via Lodi 40 - lato municipio",
+396
+],
+[
+"CANONICA D'ADDA - Via Bergamo fronte edicola",
+398
+],
+[
+"PONTIROLO NUOVO - Viale Italia (municipio)",
+404
+],
+[
+"PONTIROLO NUOVO - Viale Mazzini fronte civ. 63",
+405
+],
+[
+"CISERANO - Via Circonvallazione Sud fronte civ. 10",
+416
+],
+[
+"CISERANO - SP122 Francesca",
+416
+],
+[
+"ZINGONIA - corso Europa c/o Fai Da Te",
+417
+],
+[
+"VERDELLINO - Corso Africa",
+418
+],
+[
+"VERDELLINO Via Gramsci civ. 22",
+420
+],
+[
+"VERDELLINO - Via Morletta, FS Nodo V1",
+422
+],
+[
+"VERDELLO - Via Don Giavazzi, banca",
+423
+],
+[
+"LEVATE - Corso Europa, parcheggio",
+431
+],
+[
+"STEZZANO - Via Papa Giovanni XXIII 7",
+443
+],
+[
+"BERGAMO - Colognola Chiesa",
+448
+],
+[
+"BERGAMO - Stazione Autolinee, pensilina 11",
+460
+]
+]
+},
+{
+"line": "B812",
+"code": "NS6",
+"ago": true,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+375
+],
+[
+"TREVIGLIO - P.zza del Popolo",
+377
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+378
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+379
+],
+[
+"TREVIGLIO - Via Isser, 14 - SAME",
+382
+],
+[
+"BADALASCO - Via Veneziana Bar Italia",
+386
+],
+[
+"FARA GERA D'ADDA - Via Locatelli 11",
+393
+],
+[
+"FARA GERA D'ADDA - Via Bergamo civ. 305",
+395
+],
+[
+"CANONICA D'ADDA - Via Lodi 40 - lato municipio",
+398
+],
+[
+"CANONICA D'ADDA - Via Matteotti chiesa",
+399
+],
+[
+"VAPRIO D'ADDA - via Perego 42/44 - ATM",
+405
+],
+[
+"CANONICA D'ADDA - Via Matteotti fronte chiesa",
+410
+],
+[
+"CANONICA D'ADDA - Via Bergamo fronte edicola",
+411
+],
+[
+"PONTIROLO NUOVO - Viale Italia (municipio)",
+416
+],
+[
+"PONTIROLO NUOVO - Viale Mazzini fronte civ. 63",
+417
+],
+[
+"CISERANO - Via Circonvallazione Sud fronte civ. 10",
+422
+],
+[
+"CISERANO - SP122 Francesca",
+424
+],
+[
+"ZINGONIA - corso Europa c/o Fai Da Te",
+425
+],
+[
+"VERDELLINO - Corso Africa",
+426
+],
+[
+"VERDELLINO Via Gramsci civ. 22",
+428
+],
+[
+"VERDELLINO - E-BRT",
+430
+]
+]
+},
+{
+"line": "B812",
+"code": "S6",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+404
+],
+[
+"TREVIGLIO - P.zza del Popolo",
+406
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+400
+],
+[
+"TREVIGLIO - V.le Montegrappa, CINEMA",
+401
+],
+[
+"TREVIGLIO - Piazza Mentana",
+407
+],
+[
+"CASTEL ROZZONE - Piazza Castello",
+415
+],
+[
+"ARCENE - Corso Europa SS42",
+420
+],
+[
+"VERDELLO - Via Papa Giovanni XXIII, distributore",
+425
+],
+[
+"LEVATE - Corso Europa, parcheggio",
+436
+],
+[
+"STEZZANO - Via Papa Giovanni XXIII 7",
+444
+],
+[
+"BERGAMO - Colognola Chiesa",
+453
+],
+[
+"BERGAMO - Stazione Autolinee, pensilina 11",
+465
+]
+]
+},
+{
+"line": "B812",
+"code": "S6",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"FARA GERA D'ADDA - Via Locatelli 11",
+410
+],
+[
+"FARA GERA D'ADDA - Via Bergamo civ. 305",
+411
+],
+[
+"CANONICA D'ADDA - Via Lodi 40 - lato municipio",
+414
+],
+[
+"CANONICA D'ADDA - Via Bergamo fronte edicola",
+415
+],
+[
+"CISERANO - Via Circonvallazione Sud fronte civ. 10",
+422
+]
+]
+},
+{
+"line": "B812",
+"code": "NS6",
+"ago": true,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+420
+],
+[
+"TREVIGLIO - P.zza del Popolo",
+422
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+423
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+424
+],
+[
+"TREVIGLIO - Via Isser, 14 - SAME",
+427
+],
+[
+"BADALASCO - Via Veneziana Bar Italia",
+431
+],
+[
+"FARA GERA D'ADDA - Via Locatelli 11",
+438
+],
+[
+"FARA GERA D'ADDA - Via Bergamo civ. 305",
+440
+],
+[
+"CANONICA D'ADDA - Via Lodi 40 - lato municipio",
+443
+],
+[
+"CANONICA D'ADDA - Via Matteotti chiesa",
+444
+],
+[
+"VAPRIO D'ADDA - via Perego 42/44 - ATM",
+450
+],
+[
+"CANONICA D'ADDA - Via Matteotti fronte chiesa",
+455
+],
+[
+"CANONICA D'ADDA - Via Bergamo fronte edicola",
+456
+],
+[
+"PONTIROLO NUOVO - Viale Italia (municipio)",
+461
+],
+[
+"PONTIROLO NUOVO - Viale Mazzini fronte civ. 63",
+462
+],
+[
+"CISERANO - Via Circonvallazione Sud fronte civ. 10",
+467
+],
+[
+"CISERANO - SP122 Francesca",
+469
+],
+[
+"ZINGONIA - corso Europa c/o Fai Da Te",
+470
+],
+[
+"VERDELLINO - Corso Africa",
+471
+],
+[
+"VERDELLINO Via Gramsci civ. 22",
+473
+],
+[
+"VERDELLINO - E-BRT",
+475
+]
+]
+},
+{
+"line": "B812",
+"code": "S6",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+480
+],
+[
+"TREVIGLIO - P.zza del Popolo",
+482
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+483
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+484
+],
+[
+"TREVIGLIO - Via Isser, 14 - SAME",
+487
+],
+[
+"BADALASCO - Via Veneziana Bar Italia",
+491
+],
+[
+"FARA GERA D'ADDA - Via Locatelli 11",
+498
+],
+[
+"FARA GERA D'ADDA - Via Bergamo civ. 305",
+500
+],
+[
+"CANONICA D'ADDA - Via Lodi 40 - lato municipio",
+503
+],
+[
+"CANONICA D'ADDA - Via Matteotti chiesa",
+504
+],
+[
+"VAPRIO D'ADDA - via Perego 42/44 - ATM",
+510
+],
+[
+"CANONICA D'ADDA - Via Matteotti fronte chiesa",
+515
+],
+[
+"CANONICA D'ADDA - Via Bergamo fronte edicola",
+516
+],
+[
+"PONTIROLO NUOVO - Viale Italia (municipio)",
+521
+],
+[
+"PONTIROLO NUOVO - Viale Mazzini fronte civ. 63",
+522
+],
+[
+"CISERANO - Via Circonvallazione Sud fronte civ. 10",
+527
+],
+[
+"CISERANO - SP122 Francesca",
+529
+],
+[
+"ZINGONIA - corso Europa c/o Fai Da Te",
+530
+],
+[
+"VERDELLINO - Corso Africa",
+531
+],
+[
+"VERDELLINO Via Gramsci civ. 22",
+533
+],
+[
+"VERDELLINO - E-BRT",
+535
+]
+]
+},
+{
+"line": "B812",
+"code": "NS6",
+"ago": true,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+495
+],
+[
+"TREVIGLIO - P.zza del Popolo",
+497
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+498
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+499
+],
+[
+"TREVIGLIO - Via Isser, 14 - SAME",
+502
+],
+[
+"BADALASCO - Via Veneziana Bar Italia",
+506
+],
+[
+"FARA GERA D'ADDA - Via Locatelli 11",
+513
+],
+[
+"FARA GERA D'ADDA - Via Bergamo civ. 305",
+515
+],
+[
+"CANONICA D'ADDA - Via Lodi 40 - lato municipio",
+518
+],
+[
+"CANONICA D'ADDA - Via Matteotti chiesa",
+519
+],
+[
+"VAPRIO D'ADDA - via Perego 42/44 - ATM",
+525
+],
+[
+"CANONICA D'ADDA - Via Matteotti fronte chiesa",
+530
+],
+[
+"CANONICA D'ADDA - Via Bergamo fronte edicola",
+531
+],
+[
+"PONTIROLO NUOVO - Viale Italia (municipio)",
+536
+],
+[
+"PONTIROLO NUOVO - Viale Mazzini fronte civ. 63",
+537
+],
+[
+"CISERANO - Via Circonvallazione Sud fronte civ. 10",
+542
+],
+[
+"CISERANO - SP122 Francesca",
+544
+],
+[
+"ZINGONIA - corso Europa c/o Fai Da Te",
+545
+],
+[
+"VERDELLINO - Corso Africa",
+546
+],
+[
+"VERDELLINO Via Gramsci civ. 22",
+548
+],
+[
+"VERDELLINO - E-BRT",
+550
+]
+]
+},
+{
+"line": "B812",
+"code": "NS6",
+"ago": true,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+540
+],
+[
+"TREVIGLIO - P.zza del Popolo",
+542
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+543
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+544
+],
+[
+"TREVIGLIO - Via Isser, 14 - SAME",
+547
+],
+[
+"BADALASCO - Via Veneziana Bar Italia",
+551
+],
+[
+"FARA GERA D'ADDA - Via Locatelli 11",
+558
+],
+[
+"FARA GERA D'ADDA - Via Bergamo civ. 305",
+560
+],
+[
+"CANONICA D'ADDA - Via Lodi 40 - lato municipio",
+563
+],
+[
+"CANONICA D'ADDA - Via Matteotti chiesa",
+564
+],
+[
+"VAPRIO D'ADDA - via Perego 42/44 - ATM",
+570
+],
+[
+"CANONICA D'ADDA - Via Matteotti fronte chiesa",
+575
+],
+[
+"CANONICA D'ADDA - Via Bergamo fronte edicola",
+576
+],
+[
+"PONTIROLO NUOVO - Viale Italia (municipio)",
+581
+],
+[
+"PONTIROLO NUOVO - Viale Mazzini fronte civ. 63",
+582
+],
+[
+"CISERANO - Via Circonvallazione Sud fronte civ. 10",
+587
+],
+[
+"CISERANO - SP122 Francesca",
+589
+],
+[
+"ZINGONIA - corso Europa c/o Fai Da Te",
+590
+],
+[
+"VERDELLINO - Corso Africa",
+591
+],
+[
+"VERDELLINO Via Gramsci civ. 22",
+593
+],
+[
+"VERDELLINO - E-BRT",
+595
+]
+]
+},
+{
+"line": "B812",
+"code": "S6",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+555
+],
+[
+"TREVIGLIO - P.zza del Popolo",
+557
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+558
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+559
+],
+[
+"TREVIGLIO - Via Isser, 14 - SAME",
+562
+],
+[
+"BADALASCO - Via Veneziana Bar Italia",
+566
+],
+[
+"FARA GERA D'ADDA - Via Locatelli 11",
+573
+],
+[
+"FARA GERA D'ADDA - Via Bergamo civ. 305",
+575
+],
+[
+"CANONICA D'ADDA - Via Lodi 40 - lato municipio",
+578
+],
+[
+"CANONICA D'ADDA - Via Matteotti chiesa",
+579
+],
+[
+"VAPRIO D'ADDA - via Perego 42/44 - ATM",
+585
+],
+[
+"CANONICA D'ADDA - Via Matteotti fronte chiesa",
+590
+],
+[
+"CANONICA D'ADDA - Via Bergamo fronte edicola",
+591
+],
+[
+"PONTIROLO NUOVO - Viale Italia (municipio)",
+596
+],
+[
+"PONTIROLO NUOVO - Viale Mazzini fronte civ. 63",
+597
+],
+[
+"CISERANO - Via Circonvallazione Sud fronte civ. 10",
+602
+],
+[
+"CISERANO - SP122 Francesca",
+604
+],
+[
+"ZINGONIA - corso Europa c/o Fai Da Te",
+605
+],
+[
+"VERDELLINO - Corso Africa",
+606
+],
+[
+"VERDELLINO Via Gramsci civ. 22",
+608
+],
+[
+"VERDELLINO - E-BRT",
+610
+]
+]
+},
+{
+"line": "B812",
+"code": "NS5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+645
+],
+[
+"TREVIGLIO - P.zza del Popolo",
+647
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+648
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+649
+],
+[
+"TREVIGLIO - Via Isser, 14 - SAME",
+652
+],
+[
+"BADALASCO - Via Veneziana Bar Italia",
+656
+],
+[
+"FARA GERA D'ADDA - Via Locatelli 11",
+663
+],
+[
+"FARA GERA D'ADDA - Via Bergamo civ. 305",
+665
+],
+[
+"CANONICA D'ADDA - Via Lodi 40 - lato municipio",
+668
+],
+[
+"CANONICA D'ADDA - Via Matteotti chiesa",
+669
+],
+[
+"VAPRIO D'ADDA - via Perego 42/44 - ATM",
+675
+],
+[
+"CANONICA D'ADDA - Via Matteotti fronte chiesa",
+680
+],
+[
+"CANONICA D'ADDA - Via Bergamo fronte edicola",
+681
+],
+[
+"PONTIROLO NUOVO - Viale Italia (municipio)",
+686
+],
+[
+"PONTIROLO NUOVO - Viale Mazzini fronte civ. 63",
+687
+],
+[
+"CISERANO - Via Circonvallazione Sud fronte civ. 10",
+692
+],
+[
+"CISERANO - SP122 Francesca",
+694
+],
+[
+"ZINGONIA - corso Europa c/o Fai Da Te",
+695
+],
+[
+"VERDELLINO - Corso Africa",
+696
+],
+[
+"VERDELLINO Via Gramsci civ. 22",
+698
+],
+[
+"VERDELLINO - E-BRT",
+700
+]
+]
+},
+{
+"line": "B812",
+"code": "S6",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+664
+],
+[
+"TREVIGLIO - P.zza del Popolo",
+666
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+660
+],
+[
+"TREVIGLIO - V.le Montegrappa, CINEMA",
+661
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+667
+],
+[
+"TREVIGLIO - Via Isser, 14 - SAME",
+670
+],
+[
+"BADALASCO - Via Veneziana Bar Italia",
+673
+],
+[
+"FARA GERA D'ADDA - Via Locatelli 11",
+678
+],
+[
+"FARA GERA D'ADDA - Via Bergamo civ. 305",
+679
+],
+[
+"CANONICA D'ADDA - Via Lodi 40 - lato municipio",
+681
+],
+[
+"CANONICA D'ADDA - Via Bergamo fronte edicola",
+685
+],
+[
+"PONTIROLO NUOVO - Viale Italia (municipio)",
+690
+],
+[
+"PONTIROLO NUOVO - Viale Mazzini fronte civ. 63",
+691
+],
+[
+"CISERANO - Via Circonvallazione Sud fronte civ. 10",
+696
+],
+[
+"CISERANO - SP122 Francesca",
+697
+],
+[
+"ZINGONIA - corso Europa c/o Fai Da Te",
+700
+],
+[
+"VERDELLINO - Corso Africa",
+701
+],
+[
+"VERDELLINO Via Gramsci civ. 22",
+703
+],
+[
+"VERDELLINO - Via Morletta, FS Nodo V1",
+704
+],
+[
+"VERDELLO - Via Don Giavazzi, banca",
+706
+],
+[
+"LEVATE - Corso Europa, parcheggio",
+713
+],
+[
+"STEZZANO - Via Papa Giovanni XXIII 7",
+719
+],
+[
+"BERGAMO - Colognola Chiesa",
+725
+],
+[
+"BERGAMO - Stazione Autolinee, pensilina 11",
+730
+]
+]
+},
+{
+"line": "B812",
+"code": "NS6",
+"ago": true,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+675
+],
+[
+"TREVIGLIO - P.zza del Popolo",
+677
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+678
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+679
+],
+[
+"TREVIGLIO - Via Isser, 14 - SAME",
+682
+],
+[
+"BADALASCO - Via Veneziana Bar Italia",
+686
+],
+[
+"FARA GERA D'ADDA - Via Locatelli 11",
+693
+],
+[
+"FARA GERA D'ADDA - Via Bergamo civ. 305",
+695
+],
+[
+"CANONICA D'ADDA - Via Lodi 40 - lato municipio",
+698
+],
+[
+"CANONICA D'ADDA - Via Matteotti chiesa",
+699
+],
+[
+"VAPRIO D'ADDA - via Perego 42/44 - ATM",
+705
+],
+[
+"CANONICA D'ADDA - Via Matteotti fronte chiesa",
+710
+],
+[
+"CANONICA D'ADDA - Via Bergamo fronte edicola",
+711
+],
+[
+"PONTIROLO NUOVO - Viale Italia (municipio)",
+716
+],
+[
+"PONTIROLO NUOVO - Viale Mazzini fronte civ. 63",
+717
+],
+[
+"CISERANO - Via Circonvallazione Sud fronte civ. 10",
+722
+],
+[
+"CISERANO - SP122 Francesca",
+724
+],
+[
+"ZINGONIA - corso Europa c/o Fai Da Te",
+725
+],
+[
+"VERDELLINO - Corso Africa",
+726
+],
+[
+"VERDELLINO Via Gramsci civ. 22",
+728
+],
+[
+"VERDELLINO - E-BRT",
+730
+]
+]
+},
+{
+"line": "B812",
+"code": "S6",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+724
+],
+[
+"TREVIGLIO - P.zza del Popolo",
+726
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+720
+],
+[
+"TREVIGLIO - V.le Montegrappa, CINEMA",
+721
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+728
+],
+[
+"TREVIGLIO - Via Isser, 14 - SAME",
+730
+],
+[
+"BADALASCO - Via Veneziana Bar Italia",
+733
+],
+[
+"FARA GERA D'ADDA - Via Locatelli 11",
+738
+],
+[
+"FARA GERA D'ADDA - Via Bergamo civ. 305",
+739
+],
+[
+"CANONICA D'ADDA - Via Lodi 40 - lato municipio",
+743
+],
+[
+"CANONICA D'ADDA - Via Bergamo fronte edicola",
+745
+],
+[
+"PONTIROLO NUOVO - Viale Italia (municipio)",
+750
+],
+[
+"PONTIROLO NUOVO - Viale Mazzini fronte civ. 63",
+751
+],
+[
+"CISERANO - Via Circonvallazione Sud fronte civ. 10",
+758
+],
+[
+"CISERANO - SP122 Francesca",
+760
+],
+[
+"ZINGONIA - corso Europa c/o Fai Da Te",
+762
+],
+[
+"VERDELLINO - Corso Africa",
+763
+],
+[
+"VERDELLINO Via Gramsci civ. 22",
+765
+],
+[
+"VERDELLINO - Via Morletta, FS Nodo V1",
+766
+],
+[
+"VERDELLO - Via Don Giavazzi, banca",
+768
+],
+[
+"LEVATE - Corso Europa, parcheggio",
+773
+],
+[
+"STEZZANO - Via Papa Giovanni XXIII 7",
+779
+],
+[
+"BERGAMO - Colognola Chiesa",
+786
+],
+[
+"BERGAMO - Stazione Autolinee, pensilina 11",
+792
+]
+]
+},
+{
+"line": "B812",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"CARAVAGGIO - Via Zenale e Butinone",
+725
+],
+[
+"TREVIGLIO - Ospedale / ITIS, lato Trony",
+729
+],
+[
+"TREVIGLIO - Viale MERISIO, lato Agraria",
+735
+],
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+739
+],
+[
+"TREVIGLIO - P.zza del Popolo",
+741
+],
+[
+"TREVIGLIO - Piazza Mentana",
+743
+],
+[
+"CASTEL ROZZONE - Piazza Castello",
+750
+],
+[
+"ARCENE - Corso Europa SS42",
+755
+],
+[
+"VERDELLO - Via Papa Giovanni XXIII, distributore",
+760
+],
+[
+"STEZZANO - Via Papa Giovanni XXIII 7",
+769
+],
+[
+"BERGAMO - Colognola Chiesa",
+776
+],
+[
+"BERGAMO - Stazione Autolinee, pensilina 11",
+785
+]
+]
+},
+{
+"line": "B812",
+"code": "SSAB",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - Viale MERISIO, lato Agraria",
+732
+],
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+737
+],
+[
+"TREVIGLIO - P.zza del Popolo",
+739
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+741
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+743
+],
+[
+"TREVIGLIO - Via Isser, 14 - SAME",
+744
+],
+[
+"BADALASCO - Via Veneziana Bar Italia",
+747
+],
+[
+"FARA GERA D'ADDA - Via Locatelli 11",
+751
+],
+[
+"FARA GERA D'ADDA - Via Bergamo civ. 305",
+756
+],
+[
+"CANONICA D'ADDA - Via Bergamo fronte edicola",
+760
+]
+]
+},
+{
+"line": "B812",
+"code": "SSAB",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - Viale MERISIO, lato Agraria",
+732
+],
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+739
+],
+[
+"TREVIGLIO - P.zza del Popolo",
+741
+],
+[
+"TREVIGLIO - Piazza Mentana",
+742
+],
+[
+"CASTEL ROZZONE - Piazza Castello",
+750
+],
+[
+"ARCENE - Corso Europa SS42",
+755
+],
+[
+"VERDELLO - Via Papa Giovanni XXIII, distributore",
+760
+],
+[
+"STEZZANO - Via Papa Giovanni XXIII 7",
+769
+],
+[
+"BERGAMO - Colognola Chiesa",
+776
+],
+[
+"BERGAMO - Stazione Autolinee, pensilina 11",
+785
+]
+]
+},
+{
+"line": "B812",
+"code": "NS6",
+"ago": true,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+750
+],
+[
+"TREVIGLIO - P.zza del Popolo",
+752
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+753
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+754
+],
+[
+"TREVIGLIO - Via Isser, 14 - SAME",
+757
+],
+[
+"BADALASCO - Via Veneziana Bar Italia",
+761
+],
+[
+"FARA GERA D'ADDA - Via Locatelli 11",
+768
+],
+[
+"FARA GERA D'ADDA - Via Bergamo civ. 305",
+770
+],
+[
+"CANONICA D'ADDA - Via Lodi 40 - lato municipio",
+773
+],
+[
+"CANONICA D'ADDA - Via Matteotti chiesa",
+774
+],
+[
+"VAPRIO D'ADDA - via Perego 42/44 - ATM",
+780
+],
+[
+"CANONICA D'ADDA - Via Matteotti fronte chiesa",
+785
+],
+[
+"CANONICA D'ADDA - Via Bergamo fronte edicola",
+786
+],
+[
+"PONTIROLO NUOVO - Viale Italia (municipio)",
+791
+],
+[
+"PONTIROLO NUOVO - Viale Mazzini fronte civ. 63",
+792
+],
+[
+"CISERANO - Via Circonvallazione Sud fronte civ. 10",
+797
+],
+[
+"CISERANO - SP122 Francesca",
+799
+],
+[
+"ZINGONIA - corso Europa c/o Fai Da Te",
+800
+],
+[
+"VERDELLINO - Corso Africa",
+801
+],
+[
+"VERDELLINO Via Gramsci civ. 22",
+803
+],
+[
+"VERDELLINO - E-BRT",
+805
+]
+]
+},
+{
+"line": "B812",
+"code": "S6",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+754
+],
+[
+"TREVIGLIO - P.zza del Popolo",
+756
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+750
+],
+[
+"TREVIGLIO - V.le Montegrappa, CINEMA",
+751
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+758
+],
+[
+"TREVIGLIO - Via Isser, 14 - SAME",
+759
+],
+[
+"BADALASCO - Via Veneziana Bar Italia",
+762
+],
+[
+"FARA GERA D'ADDA - Via Locatelli 11",
+766
+],
+[
+"FARA GERA D'ADDA - Via Bergamo civ. 305",
+767
+],
+[
+"CANONICA D'ADDA - Via Lodi 40 - lato municipio",
+771
+],
+[
+"CANONICA D'ADDA - Via Bergamo fronte edicola",
+772
+],
+[
+"PONTIROLO NUOVO - Viale Italia (municipio)",
+778
+],
+[
+"PONTIROLO NUOVO - Viale Mazzini fronte civ. 63",
+779
+],
+[
+"CISERANO - Via Circonvallazione Sud fronte civ. 10",
+786
+],
+[
+"CISERANO - SP122 Francesca",
+787
+],
+[
+"ZINGONIA - corso Europa c/o Fai Da Te",
+790
+],
+[
+"VERDELLINO - Corso Africa",
+792
+],
+[
+"VERDELLINO Via Gramsci civ. 22",
+794
+],
+[
+"VERDELLINO - Via Morletta, FS Nodo V1",
+795
+],
+[
+"VERDELLO - Via Don Giavazzi, banca",
+796
+],
+[
+"LEVATE - Corso Europa, parcheggio",
+801
+],
+[
+"STEZZANO - Via Papa Giovanni XXIII 7",
+808
+],
+[
+"BERGAMO - Colognola Chiesa",
+814
+],
+[
+"BERGAMO - Stazione Autolinee, pensilina 11",
+820
+]
+]
+},
+{
+"line": "B812",
+"code": "S6",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"CARAVAGGIO - Via Mazzini, Autostazione",
+785
+],
+[
+"CASTEL ROZZONE - C.so Europa",
+798
+],
+[
+"ARCENE - Corso Europa SS42",
+803
+],
+[
+"CISERANO - Via Circonvallazione Sud fronte civ. 10",
+808
+],
+[
+"CISERANO - SP122 Francesca",
+809
+],
+[
+"ZINGONIA - corso Europa c/o Fai Da Te",
+811
+],
+[
+"VERDELLINO - Corso Africa",
+812
+],
+[
+"VERDELLINO Via Gramsci civ. 22",
+814
+],
+[
+"VERDELLINO - Via Morletta, FS Nodo V1",
+815
+],
+[
+"VERDELLO - Via Don Giavazzi, banca",
+815
+],
+[
+"VERDELLO - Via Papa Giovanni XXIII, distributore",
+816
+]
+]
+},
+{
+"line": "B812",
+"code": "S6",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"CARAVAGGIO - Via Zenale e Butinone",
+785
+],
+[
+"TREVIGLIO - Ospedale / ITIS, lato Trony",
+790
+],
+[
+"TREVIGLIO - Viale MERISIO, lato Agraria",
+793
+],
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+798
+],
+[
+"TREVIGLIO - P.zza del Popolo",
+800
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+802
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+803
+],
+[
+"TREVIGLIO - Via Isser, 14 - SAME",
+805
+],
+[
+"BADALASCO - Via Veneziana Bar Italia",
+809
+],
+[
+"FARA GERA D'ADDA - Via Locatelli 11",
+813
+],
+[
+"FARA GERA D'ADDA - Via Bergamo civ. 305",
+814
+],
+[
+"CANONICA D'ADDA - Via Lodi 40 - lato municipio",
+817
+],
+[
+"CANONICA D'ADDA - Via Bergamo fronte edicola",
+820
+],
+[
+"PONTIROLO NUOVO - Viale Italia (municipio)",
+824
+],
+[
+"PONTIROLO NUOVO - Viale Mazzini fronte civ. 63",
+825
+],
+[
+"CISERANO - Via Circonvallazione Sud fronte civ. 10",
+832
+],
+[
+"CISERANO - SP122 Francesca",
+834
+],
+[
+"ZINGONIA - corso Europa c/o Fai Da Te",
+836
+],
+[
+"VERDELLINO - Corso Africa",
+837
+],
+[
+"VERDELLINO Via Gramsci civ. 22",
+839
+],
+[
+"VERDELLINO - Via Morletta, FS Nodo V1",
+840
+],
+[
+"VERDELLO - Via Don Giavazzi, banca",
+842
+],
+[
+"LEVATE - Corso Europa, parcheggio",
+847
+],
+[
+"STEZZANO - Via Papa Giovanni XXIII 7",
+855
+],
+[
+"BERGAMO - Colognola Chiesa",
+860
+],
+[
+"BERGAMO - Stazione Autolinee, pensilina 11",
+870
+]
+]
+},
+{
+"line": "B812",
+"code": "S6",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"CARAVAGGIO - Via Zenale e Butinone",
+790
+],
+[
+"TREVIGLIO - Ospedale / ITIS, lato Trony",
+793
+],
+[
+"TREVIGLIO - Viale MERISIO, lato Agraria",
+795
+],
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+800
+],
+[
+"TREVIGLIO - P.zza del Popolo",
+802
+],
+[
+"TREVIGLIO - Piazza Mentana",
+804
+],
+[
+"PONTIROLO NUOVO - Viale Italia (municipio)",
+814
+],
+[
+"PONTIROLO NUOVO - Viale Mazzini fronte civ. 63",
+813
+],
+[
+"CISERANO - Via Circonvallazione Sud fronte civ. 10",
+821
+],
+[
+"CISERANO - SP122 Francesca",
+823
+],
+[
+"ZINGONIA - corso Europa c/o Fai Da Te",
+825
+],
+[
+"VERDELLINO - Corso Africa",
+826
+],
+[
+"VERDELLINO Via Gramsci civ. 22",
+828
+],
+[
+"VERDELLO - Via Papa Giovanni XXIII, distributore",
+830
+],
+[
+"LEVATE - Corso Europa, parcheggio",
+834
+]
+]
+},
+{
+"line": "B812",
+"code": "NS6",
+"ago": true,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+795
+],
+[
+"TREVIGLIO - P.zza del Popolo",
+797
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+798
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+799
+],
+[
+"TREVIGLIO - Via Isser, 14 - SAME",
+802
+],
+[
+"BADALASCO - Via Veneziana Bar Italia",
+806
+],
+[
+"FARA GERA D'ADDA - Via Locatelli 11",
+813
+],
+[
+"FARA GERA D'ADDA - Via Bergamo civ. 305",
+815
+],
+[
+"CANONICA D'ADDA - Via Lodi 40 - lato municipio",
+818
+],
+[
+"CANONICA D'ADDA - Via Matteotti chiesa",
+819
+],
+[
+"VAPRIO D'ADDA - via Perego 42/44 - ATM",
+825
+],
+[
+"CANONICA D'ADDA - Via Matteotti fronte chiesa",
+830
+],
+[
+"CANONICA D'ADDA - Via Bergamo fronte edicola",
+831
+],
+[
+"PONTIROLO NUOVO - Viale Italia (municipio)",
+836
+],
+[
+"PONTIROLO NUOVO - Viale Mazzini fronte civ. 63",
+837
+],
+[
+"CISERANO - Via Circonvallazione Sud fronte civ. 10",
+842
+],
+[
+"CISERANO - SP122 Francesca",
+844
+],
+[
+"ZINGONIA - corso Europa c/o Fai Da Te",
+845
+],
+[
+"VERDELLINO - Corso Africa",
+846
+],
+[
+"VERDELLINO Via Gramsci civ. 22",
+848
+],
+[
+"VERDELLINO - E-BRT",
+850
+]
+]
+},
+{
+"line": "B812",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"CARAVAGGIO - Via Mazzini, Autostazione",
+845
+],
+[
+"CASTEL ROZZONE - C.so Europa",
+858
+],
+[
+"ARCENE - Corso Europa SS42",
+863
+],
+[
+"CISERANO - Via Circonvallazione Sud fronte civ. 10",
+868
+],
+[
+"CISERANO - SP122 Francesca",
+869
+],
+[
+"ZINGONIA - corso Europa c/o Fai Da Te",
+871
+],
+[
+"VERDELLINO - Corso Africa",
+872
+],
+[
+"VERDELLINO Via Gramsci civ. 22",
+874
+],
+[
+"VERDELLINO - E-BRT",
+875
+],
+[
+"VERDELLINO - Via Morletta, FS Nodo V1",
+875
+],
+[
+"VERDELLO - Via Don Giavazzi, banca",
+876
+]
+]
+},
+{
+"line": "B812",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"CARAVAGGIO - Via Zenale e Butinone",
+845
+],
+[
+"TREVIGLIO - Ospedale / ITIS, lato Trony",
+848
+],
+[
+"TREVIGLIO - Viale MERISIO, lato Agraria",
+850
+],
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+860
+],
+[
+"TREVIGLIO - P.zza del Popolo",
+862
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+863
+],
+[
+"TREVIGLIO - Via Isser, 14 - SAME",
+866
+],
+[
+"BADALASCO - Via Veneziana Bar Italia",
+870
+],
+[
+"FARA GERA D'ADDA - Via Locatelli 11",
+875
+],
+[
+"FARA GERA D'ADDA - Via Bergamo civ. 305",
+876
+],
+[
+"CANONICA D'ADDA - Via Lodi 40 - lato municipio",
+879
+],
+[
+"CANONICA D'ADDA - Via Bergamo fronte edicola",
+880
+],
+[
+"PONTIROLO NUOVO - Viale Italia (municipio)",
+885
+],
+[
+"PONTIROLO NUOVO - Viale Mazzini fronte civ. 63",
+887
+],
+[
+"CISERANO - Via Circonvallazione Sud fronte civ. 10",
+893
+],
+[
+"CISERANO - SP122 Francesca",
+895
+],
+[
+"ZINGONIA - corso Europa c/o Fai Da Te",
+897
+],
+[
+"VERDELLINO - Corso Africa",
+898
+],
+[
+"VERDELLINO Via Gramsci civ. 22",
+900
+],
+[
+"VERDELLINO - Via Morletta, FS Nodo V1",
+901
+],
+[
+"VERDELLO - Via Don Giavazzi, banca",
+902
+],
+[
+"LEVATE - Corso Europa, parcheggio",
+909
+],
+[
+"STEZZANO - Via Papa Giovanni XXIII 7",
+916
+],
+[
+"BERGAMO - Colognola Chiesa",
+921
+],
+[
+"BERGAMO - Stazione Autolinee, pensilina 11",
+927
+]
+]
+},
+{
+"line": "B812",
+"code": "NS6",
+"ago": true,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+870
+],
+[
+"TREVIGLIO - P.zza del Popolo",
+872
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+873
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+874
+],
+[
+"TREVIGLIO - Via Isser, 14 - SAME",
+877
+],
+[
+"BADALASCO - Via Veneziana Bar Italia",
+881
+],
+[
+"FARA GERA D'ADDA - Via Locatelli 11",
+888
+],
+[
+"FARA GERA D'ADDA - Via Bergamo civ. 305",
+890
+],
+[
+"CANONICA D'ADDA - Via Lodi 40 - lato municipio",
+893
+],
+[
+"CANONICA D'ADDA - Via Matteotti chiesa",
+894
+],
+[
+"VAPRIO D'ADDA - via Perego 42/44 - ATM",
+900
+],
+[
+"CANONICA D'ADDA - Via Matteotti fronte chiesa",
+905
+],
+[
+"CANONICA D'ADDA - Via Bergamo fronte edicola",
+906
+],
+[
+"PONTIROLO NUOVO - Viale Italia (municipio)",
+911
+],
+[
+"PONTIROLO NUOVO - Viale Mazzini fronte civ. 63",
+912
+],
+[
+"CISERANO - Via Circonvallazione Sud fronte civ. 10",
+917
+],
+[
+"CISERANO - SP122 Francesca",
+919
+],
+[
+"ZINGONIA - corso Europa c/o Fai Da Te",
+920
+],
+[
+"VERDELLINO - Corso Africa",
+921
+],
+[
+"VERDELLINO Via Gramsci civ. 22",
+923
+],
+[
+"VERDELLINO - E-BRT",
+925
+]
+]
+},
+{
+"line": "B812",
+"code": "SSAB",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+885
+],
+[
+"TREVIGLIO - P.zza del Popolo",
+887
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+888
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+889
+],
+[
+"TREVIGLIO - Via Isser, 14 - SAME",
+892
+],
+[
+"BADALASCO - Via Veneziana Bar Italia",
+896
+],
+[
+"FARA GERA D'ADDA - Via Locatelli 11",
+903
+],
+[
+"FARA GERA D'ADDA - Via Bergamo civ. 305",
+905
+],
+[
+"CANONICA D'ADDA - Via Lodi 40 - lato municipio",
+908
+],
+[
+"CANONICA D'ADDA - Via Matteotti chiesa",
+909
+],
+[
+"VAPRIO D'ADDA - via Perego 42/44 - ATM",
+915
+],
+[
+"CANONICA D'ADDA - Via Matteotti fronte chiesa",
+920
+],
+[
+"CANONICA D'ADDA - Via Bergamo fronte edicola",
+921
+],
+[
+"PONTIROLO NUOVO - Viale Italia (municipio)",
+926
+],
+[
+"PONTIROLO NUOVO - Viale Mazzini fronte civ. 63",
+927
+],
+[
+"CISERANO - Via Circonvallazione Sud fronte civ. 10",
+932
+],
+[
+"CISERANO - SP122 Francesca",
+934
+],
+[
+"ZINGONIA - corso Europa c/o Fai Da Te",
+935
+],
+[
+"VERDELLINO - Corso Africa",
+936
+],
+[
+"VERDELLINO Via Gramsci civ. 22",
+938
+],
+[
+"VERDELLINO - E-BRT",
+940
+]
+]
+},
+{
+"line": "B812",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"CARAVAGGIO - Via Zenale e Butinone",
+905
+],
+[
+"TREVIGLIO - Ospedale / ITIS, lato Trony",
+908
+],
+[
+"TREVIGLIO - Viale MERISIO, lato Agraria",
+910
+],
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+915
+],
+[
+"TREVIGLIO - P.zza del Popolo",
+917
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+920
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+923
+],
+[
+"TREVIGLIO - Via Isser, 14 - SAME",
+924
+],
+[
+"BADALASCO - Via Veneziana Bar Italia",
+928
+],
+[
+"FARA GERA D'ADDA - Via Locatelli 11",
+932
+],
+[
+"FARA GERA D'ADDA - Via Bergamo civ. 305",
+933
+],
+[
+"CANONICA D'ADDA - Via Lodi 40 - lato municipio",
+936
+],
+[
+"CANONICA D'ADDA - Via Bergamo fronte edicola",
+939
+],
+[
+"PONTIROLO NUOVO - Viale Italia (municipio)",
+942
+],
+[
+"PONTIROLO NUOVO - Viale Mazzini fronte civ. 63",
+945
+],
+[
+"CISERANO - Via Circonvallazione Sud fronte civ. 10",
+952
+],
+[
+"CISERANO - SP122 Francesca",
+954
+],
+[
+"ZINGONIA - corso Europa c/o Fai Da Te",
+956
+],
+[
+"VERDELLINO - Corso Africa",
+957
+],
+[
+"VERDELLINO Via Gramsci civ. 22",
+959
+],
+[
+"VERDELLINO - E-BRT",
+962
+],
+[
+"VERDELLINO - Via Morletta, FS Nodo V1",
+960
+],
+[
+"VERDELLO - Via Don Giavazzi, banca",
+967
+],
+[
+"LEVATE - Corso Europa, parcheggio",
+972
+],
+[
+"STEZZANO - Via Papa Giovanni XXIII 7",
+975
+],
+[
+"BERGAMO - Colognola Chiesa",
+981
+],
+[
+"BERGAMO - Stazione Autolinee, pensilina 11",
+987
+]
+]
+},
+{
+"line": "B812",
+"code": "F6",
+"ago": true,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+990
+],
+[
+"TREVIGLIO - P.zza del Popolo",
+992
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+993
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+994
+],
+[
+"TREVIGLIO - Via Isser, 14 - SAME",
+997
+],
+[
+"BADALASCO - Via Veneziana Bar Italia",
+1001
+],
+[
+"FARA GERA D'ADDA - Via Locatelli 11",
+1008
+],
+[
+"FARA GERA D'ADDA - Via Bergamo civ. 305",
+1010
+],
+[
+"CANONICA D'ADDA - Via Lodi 40 - lato municipio",
+1013
+],
+[
+"CANONICA D'ADDA - Via Matteotti chiesa",
+1014
+],
+[
+"VAPRIO D'ADDA - via Perego 42/44 - ATM",
+1020
+],
+[
+"CANONICA D'ADDA - Via Matteotti fronte chiesa",
+1025
+],
+[
+"CANONICA D'ADDA - Via Bergamo fronte edicola",
+1026
+],
+[
+"PONTIROLO NUOVO - Viale Italia (municipio)",
+1031
+],
+[
+"PONTIROLO NUOVO - Viale Mazzini fronte civ. 63",
+1032
+],
+[
+"CISERANO - Via Circonvallazione Sud fronte civ. 10",
+1037
+],
+[
+"CISERANO - SP122 Francesca",
+1039
+],
+[
+"ZINGONIA - corso Europa c/o Fai Da Te",
+1040
+],
+[
+"VERDELLINO - Corso Africa",
+1041
+],
+[
+"VERDELLINO Via Gramsci civ. 22",
+1043
+],
+[
+"VERDELLINO - E-BRT",
+1045
+]
+]
+},
+{
+"line": "B812",
+"code": "NS5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+1050
+],
+[
+"TREVIGLIO - P.zza del Popolo",
+1052
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+1053
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+1054
+],
+[
+"TREVIGLIO - Via Isser, 14 - SAME",
+1057
+],
+[
+"BADALASCO - Via Veneziana Bar Italia",
+1061
+],
+[
+"FARA GERA D'ADDA - Via Locatelli 11",
+1068
+],
+[
+"FARA GERA D'ADDA - Via Bergamo civ. 305",
+1070
+],
+[
+"CANONICA D'ADDA - Via Lodi 40 - lato municipio",
+1073
+],
+[
+"CANONICA D'ADDA - Via Matteotti chiesa",
+1074
+],
+[
+"VAPRIO D'ADDA - via Perego 42/44 - ATM",
+1080
+],
+[
+"CANONICA D'ADDA - Via Matteotti fronte chiesa",
+1085
+],
+[
+"CANONICA D'ADDA - Via Bergamo fronte edicola",
+1086
+],
+[
+"PONTIROLO NUOVO - Viale Italia (municipio)",
+1091
+],
+[
+"PONTIROLO NUOVO - Viale Mazzini fronte civ. 63",
+1092
+],
+[
+"CISERANO - Via Circonvallazione Sud fronte civ. 10",
+1097
+],
+[
+"CISERANO - SP122 Francesca",
+1099
+],
+[
+"ZINGONIA - corso Europa c/o Fai Da Te",
+1100
+],
+[
+"VERDELLINO - Corso Africa",
+1101
+],
+[
+"VERDELLINO Via Gramsci civ. 22",
+1103
+],
+[
+"VERDELLINO - E-BRT",
+1105
+]
+]
+},
+{
+"line": "B812",
+"code": "S6",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+1050
+],
+[
+"TREVIGLIO - P.zza del Popolo",
+1052
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+1053
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+1054
+],
+[
+"TREVIGLIO - Via Isser, 14 - SAME",
+1057
+],
+[
+"BADALASCO - Via Veneziana Bar Italia",
+1061
+],
+[
+"FARA GERA D'ADDA - Via Locatelli 11",
+1068
+],
+[
+"FARA GERA D'ADDA - Via Bergamo civ. 305",
+1070
+],
+[
+"CANONICA D'ADDA - Via Lodi 40 - lato municipio",
+1073
+],
+[
+"CANONICA D'ADDA - Via Matteotti chiesa",
+1074
+],
+[
+"VAPRIO D'ADDA - via Perego 42/44 - ATM",
+1080
+],
+[
+"CANONICA D'ADDA - Via Matteotti fronte chiesa",
+1085
+],
+[
+"CANONICA D'ADDA - Via Bergamo fronte edicola",
+1086
+],
+[
+"PONTIROLO NUOVO - Viale Italia (municipio)",
+1091
+],
+[
+"PONTIROLO NUOVO - Viale Mazzini fronte civ. 63",
+1092
+],
+[
+"CISERANO - Via Circonvallazione Sud fronte civ. 10",
+1097
+],
+[
+"CISERANO - SP122 Francesca",
+1099
+],
+[
+"ZINGONIA - corso Europa c/o Fai Da Te",
+1100
+],
+[
+"VERDELLINO - Corso Africa",
+1101
+],
+[
+"VERDELLINO Via Gramsci civ. 22",
+1103
+],
+[
+"VERDELLINO - E-BRT",
+1105
+]
+]
+},
+{
+"line": "B812",
+"code": "F6",
+"ago": true,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+1110
+],
+[
+"TREVIGLIO - P.zza del Popolo",
+1112
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+1113
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+1114
+],
+[
+"TREVIGLIO - Via Isser, 14 - SAME",
+1117
+],
+[
+"BADALASCO - Via Veneziana Bar Italia",
+1121
+],
+[
+"FARA GERA D'ADDA - Via Locatelli 11",
+1128
+],
+[
+"FARA GERA D'ADDA - Via Bergamo civ. 305",
+1130
+],
+[
+"CANONICA D'ADDA - Via Lodi 40 - lato municipio",
+1133
+],
+[
+"CANONICA D'ADDA - Via Matteotti chiesa",
+1134
+],
+[
+"VAPRIO D'ADDA - via Perego 42/44 - ATM",
+1140
+],
+[
+"CANONICA D'ADDA - Via Matteotti fronte chiesa",
+1145
+],
+[
+"CANONICA D'ADDA - Via Bergamo fronte edicola",
+1146
+],
+[
+"PONTIROLO NUOVO - Viale Italia (municipio)",
+1151
+],
+[
+"PONTIROLO NUOVO - Viale Mazzini fronte civ. 63",
+1152
+],
+[
+"CISERANO - Via Circonvallazione Sud fronte civ. 10",
+1157
+],
+[
+"CISERANO - SP122 Francesca",
+1159
+],
+[
+"ZINGONIA - corso Europa c/o Fai Da Te",
+1160
+],
+[
+"VERDELLINO - Corso Africa",
+1161
+],
+[
+"VERDELLINO Via Gramsci civ. 22",
+1163
+],
+[
+"VERDELLINO - E-BRT",
+1165
+]
+]
+},
+{
+"line": "B812",
+"code": "NS6",
+"ago": true,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+1155
+],
+[
+"TREVIGLIO - P.zza del Popolo",
+1157
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+1158
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+1159
+],
+[
+"TREVIGLIO - Via Isser, 14 - SAME",
+1162
+],
+[
+"BADALASCO - Via Veneziana Bar Italia",
+1166
+],
+[
+"FARA GERA D'ADDA - Via Locatelli 11",
+1173
+],
+[
+"FARA GERA D'ADDA - Via Bergamo civ. 305",
+1175
+],
+[
+"CANONICA D'ADDA - Via Lodi 40 - lato municipio",
+1178
+],
+[
+"CANONICA D'ADDA - Via Matteotti chiesa",
+1179
+],
+[
+"VAPRIO D'ADDA - via Perego 42/44 - ATM",
+1185
+],
+[
+"CANONICA D'ADDA - Via Matteotti fronte chiesa",
+1190
+],
+[
+"CANONICA D'ADDA - Via Bergamo fronte edicola",
+1191
+],
+[
+"PONTIROLO NUOVO - Viale Italia (municipio)",
+1196
+],
+[
+"PONTIROLO NUOVO - Viale Mazzini fronte civ. 63",
+1197
+],
+[
+"CISERANO - Via Circonvallazione Sud fronte civ. 10",
+1202
+],
+[
+"CISERANO - SP122 Francesca",
+1204
+],
+[
+"ZINGONIA - corso Europa c/o Fai Da Te",
+1205
+],
+[
+"VERDELLINO - Corso Africa",
+1206
+],
+[
+"VERDELLINO Via Gramsci civ. 22",
+1208
+],
+[
+"VERDELLINO - E-BRT",
+1210
+]
+]
+},
+{
+"line": "B812",
+"code": "NS6",
+"ago": true,
+"notes": [],
+"stops": [
+[
+"CANONICA D'ADDA - Via Bergamo Edicola",
+338
+],
+[
+"CANONICA D'ADDA - Via Matteotti chiesa",
+340
+],
+[
+"VAPRIO D'ADDA - via Perego 42/44 - ATM",
+345
+],
+[
+"CANONICA D'ADDA - Via Matteotti fronte chiesa",
+350
+],
+[
+"CANONICA D'ADDA - Via Lodi 40",
+351
+],
+[
+"FARA GERA D'ADDA - Via Bergamo, 382 fronte distributore",
+354
+],
+[
+"FARA GERA D'ADDA - Via Locatelli, 12",
+355
+],
+[
+"BADALASCO - Via Veneziana, 1428",
+362
+],
+[
+"TREVIGLIO - Via Isser, 31 - SAME",
+367
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+370
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+371
+],
+[
+"TREVIGLIO - V.le Montegrappa (cinema)",
+372
+],
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+374
+]
+]
+},
+{
+"line": "B812",
+"code": "NS6",
+"ago": true,
+"notes": [],
+"stops": [
+[
+"CANONICA D'ADDA - Via Bergamo Edicola",
+380
+],
+[
+"CANONICA D'ADDA - Via Matteotti chiesa",
+382
+],
+[
+"VAPRIO D'ADDA - via Perego 42/44 - ATM",
+387
+],
+[
+"CANONICA D'ADDA - Via Matteotti fronte chiesa",
+392
+],
+[
+"CANONICA D'ADDA - Via Lodi 40",
+393
+],
+[
+"FARA GERA D'ADDA - Via Bergamo, 382 fronte distributore",
+396
+],
+[
+"FARA GERA D'ADDA - Via Locatelli, 12",
+397
+],
+[
+"BADALASCO - Via Veneziana, 1428",
+404
+],
+[
+"TREVIGLIO - Via Isser, 31 - SAME",
+409
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+412
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+413
+],
+[
+"TREVIGLIO - V.le Montegrappa (cinema)",
+414
+],
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+416
+]
+]
+},
+{
+"line": "B812",
+"code": "S6",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"FARA GERA D'ADDA - Via Bergamo, 382 fronte distributore",
+399
+],
+[
+"FARA GERA D'ADDA - Via Locatelli, 12",
+401
+],
+[
+"BADALASCO - Via Veneziana, 1428",
+405
+],
+[
+"TREVIGLIO - Via Isser, 31 - SAME",
+410
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+412
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+413
+]
+]
+},
+{
+"line": "B812",
+"code": "S6",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"STEZZANO - Via Zanchi, Hotel Albi",
+400
+],
+[
+"LEVATE - Corso Europa, parcheggio",
+408
+],
+[
+"VERDELLO - Via Giovanni XXIII - fronte distrib.",
+412
+],
+[
+"ZINGONIA - corso Europa, 29/33",
+420
+],
+[
+"CISERANO, S.P.122, Via Francesca",
+422
+],
+[
+"CARAVAGGIO - Via Mazzini, Autostazione",
+450
+],
+[
+"TREVIGLIO - Piazza MENTANA, Collegio Angeli",
+468
+],
+[
+"TREVIGLIO - Piazza del POPOLO",
+472
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+475
+]
+]
+},
+{
+"line": "B812",
+"code": "S6",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"CISERANO - Via Circonvallazione Sud 10",
+422
+],
+[
+"ARCENE, Via Alcide De Gasperi 11",
+430
+],
+[
+"ARCENE - Corso Europa, S.S.42",
+431
+],
+[
+"CASTEL ROZZONE - C.so Europa",
+439
+],
+[
+"CARAVAGGIO - Via Mazzini, Autostazione",
+458
+],
+[
+"TREVIGLIO - Piazza MENTANA, Collegio Angeli",
+473
+],
+[
+"TREVIGLIO - Piazza del POPOLO",
+474
+],
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+476
+]
+]
+},
+{
+"line": "B812",
+"code": "NS6",
+"ago": true,
+"notes": [],
+"stops": [
+[
+"VERDELLINO -E-BRT",
+430
+],
+[
+"VERDELLINO F.S. Via Gramsci, 15",
+431
+],
+[
+"VERDELLINO - Corso Africa, 16",
+433
+],
+[
+"ZINGONIA - corso Europa, 29/33",
+434
+],
+[
+"CISERANO - Via Circonvallazione Sud 10",
+438
+],
+[
+"PONTIROLO NUOVO - Via Mazzini, 61",
+444
+],
+[
+"PONTIROLO NUOVO - Viale Italia municipio",
+445
+],
+[
+"CANONICA D'ADDA - Via Bergamo Edicola",
+449
+],
+[
+"CANONICA D'ADDA - Via Matteotti chiesa",
+451
+],
+[
+"VAPRIO D'ADDA - via Perego 42/44 - ATM",
+456
+],
+[
+"CANONICA D'ADDA - Via Matteotti fronte chiesa",
+461
+],
+[
+"CANONICA D'ADDA - Via Lodi 40",
+462
+],
+[
+"FARA GERA D'ADDA - Via Bergamo, 382 fronte distributore",
+465
+],
+[
+"FARA GERA D'ADDA - Via Locatelli, 12",
+466
+],
+[
+"BADALASCO - Via Veneziana, 1428",
+473
+],
+[
+"TREVIGLIO - Via Isser, 31 - SAME",
+478
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+481
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+482
+],
+[
+"TREVIGLIO - V.le Montegrappa (cinema)",
+483
+],
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+485
+]
+]
+},
+{
+"line": "B812",
+"code": "S6",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"BERGAMO, stazione Autolinee,pensilina 11",
+460
+],
+[
+"BERGAMO - Colognola Edicola",
+470
+],
+[
+"STEZZANO - Via Zanchi, Hotel Albi",
+476
+],
+[
+"LEVATE - Corso Europa, parcheggio",
+485
+],
+[
+"VERDELLO - Via Don Giavazzi",
+492
+],
+[
+"VERDELLINO - Via Morletta, lato Park, FS",
+493
+],
+[
+"VERDELLINO F.S. Via Gramsci, 15",
+494
+],
+[
+"VERDELLINO - Corso Africa, 16",
+496
+],
+[
+"ZINGONIA - corso Europa, 29/33",
+498
+],
+[
+"CISERANO - Via Circonvallazione Sud 10",
+500
+],
+[
+"PONTIROLO NUOVO - Via Mazzini, 61",
+506
+],
+[
+"PONTIROLO NUOVO - Viale Italia municipio",
+507
+],
+[
+"CANONICA D'ADDA - Via Bergamo Edicola",
+510
+],
+[
+"CANONICA D'ADDA - Via Lodi 40",
+512
+],
+[
+"FARA GERA D'ADDA - Via Bergamo, 382 fronte distributore",
+515
+],
+[
+"FARA GERA D'ADDA - Via Locatelli, 12",
+516
+],
+[
+"BADALASCO - Via Veneziana, 1428",
+525
+],
+[
+"TREVIGLIO - Via Isser, 31 - SAME",
+529
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+532
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+533
+],
+[
+"TREVIGLIO - V.le Montegrappa (cinema)",
+534
+],
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+535
+]
+]
+},
+{
+"line": "B812",
+"code": "NS6",
+"ago": true,
+"notes": [],
+"stops": [
+[
+"VERDELLINO -E-BRT",
+480
+],
+[
+"VERDELLINO F.S. Via Gramsci, 15",
+481
+],
+[
+"VERDELLINO - Corso Africa, 16",
+483
+],
+[
+"ZINGONIA - corso Europa, 29/33",
+484
+],
+[
+"CISERANO - Via Circonvallazione Sud 10",
+488
+],
+[
+"PONTIROLO NUOVO - Via Mazzini, 61",
+494
+],
+[
+"PONTIROLO NUOVO - Viale Italia municipio",
+495
+],
+[
+"CANONICA D'ADDA - Via Bergamo Edicola",
+499
+],
+[
+"CANONICA D'ADDA - Via Matteotti chiesa",
+501
+],
+[
+"VAPRIO D'ADDA - via Perego 42/44 - ATM",
+506
+],
+[
+"CANONICA D'ADDA - Via Matteotti fronte chiesa",
+511
+],
+[
+"CANONICA D'ADDA - Via Lodi 40",
+512
+],
+[
+"FARA GERA D'ADDA - Via Bergamo, 382 fronte distributore",
+515
+],
+[
+"FARA GERA D'ADDA - Via Locatelli, 12",
+516
+],
+[
+"BADALASCO - Via Veneziana, 1428",
+523
+],
+[
+"TREVIGLIO - Via Isser, 31 - SAME",
+528
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+531
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+532
+],
+[
+"TREVIGLIO - V.le Montegrappa (cinema)",
+533
+],
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+535
+]
+]
+},
+{
+"line": "B812",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"BERGAMO, stazione Autolinee,pensilina 11",
+500
+],
+[
+"BERGAMO - Colognola Edicola",
+510
+],
+[
+"STEZZANO - Via Zanchi, Hotel Albi",
+516
+],
+[
+"LEVATE - Corso Europa, parcheggio",
+525
+],
+[
+"VERDELLO - Via Don Giavazzi",
+532
+],
+[
+"VERDELLINO - Via Morletta, lato Park, FS",
+533
+],
+[
+"VERDELLINO F.S. Via Gramsci, 15",
+534
+],
+[
+"VERDELLINO - Corso Africa, 16",
+536
+],
+[
+"ZINGONIA - corso Europa, 29/33",
+538
+],
+[
+"CISERANO - Via Circonvallazione Sud 10",
+540
+],
+[
+"PONTIROLO NUOVO - Via Mazzini, 61",
+546
+],
+[
+"PONTIROLO NUOVO - Viale Italia municipio",
+547
+],
+[
+"CANONICA D'ADDA - Via Bergamo Edicola",
+550
+],
+[
+"CANONICA D'ADDA - Via Lodi 40",
+552
+],
+[
+"FARA GERA D'ADDA - Via Bergamo, 382 fronte distributore",
+555
+],
+[
+"FARA GERA D'ADDA - Via Locatelli, 12",
+556
+],
+[
+"BADALASCO - Via Veneziana, 1428",
+564
+],
+[
+"TREVIGLIO - Via Isser, 31 - SAME",
+569
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+572
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+573
+],
+[
+"TREVIGLIO - V.le Montegrappa (cinema)",
+574
+],
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+575
+]
+]
+},
+{
+"line": "B812",
+"code": "NS6",
+"ago": true,
+"notes": [],
+"stops": [
+[
+"VERDELLINO -E-BRT",
+555
+],
+[
+"VERDELLINO F.S. Via Gramsci, 15",
+556
+],
+[
+"VERDELLINO - Corso Africa, 16",
+558
+],
+[
+"ZINGONIA - corso Europa, 29/33",
+559
+],
+[
+"CISERANO - Via Circonvallazione Sud 10",
+563
+],
+[
+"PONTIROLO NUOVO - Via Mazzini, 61",
+569
+],
+[
+"PONTIROLO NUOVO - Viale Italia municipio",
+570
+],
+[
+"CANONICA D'ADDA - Via Bergamo Edicola",
+574
+],
+[
+"CANONICA D'ADDA - Via Matteotti chiesa",
+576
+],
+[
+"VAPRIO D'ADDA - via Perego 42/44 - ATM",
+581
+],
+[
+"CANONICA D'ADDA - Via Matteotti fronte chiesa",
+586
+],
+[
+"CANONICA D'ADDA - Via Lodi 40",
+587
+],
+[
+"FARA GERA D'ADDA - Via Bergamo, 382 fronte distributore",
+590
+],
+[
+"FARA GERA D'ADDA - Via Locatelli, 12",
+591
+],
+[
+"BADALASCO - Via Veneziana, 1428",
+598
+],
+[
+"TREVIGLIO - Via Isser, 31 - SAME",
+603
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+606
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+607
+],
+[
+"TREVIGLIO - V.le Montegrappa (cinema)",
+608
+],
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+610
+]
+]
+},
+{
+"line": "B812",
+"code": "NS6",
+"ago": true,
+"notes": [],
+"stops": [
+[
+"VERDELLINO -E-BRT",
+595
+],
+[
+"VERDELLINO F.S. Via Gramsci, 15",
+596
+],
+[
+"VERDELLINO - Corso Africa, 16",
+598
+],
+[
+"ZINGONIA - corso Europa, 29/33",
+599
+],
+[
+"CISERANO - Via Circonvallazione Sud 10",
+603
+],
+[
+"PONTIROLO NUOVO - Via Mazzini, 61",
+609
+],
+[
+"PONTIROLO NUOVO - Viale Italia municipio",
+610
+],
+[
+"CANONICA D'ADDA - Via Bergamo Edicola",
+614
+],
+[
+"CANONICA D'ADDA - Via Matteotti chiesa",
+616
+],
+[
+"VAPRIO D'ADDA - via Perego 42/44 - ATM",
+621
+],
+[
+"CANONICA D'ADDA - Via Matteotti fronte chiesa",
+626
+],
+[
+"CANONICA D'ADDA - Via Lodi 40",
+627
+],
+[
+"FARA GERA D'ADDA - Via Bergamo, 382 fronte distributore",
+630
+],
+[
+"FARA GERA D'ADDA - Via Locatelli, 12",
+631
+],
+[
+"BADALASCO - Via Veneziana, 1428",
+638
+],
+[
+"TREVIGLIO - Via Isser, 31 - SAME",
+643
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+646
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+647
+],
+[
+"TREVIGLIO - V.le Montegrappa (cinema)",
+648
+],
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+650
+]
+]
+},
+{
+"line": "B812",
+"code": "S6",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"VERDELLINO -E-BRT",
+610
+],
+[
+"VERDELLINO F.S. Via Gramsci, 15",
+611
+],
+[
+"VERDELLINO - Corso Africa, 16",
+613
+],
+[
+"ZINGONIA - corso Europa, 29/33",
+614
+],
+[
+"CISERANO - Via Circonvallazione Sud 10",
+618
+],
+[
+"PONTIROLO NUOVO - Via Mazzini, 61",
+624
+],
+[
+"PONTIROLO NUOVO - Viale Italia municipio",
+625
+],
+[
+"CANONICA D'ADDA - Via Bergamo Edicola",
+629
+],
+[
+"CANONICA D'ADDA - Via Matteotti chiesa",
+631
+],
+[
+"VAPRIO D'ADDA - via Perego 42/44 - ATM",
+636
+],
+[
+"CANONICA D'ADDA - Via Matteotti fronte chiesa",
+641
+],
+[
+"CANONICA D'ADDA - Via Lodi 40",
+642
+],
+[
+"FARA GERA D'ADDA - Via Bergamo, 382 fronte distributore",
+645
+],
+[
+"FARA GERA D'ADDA - Via Locatelli, 12",
+646
+],
+[
+"BADALASCO - Via Veneziana, 1428",
+653
+],
+[
+"TREVIGLIO - Via Isser, 31 - SAME",
+658
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+661
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+662
+],
+[
+"TREVIGLIO - V.le Montegrappa (cinema)",
+663
+],
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+665
+]
+]
+},
+{
+"line": "B812",
+"code": "NS5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"VERDELLINO -E-BRT",
+700
+],
+[
+"VERDELLINO F.S. Via Gramsci, 15",
+701
+],
+[
+"VERDELLINO - Corso Africa, 16",
+703
+],
+[
+"ZINGONIA - corso Europa, 29/33",
+704
+],
+[
+"CISERANO - Via Circonvallazione Sud 10",
+708
+],
+[
+"PONTIROLO NUOVO - Via Mazzini, 61",
+714
+],
+[
+"PONTIROLO NUOVO - Viale Italia municipio",
+715
+],
+[
+"CANONICA D'ADDA - Via Bergamo Edicola",
+719
+],
+[
+"CANONICA D'ADDA - Via Matteotti chiesa",
+721
+],
+[
+"VAPRIO D'ADDA - via Perego 42/44 - ATM",
+726
+],
+[
+"CANONICA D'ADDA - Via Matteotti fronte chiesa",
+731
+],
+[
+"CANONICA D'ADDA - Via Lodi 40",
+732
+],
+[
+"FARA GERA D'ADDA - Via Bergamo, 382 fronte distributore",
+735
+],
+[
+"FARA GERA D'ADDA - Via Locatelli, 12",
+736
+],
+[
+"BADALASCO - Via Veneziana, 1428",
+743
+],
+[
+"TREVIGLIO - Via Isser, 31 - SAME",
+748
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+751
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+752
+],
+[
+"TREVIGLIO - V.le Montegrappa (cinema)",
+753
+],
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+755
+]
+]
+},
+{
+"line": "B812",
+"code": "NS6",
+"ago": true,
+"notes": [],
+"stops": [
+[
+"VERDELLINO -E-BRT",
+730
+],
+[
+"VERDELLINO F.S. Via Gramsci, 15",
+731
+],
+[
+"VERDELLINO - Corso Africa, 16",
+733
+],
+[
+"ZINGONIA - corso Europa, 29/33",
+734
+],
+[
+"CISERANO - Via Circonvallazione Sud 10",
+738
+],
+[
+"PONTIROLO NUOVO - Via Mazzini, 61",
+744
+],
+[
+"PONTIROLO NUOVO - Viale Italia municipio",
+745
+],
+[
+"CANONICA D'ADDA - Via Bergamo Edicola",
+749
+],
+[
+"CANONICA D'ADDA - Via Matteotti chiesa",
+751
+],
+[
+"VAPRIO D'ADDA - via Perego 42/44 - ATM",
+756
+],
+[
+"CANONICA D'ADDA - Via Matteotti fronte chiesa",
+761
+],
+[
+"CANONICA D'ADDA - Via Lodi 40",
+762
+],
+[
+"FARA GERA D'ADDA - Via Bergamo, 382 fronte distributore",
+765
+],
+[
+"FARA GERA D'ADDA - Via Locatelli, 12",
+766
+],
+[
+"BADALASCO - Via Veneziana, 1428",
+773
+],
+[
+"TREVIGLIO - Via Isser, 31 - SAME",
+778
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+781
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+782
+],
+[
+"TREVIGLIO - V.le Montegrappa (cinema)",
+783
+],
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+785
+]
+]
+},
+{
+"line": "B812",
+"code": "S6",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"BERGAMO, stazione Autolinee,pensilina 11",
+735
+],
+[
+"BERGAMO - Colognola Edicola",
+745
+],
+[
+"STEZZANO - Via Zanchi, Hotel Albi",
+751
+],
+[
+"LEVATE - Corso Europa, parcheggio",
+760
+],
+[
+"VERDELLO - Via Don Giavazzi",
+767
+],
+[
+"VERDELLINO - Via Morletta, lato Park, FS",
+768
+],
+[
+"VERDELLINO F.S. Via Gramsci, 15",
+769
+],
+[
+"VERDELLINO - Corso Africa, 16",
+771
+],
+[
+"ZINGONIA - corso Europa, 29/33",
+773
+],
+[
+"CISERANO - Via Circonvallazione Sud 10",
+775
+],
+[
+"PONTIROLO NUOVO - Via Mazzini, 61",
+781
+],
+[
+"PONTIROLO NUOVO - Viale Italia municipio",
+782
+],
+[
+"CANONICA D'ADDA - Via Bergamo Edicola",
+785
+],
+[
+"CANONICA D'ADDA - Via Lodi 40",
+787
+],
+[
+"FARA GERA D'ADDA - Via Bergamo, 382 fronte distributore",
+790
+],
+[
+"FARA GERA D'ADDA - Via Locatelli, 12",
+791
+],
+[
+"BADALASCO - Via Veneziana, 1428",
+796
+],
+[
+"TREVIGLIO - Via Isser, 31 - SAME",
+802
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+806
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+807
+],
+[
+"TREVIGLIO - V.le Montegrappa (cinema)",
+808
+],
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+810
+]
+]
+},
+{
+"line": "B812",
+"code": "S6",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"BERGAMO, stazione Autolinee,pensilina 11",
+795
+],
+[
+"BERGAMO - Colognola Edicola",
+801
+],
+[
+"STEZZANO - Via Zanchi, Hotel Albi",
+807
+],
+[
+"COMUN NUOVO - Via Duca D'Aosta 16",
+813
+],
+[
+"VERDELLO - Via Giovanni XXIII - fronte distrib.",
+817
+],
+[
+"ARCENE, Via Alcide De Gasperi 11",
+821
+],
+[
+"ARCENE - Corso Europa, S.S.42",
+822
+],
+[
+"CASTEL ROZZONE - Via Nazioni Unite",
+825
+],
+[
+"CASTEL ROZZONE - C.so Europa",
+827
+],
+[
+"TREVIGLIO - Piazza MENTANA, Collegio Angeli",
+834
+],
+[
+"TREVIGLIO - Piazza del POPOLO",
+835
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+845
+],
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+840
+]
+]
+},
+{
+"line": "B812",
+"code": "S6",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"BERGAMO, stazione Autolinee,pensilina 11",
+800
+],
+[
+"BERGAMO - Colognola Edicola",
+810
+],
+[
+"STEZZANO - Via Zanchi, Hotel Albi",
+816
+],
+[
+"LEVATE - Corso Europa, parcheggio",
+825
+],
+[
+"VERDELLO - Via Don Giavazzi",
+832
+],
+[
+"VERDELLINO - Via Morletta, lato Park, FS",
+833
+],
+[
+"VERDELLINO F.S. Via Gramsci, 15",
+834
+],
+[
+"VERDELLINO - Corso Africa, 16",
+836
+],
+[
+"ZINGONIA - corso Europa, 29/33",
+838
+],
+[
+"CISERANO - Via Circonvallazione Sud 10",
+840
+],
+[
+"PONTIROLO NUOVO - Via Mazzini, 61",
+846
+],
+[
+"PONTIROLO NUOVO - Viale Italia municipio",
+847
+],
+[
+"CANONICA D'ADDA - Via Bergamo Edicola",
+850
+],
+[
+"CANONICA D'ADDA - Via Lodi 40",
+852
+],
+[
+"FARA GERA D'ADDA - Via Bergamo, 382 fronte distributore",
+855
+],
+[
+"FARA GERA D'ADDA - Via Locatelli, 12",
+856
+],
+[
+"BADALASCO - Via Veneziana, 1428",
+862
+],
+[
+"TREVIGLIO - Via Isser, 31 - SAME",
+869
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+872
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+873
+],
+[
+"TREVIGLIO - V.le Montegrappa (cinema)",
+874
+],
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+875
+]
+]
+},
+{
+"line": "B812",
+"code": "NS6",
+"ago": true,
+"notes": [],
+"stops": [
+[
+"VERDELLINO -E-BRT",
+810
+],
+[
+"VERDELLINO F.S. Via Gramsci, 15",
+811
+],
+[
+"VERDELLINO - Corso Africa, 16",
+813
+],
+[
+"ZINGONIA - corso Europa, 29/33",
+814
+],
+[
+"CISERANO - Via Circonvallazione Sud 10",
+818
+],
+[
+"PONTIROLO NUOVO - Via Mazzini, 61",
+824
+],
+[
+"PONTIROLO NUOVO - Viale Italia municipio",
+825
+],
+[
+"CANONICA D'ADDA - Via Bergamo Edicola",
+829
+],
+[
+"CANONICA D'ADDA - Via Matteotti chiesa",
+831
+],
+[
+"VAPRIO D'ADDA - via Perego 42/44 - ATM",
+836
+],
+[
+"CANONICA D'ADDA - Via Matteotti fronte chiesa",
+841
+],
+[
+"CANONICA D'ADDA - Via Lodi 40",
+842
+],
+[
+"FARA GERA D'ADDA - Via Bergamo, 382 fronte distributore",
+845
+],
+[
+"FARA GERA D'ADDA - Via Locatelli, 12",
+846
+],
+[
+"BADALASCO - Via Veneziana, 1428",
+853
+],
+[
+"TREVIGLIO - Via Isser, 31 - SAME",
+858
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+861
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+862
+],
+[
+"TREVIGLIO - V.le Montegrappa (cinema)",
+863
+],
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+865
+]
+]
+},
+{
+"line": "B812",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"VERDELLO - Via Giovanni XXIII - fronte distrib.",
+816
+],
+[
+"ARCENE, Via Alcide De Gasperi 11",
+821
+],
+[
+"ARCENE - Corso Europa, S.S.42",
+822
+],
+[
+"CASTEL ROZZONE - Via Nazioni Unite",
+825
+]
+]
+},
+{
+"line": "B812",
+"code": "SSAB",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"VERDELLO - Via Giovanni XXIII - fronte distrib.",
+816
+],
+[
+"ARCENE, Via Alcide De Gasperi 11",
+821
+],
+[
+"ARCENE - Corso Europa, S.S.42",
+821
+],
+[
+"CASTEL ROZZONE - Via Nazioni Unite",
+825
+],
+[
+"TREVIGLIO - Piazza MENTANA, Collegio Angeli",
+836
+],
+[
+"TREVIGLIO - Piazza del POPOLO",
+839
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+840
+]
+]
+},
+{
+"line": "B812",
+"code": "NS6",
+"ago": true,
+"notes": [],
+"stops": [
+[
+"VERDELLINO -E-BRT",
+850
+],
+[
+"VERDELLINO F.S. Via Gramsci, 15",
+851
+],
+[
+"VERDELLINO - Corso Africa, 16",
+853
+],
+[
+"ZINGONIA - corso Europa, 29/33",
+854
+],
+[
+"CISERANO - Via Circonvallazione Sud 10",
+858
+],
+[
+"PONTIROLO NUOVO - Via Mazzini, 61",
+864
+],
+[
+"PONTIROLO NUOVO - Viale Italia municipio",
+865
+],
+[
+"CANONICA D'ADDA - Via Bergamo Edicola",
+869
+],
+[
+"CANONICA D'ADDA - Via Matteotti chiesa",
+871
+],
+[
+"VAPRIO D'ADDA - via Perego 42/44 - ATM",
+876
+],
+[
+"CANONICA D'ADDA - Via Matteotti fronte chiesa",
+881
+],
+[
+"CANONICA D'ADDA - Via Lodi 40",
+882
+],
+[
+"FARA GERA D'ADDA - Via Bergamo, 382 fronte distributore",
+885
+],
+[
+"FARA GERA D'ADDA - Via Locatelli, 12",
+886
+],
+[
+"BADALASCO - Via Veneziana, 1428",
+893
+],
+[
+"TREVIGLIO - Via Isser, 31 - SAME",
+898
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+901
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+902
+],
+[
+"TREVIGLIO - V.le Montegrappa (cinema)",
+903
+],
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+905
+]
+]
+},
+{
+"line": "B812",
+"code": "S6",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"BERGAMO, stazione Autolinee,pensilina 11",
+850
+],
+[
+"BERGAMO - Colognola Edicola",
+860
+],
+[
+"STEZZANO - Via Zanchi, Hotel Albi",
+863
+],
+[
+"LEVATE - Corso Europa, parcheggio",
+868
+],
+[
+"VERDELLO - Via Giovanni XXIII - fronte distrib.",
+873
+],
+[
+"CISERANO - Via Circonvallazione Sud 10",
+890
+],
+[
+"ARCENE, Via Alcide De Gasperi 11",
+878
+],
+[
+"ARCENE - Corso Europa, S.S.42",
+880
+],
+[
+"PONTIROLO NUOVO - Via Mazzini, 61",
+895
+],
+[
+"PONTIROLO NUOVO - Viale Italia municipio",
+896
+],
+[
+"CANONICA D'ADDA - Via Bergamo Edicola",
+901
+],
+[
+"CANONICA D'ADDA - Via Lodi 40",
+902
+],
+[
+"FARA GERA D'ADDA - Via Bergamo, 382 fronte distributore",
+906
+],
+[
+"FARA GERA D'ADDA - Via Locatelli, 12",
+908
+],
+[
+"BADALASCO - Via Veneziana, 1428",
+913
+],
+[
+"TREVIGLIO - Via Isser, 31 - SAME",
+916
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+919
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+920
+]
+]
+},
+{
+"line": "B812",
+"code": "S6",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"BERGAMO, stazione Autolinee,pensilina 11",
+875
+],
+[
+"BERGAMO - Colognola Edicola",
+882
+],
+[
+"STEZZANO - Via Zanchi, Hotel Albi",
+887
+],
+[
+"LEVATE - Corso Europa, parcheggio",
+892
+],
+[
+"VERDELLO - Via Don Giavazzi",
+897
+],
+[
+"VERDELLINO - Via Morletta, lato Park, FS",
+898
+],
+[
+"VERDELLINO F.S. Via Gramsci, 15",
+959
+],
+[
+"VERDELLINO - Corso Africa, 16",
+901
+],
+[
+"ZINGONIA - corso Europa, 29/33",
+903
+],
+[
+"CISERANO - Via Circonvallazione Sud 10",
+908
+],
+[
+"PONTIROLO NUOVO - Via Mazzini, 61",
+913
+],
+[
+"PONTIROLO NUOVO - Viale Italia municipio",
+914
+],
+[
+"CANONICA D'ADDA - Via Bergamo Edicola",
+918
+],
+[
+"CANONICA D'ADDA - Via Lodi 40",
+919
+],
+[
+"FARA GERA D'ADDA - Via Bergamo, 382 fronte distributore",
+923
+],
+[
+"FARA GERA D'ADDA - Via Locatelli, 12",
+924
+],
+[
+"BADALASCO - Via Veneziana, 1428",
+930
+],
+[
+"TREVIGLIO - Via Isser, 31 - SAME",
+934
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+937
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+940
+],
+[
+"TREVIGLIO - V.le Montegrappa (cinema)",
+941
+],
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+942
+]
+]
+},
+{
+"line": "B812",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"VERDELLO - Via Giovanni XXIII - fronte distrib.",
+876
+],
+[
+"ARCENE, Via Alcide De Gasperi 11",
+882
+],
+[
+"ARCENE - Corso Europa, S.S.42",
+883
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+906
+]
+]
+},
+{
+"line": "B812",
+"code": "NS6",
+"ago": true,
+"notes": [],
+"stops": [
+[
+"VERDELLINO -E-BRT",
+930
+],
+[
+"VERDELLINO F.S. Via Gramsci, 15",
+931
+],
+[
+"VERDELLINO - Corso Africa, 16",
+933
+],
+[
+"ZINGONIA - corso Europa, 29/33",
+934
+],
+[
+"CISERANO - Via Circonvallazione Sud 10",
+938
+],
+[
+"PONTIROLO NUOVO - Via Mazzini, 61",
+944
+],
+[
+"PONTIROLO NUOVO - Viale Italia municipio",
+945
+],
+[
+"CANONICA D'ADDA - Via Bergamo Edicola",
+949
+],
+[
+"CANONICA D'ADDA - Via Matteotti chiesa",
+951
+],
+[
+"VAPRIO D'ADDA - via Perego 42/44 - ATM",
+956
+],
+[
+"CANONICA D'ADDA - Via Matteotti fronte chiesa",
+961
+],
+[
+"CANONICA D'ADDA - Via Lodi 40",
+962
+],
+[
+"FARA GERA D'ADDA - Via Bergamo, 382 fronte distributore",
+965
+],
+[
+"FARA GERA D'ADDA - Via Locatelli, 12",
+966
+],
+[
+"BADALASCO - Via Veneziana, 1428",
+973
+],
+[
+"TREVIGLIO - Via Isser, 31 - SAME",
+978
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+981
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+982
+],
+[
+"TREVIGLIO - V.le Montegrappa (cinema)",
+983
+],
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+985
+]
+]
+},
+{
+"line": "B812",
+"code": "SSAB",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"VERDELLINO -E-BRT",
+940
+],
+[
+"VERDELLINO F.S. Via Gramsci, 15",
+941
+],
+[
+"VERDELLINO - Corso Africa, 16",
+943
+],
+[
+"ZINGONIA - corso Europa, 29/33",
+944
+],
+[
+"CISERANO - Via Circonvallazione Sud 10",
+948
+],
+[
+"PONTIROLO NUOVO - Via Mazzini, 61",
+954
+],
+[
+"PONTIROLO NUOVO - Viale Italia municipio",
+955
+],
+[
+"CANONICA D'ADDA - Via Bergamo Edicola",
+959
+],
+[
+"CANONICA D'ADDA - Via Matteotti chiesa",
+961
+],
+[
+"VAPRIO D'ADDA - via Perego 42/44 - ATM",
+966
+],
+[
+"CANONICA D'ADDA - Via Matteotti fronte chiesa",
+971
+],
+[
+"CANONICA D'ADDA - Via Lodi 40",
+972
+],
+[
+"FARA GERA D'ADDA - Via Bergamo, 382 fronte distributore",
+975
+],
+[
+"FARA GERA D'ADDA - Via Locatelli, 12",
+976
+],
+[
+"BADALASCO - Via Veneziana, 1428",
+983
+],
+[
+"TREVIGLIO - Via Isser, 31 - SAME",
+988
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+991
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+992
+],
+[
+"TREVIGLIO - V.le Montegrappa (cinema)",
+993
+],
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+995
+]
+]
+},
+{
+"line": "B812",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"BERGAMO, stazione Autolinee,pensilina 11",
+950
+],
+[
+"BERGAMO - Colognola Edicola",
+956
+],
+[
+"STEZZANO - Via Zanchi, Hotel Albi",
+962
+],
+[
+"LEVATE - Corso Europa, parcheggio",
+967
+],
+[
+"VERDELLO - Via Don Giavazzi",
+972
+],
+[
+"VERDELLINO - Via Morletta, lato Park, FS",
+973
+],
+[
+"VERDELLINO F.S. Via Gramsci, 15",
+974
+],
+[
+"VERDELLINO - Corso Africa, 16",
+977
+],
+[
+"ZINGONIA - corso Europa, 29/33",
+978
+],
+[
+"CISERANO - Via Circonvallazione Sud 10",
+983
+],
+[
+"PONTIROLO NUOVO - Via Mazzini, 61",
+990
+],
+[
+"PONTIROLO NUOVO - Viale Italia municipio",
+992
+],
+[
+"CANONICA D'ADDA - Via Bergamo Edicola",
+995
+],
+[
+"CANONICA D'ADDA - Via Lodi 40",
+997
+],
+[
+"FARA GERA D'ADDA - Via Bergamo, 382 fronte distributore",
+1000
+],
+[
+"FARA GERA D'ADDA - Via Locatelli, 12",
+1001
+],
+[
+"BADALASCO - Via Veneziana, 1428",
+1007
+],
+[
+"TREVIGLIO - Via Isser, 31 - SAME",
+1012
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+1015
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+1017
+],
+[
+"TREVIGLIO - V.le Montegrappa (cinema)",
+1018
+],
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+1019
+]
+]
+},
+{
+"line": "B812",
+"code": "F6",
+"ago": true,
+"notes": [],
+"stops": [
+[
+"VERDELLINO -E-BRT",
+1050
+],
+[
+"VERDELLINO F.S. Via Gramsci, 15",
+1051
+],
+[
+"VERDELLINO - Corso Africa, 16",
+1053
+],
+[
+"ZINGONIA - corso Europa, 29/33",
+1054
+],
+[
+"CISERANO - Via Circonvallazione Sud 10",
+1058
+],
+[
+"PONTIROLO NUOVO - Via Mazzini, 61",
+1064
+],
+[
+"PONTIROLO NUOVO - Viale Italia municipio",
+1065
+],
+[
+"CANONICA D'ADDA - Via Bergamo Edicola",
+1069
+],
+[
+"CANONICA D'ADDA - Via Matteotti chiesa",
+1071
+],
+[
+"VAPRIO D'ADDA - via Perego 42/44 - ATM",
+1076
+],
+[
+"CANONICA D'ADDA - Via Matteotti fronte chiesa",
+1081
+],
+[
+"CANONICA D'ADDA - Via Lodi 40",
+1082
+],
+[
+"FARA GERA D'ADDA - Via Bergamo, 382 fronte distributore",
+1085
+],
+[
+"FARA GERA D'ADDA - Via Locatelli, 12",
+1086
+],
+[
+"BADALASCO - Via Veneziana, 1428",
+1093
+],
+[
+"TREVIGLIO - Via Isser, 31 - SAME",
+1098
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+1101
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+1102
+],
+[
+"TREVIGLIO - V.le Montegrappa (cinema)",
+1103
+],
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+1105
+]
+]
+},
+{
+"line": "B812",
+"code": "NS5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"VERDELLINO -E-BRT",
+1105
+],
+[
+"VERDELLINO F.S. Via Gramsci, 15",
+1106
+],
+[
+"VERDELLINO - Corso Africa, 16",
+1108
+],
+[
+"ZINGONIA - corso Europa, 29/33",
+1109
+],
+[
+"CISERANO - Via Circonvallazione Sud 10",
+1113
+],
+[
+"PONTIROLO NUOVO - Via Mazzini, 61",
+1119
+],
+[
+"PONTIROLO NUOVO - Viale Italia municipio",
+1120
+],
+[
+"CANONICA D'ADDA - Via Bergamo Edicola",
+1124
+],
+[
+"CANONICA D'ADDA - Via Matteotti chiesa",
+1126
+],
+[
+"VAPRIO D'ADDA - via Perego 42/44 - ATM",
+1131
+],
+[
+"CANONICA D'ADDA - Via Matteotti fronte chiesa",
+1136
+],
+[
+"CANONICA D'ADDA - Via Lodi 40",
+1137
+],
+[
+"FARA GERA D'ADDA - Via Bergamo, 382 fronte distributore",
+1140
+],
+[
+"FARA GERA D'ADDA - Via Locatelli, 12",
+1141
+],
+[
+"BADALASCO - Via Veneziana, 1428",
+1148
+],
+[
+"TREVIGLIO - Via Isser, 31 - SAME",
+1153
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+1156
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+1157
+],
+[
+"TREVIGLIO - V.le Montegrappa (cinema)",
+1158
+],
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+1160
+]
+]
+},
+{
+"line": "B812",
+"code": "S6",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"VERDELLINO -E-BRT",
+1115
+],
+[
+"VERDELLINO F.S. Via Gramsci, 15",
+1116
+],
+[
+"VERDELLINO - Corso Africa, 16",
+1118
+],
+[
+"ZINGONIA - corso Europa, 29/33",
+1119
+],
+[
+"CISERANO - Via Circonvallazione Sud 10",
+1123
+],
+[
+"PONTIROLO NUOVO - Via Mazzini, 61",
+1129
+],
+[
+"PONTIROLO NUOVO - Viale Italia municipio",
+1130
+],
+[
+"CANONICA D'ADDA - Via Bergamo Edicola",
+1134
+],
+[
+"CANONICA D'ADDA - Via Matteotti chiesa",
+1136
+],
+[
+"VAPRIO D'ADDA - via Perego 42/44 - ATM",
+1141
+],
+[
+"CANONICA D'ADDA - Via Matteotti fronte chiesa",
+1146
+],
+[
+"CANONICA D'ADDA - Via Lodi 40",
+1147
+],
+[
+"FARA GERA D'ADDA - Via Bergamo, 382 fronte distributore",
+1150
+],
+[
+"FARA GERA D'ADDA - Via Locatelli, 12",
+1151
+],
+[
+"BADALASCO - Via Veneziana, 1428",
+1158
+],
+[
+"TREVIGLIO - Via Isser, 31 - SAME",
+1163
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+1166
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+1167
+],
+[
+"TREVIGLIO - V.le Montegrappa (cinema)",
+1168
+],
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+1170
+]
+]
+},
+{
+"line": "B812",
+"code": "F6",
+"ago": true,
+"notes": [],
+"stops": [
+[
+"VERDELLINO -E-BRT",
+1165
+],
+[
+"VERDELLINO F.S. Via Gramsci, 15",
+1166
+],
+[
+"VERDELLINO - Corso Africa, 16",
+1168
+],
+[
+"ZINGONIA - corso Europa, 29/33",
+1169
+],
+[
+"CISERANO - Via Circonvallazione Sud 10",
+1173
+],
+[
+"PONTIROLO NUOVO - Via Mazzini, 61",
+1179
+],
+[
+"PONTIROLO NUOVO - Viale Italia municipio",
+1180
+],
+[
+"CANONICA D'ADDA - Via Bergamo Edicola",
+1184
+],
+[
+"CANONICA D'ADDA - Via Matteotti chiesa",
+1186
+],
+[
+"VAPRIO D'ADDA - via Perego 42/44 - ATM",
+1191
+],
+[
+"CANONICA D'ADDA - Via Matteotti fronte chiesa",
+1196
+],
+[
+"CANONICA D'ADDA - Via Lodi 40",
+1197
+],
+[
+"FARA GERA D'ADDA - Via Bergamo, 382 fronte distributore",
+1200
+],
+[
+"FARA GERA D'ADDA - Via Locatelli, 12",
+1201
+],
+[
+"BADALASCO - Via Veneziana, 1428",
+1208
+],
+[
+"TREVIGLIO - Via Isser, 31 - SAME",
+1213
+],
+[
+"TREVIGLIO - Via Buonarroti/l.go I° Maggio (stazione Ovest)",
+1216
+],
+[
+"TREVIGLIO P.le Mazzini Stazione OVEST",
+1217
+],
+[
+"TREVIGLIO - V.le Montegrappa (cinema)",
+1218
+],
+[
+"TREVIGLIO - V.le De Gasperi Stazione FS",
+1220
+]
+]
+},
+{
+"line": "B812",
+"code": "NS6",
+"ago": true,
+"notes": [],
+"stops": [
+[
+"VERDELLINO -E-BRT",
+1210
+],
+[
+"VERDELLINO F.S. Via Gramsci, 15",
+1211
+],
+[
+"VERDELLINO - Corso Africa, 16",
+1213
+],
+[
+"ZINGONIA - corso Europa, 29/33",
+1214
+],
+[
+"CISERANO - Via Circonvallazione Sud 10",
+1218
+],
+[
+"PONTIROLO NUOVO - Via Mazzini, 61",
+1224
+],
+[
+"PONTIROLO NUOVO - Viale Italia municipio",
+1225
+],
+[
+"CANONICA D'ADDA - Via Bergamo Edicola",
+1229
+],
+[
+"CANONICA D'ADDA - Via Matteotti chiesa",
+1231
+],
+[
+"VAPRIO D'ADDA - via Perego 42/44 - ATM",
+1236
+],
+[
+"CANONICA D'ADDA - Via Matteotti fronte chiesa",
+1241
+]
+]
+},
+{
+"line": "T10",
+"code": "S6",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"CANONICA D'ADDA - Via Bergamo, edicola",
+382
+],
+[
+"CANONICA D'ADDA - Via Matteotti, chiesa",
+384
+],
+[
+"VAPRIO D'ADDA - Via per Grezzago 2",
+388
+],
+[
+"TREZZO SULL'ADDA - Via Nenni, ITC",
+400
+]
+]
+},
+{
+"line": "T10",
+"code": "NS6",
+"ago": true,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+388
+],
+[
+"TREVIGLIO - Piazza del POPOLO",
+389
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+385
+],
+[
+"TREVIGLIO - Viale BUONARROTTI 38",
+391
+],
+[
+"TREVIGLIO - Via Canonica,lato scuola, GEROMINA",
+394
+],
+[
+"TREVIGLIO - fraz. CASTEL CERRETO",
+397
+],
+[
+"PONTIROLO NUOVO - Viale Italia, municipio",
+402
+],
+[
+"CANONICA D'ADDA - Via Bergamo, edicola",
+405
+],
+[
+"CANONICA D'ADDA - Via Matteotti, chiesa",
+406
+],
+[
+"VAPRIO D'ADDA - Via per Grezzago 2",
+409
+],
+[
+"VAPRIO D'ADDA - Via Perego 42/44, ATM",
+412
+]
+]
+},
+{
+"line": "T10",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"CANONICA D'ADDA - Via Bergamo, edicola",
+400
+],
+[
+"CANONICA D'ADDA - Via Matteotti, chiesa",
+401
+],
+[
+"VAPRIO D'ADDA - Via per Grezzago 2",
+404
+],
+[
+"VAPRIO D'ADDA - Via Perego 42/44, ATM",
+406
+]
+]
+},
+{
+"line": "T10",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+408
+],
+[
+"TREVIGLIO - Piazza del POPOLO",
+410
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+405
+],
+[
+"TREVIGLIO - Viale BUONARROTTI 38",
+412
+],
+[
+"TREVIGLIO - Via Canonica,lato scuola, GEROMINA",
+416
+],
+[
+"TREVIGLIO - fraz. CASTEL CERRETO",
+421
+],
+[
+"PONTIROLO NUOVO - Viale Italia, municipio",
+425
+],
+[
+"CANONICA D'ADDA - Via Bergamo, edicola",
+430
+],
+[
+"FARA GERA D'ADDA - Via Udine",
+438
+],
+[
+"CANONICA D'ADDA - Via Matteotti, chiesa",
+444
+],
+[
+"VAPRIO D'ADDA - Via per Grezzago 2",
+450
+],
+[
+"VAPRIO D'ADDA - Via Perego 42/44, ATM",
+452
+],
+[
+"TREZZO SULL'ADDA - Via Biffi, edicola",
+464
+],
+[
+"TREZZO SULL'ADDA - Via Nenni, ITC",
+468
+]
+]
+},
+{
+"line": "T10",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+490
+],
+[
+"TREVIGLIO - Piazza del POPOLO",
+492
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+494
+],
+[
+"TREVIGLIO - Viale BUONARROTTI 38",
+496
+],
+[
+"TREVIGLIO - Via Canonica,lato scuola, GEROMINA",
+499
+],
+[
+"TREVIGLIO - fraz. CASTEL CERRETO",
+503
+],
+[
+"PONTIROLO NUOVO - Viale Italia, municipio",
+509
+],
+[
+"CANONICA D'ADDA - Via Bergamo, edicola",
+513
+],
+[
+"CANONICA D'ADDA - Via Matteotti, chiesa",
+514
+],
+[
+"VAPRIO D'ADDA - Via per Grezzago 2",
+518
+],
+[
+"VAPRIO D'ADDA - Via Perego 42/44, ATM",
+520
+]
+]
+},
+{
+"line": "T10",
+"code": "NS6",
+"ago": true,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+510
+],
+[
+"TREVIGLIO - Piazza del POPOLO",
+512
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+514
+],
+[
+"TREVIGLIO - Viale BUONARROTTI 38",
+516
+],
+[
+"TREVIGLIO - Via Canonica,lato scuola, GEROMINA",
+519
+],
+[
+"TREVIGLIO - fraz. CASTEL CERRETO",
+523
+],
+[
+"PONTIROLO NUOVO - Viale Italia, municipio",
+528
+],
+[
+"CANONICA D'ADDA - Via Bergamo, edicola",
+532
+],
+[
+"CANONICA D'ADDA - Via Matteotti, chiesa",
+533
+],
+[
+"VAPRIO D'ADDA - Via per Grezzago 2",
+537
+],
+[
+"VAPRIO D'ADDA - Via Perego 42/44, ATM",
+539
+]
+]
+},
+{
+"line": "T10",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+540
+],
+[
+"TREVIGLIO - Piazza del POPOLO",
+542
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+544
+],
+[
+"TREVIGLIO - Viale BUONARROTTI 38",
+546
+],
+[
+"TREVIGLIO - Via Canonica,lato scuola, GEROMINA",
+549
+],
+[
+"TREVIGLIO - fraz. CASTEL CERRETO",
+554
+],
+[
+"PONTIROLO NUOVO - Viale Italia, municipio",
+560
+],
+[
+"CANONICA D'ADDA - Via Bergamo, edicola",
+564
+],
+[
+"CANONICA D'ADDA - Via Matteotti, chiesa",
+565
+],
+[
+"VAPRIO D'ADDA - Via per Grezzago 2",
+568
+],
+[
+"VAPRIO D'ADDA - Via Perego 42/44, ATM",
+570
+]
+]
+},
+{
+"line": "T10",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+600
+],
+[
+"TREVIGLIO - Piazza del POPOLO",
+602
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+604
+],
+[
+"TREVIGLIO - Viale BUONARROTTI 38",
+606
+],
+[
+"TREVIGLIO - Via Canonica,lato scuola, GEROMINA",
+609
+],
+[
+"TREVIGLIO - fraz. CASTEL CERRETO",
+614
+],
+[
+"PONTIROLO NUOVO - Viale Italia, municipio",
+620
+],
+[
+"CANONICA D'ADDA - Via Bergamo, edicola",
+624
+],
+[
+"CANONICA D'ADDA - Via Matteotti, chiesa",
+625
+],
+[
+"VAPRIO D'ADDA - Via per Grezzago 2",
+628
+],
+[
+"VAPRIO D'ADDA - Via Perego 42/44, ATM",
+630
+]
+]
+},
+{
+"line": "T10",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"CARAVAGGIO - Via Zenale e Butinone",
+725
+],
+[
+"TREVIGLIO - Ospedale / ITIS, lato Trony",
+729
+],
+[
+"TREVIGLIO - Viale MERISIO, lato Agraria",
+731
+],
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+735
+],
+[
+"TREVIGLIO - Piazza del POPOLO",
+737
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+739
+],
+[
+"TREVIGLIO - Viale BUONARROTTI 38",
+741
+],
+[
+"TREVIGLIO - Via Canonica,lato scuola, GEROMINA",
+744
+],
+[
+"TREVIGLIO - fraz. CASTEL CERRETO",
+748
+],
+[
+"PONTIROLO NUOVO - Viale Italia, municipio",
+753
+],
+[
+"CANONICA D'ADDA - Via Bergamo, edicola",
+757
+],
+[
+"CANONICA D'ADDA - Via Matteotti, chiesa",
+758
+],
+[
+"VAPRIO D'ADDA - Via per Grezzago 2",
+762
+],
+[
+"VAPRIO D'ADDA - Via Perego 42/44, ATM",
+764
+],
+[
+"TREZZO SULL'ADDA - Via Biffi, edicola",
+774
+],
+[
+"TREZZO SULL'ADDA - Via Nenni, ITC",
+777
+]
+]
+},
+{
+"line": "T10",
+"code": "SSAB",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - Viale MERISIO, lato Agraria",
+732
+],
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+739
+],
+[
+"TREVIGLIO - Piazza del POPOLO",
+741
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+743
+],
+[
+"TREVIGLIO - Viale BUONARROTTI 38",
+745
+],
+[
+"TREVIGLIO - Via Canonica,lato scuola, GEROMINA",
+748
+],
+[
+"TREVIGLIO - fraz. CASTEL CERRETO",
+752
+],
+[
+"PONTIROLO NUOVO - Viale Italia, municipio",
+757
+],
+[
+"CANONICA D'ADDA - Via Bergamo, edicola",
+762
+],
+[
+"CANONICA D'ADDA - Via Matteotti, chiesa",
+763
+],
+[
+"VAPRIO D'ADDA - Via per Grezzago 2",
+767
+],
+[
+"VAPRIO D'ADDA - Via Perego 42/44, ATM",
+769
+],
+[
+"TREZZO SULL'ADDA - Via Biffi, edicola",
+778
+],
+[
+"TREZZO SULL'ADDA - Via Nenni, ITC",
+783
+]
+]
+},
+{
+"line": "T10",
+"code": "S6",
+"ago": false,
+"notes": [
+"Y"
+],
+"stops": [
+[
+"CARAVAGGIO - Via Zenale e Butinone",
+785
+],
+[
+"TREVIGLIO - Ospedale / ITIS, lato Trony",
+790
+],
+[
+"TREVIGLIO - Viale MERISIO, lato Agraria",
+792
+],
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+800
+],
+[
+"TREVIGLIO - Piazza del POPOLO",
+802
+],
+[
+"TREVIGLIO - Piazza MENTANA",
+804
+],
+[
+"TREVIGLIO - Via Canonica,lato scuola, GEROMINA",
+809
+],
+[
+"TREVIGLIO - fraz. CASTEL CERRETO",
+813
+],
+[
+"PONTIROLO NUOVO - Viale Italia, municipio",
+819
+],
+[
+"CANONICA D'ADDA - Via Bergamo, edicola",
+823
+],
+[
+"CANONICA D'ADDA - Via Matteotti, chiesa",
+824
+],
+[
+"VAPRIO D'ADDA - Via per Grezzago 2",
+828
+],
+[
+"VAPRIO D'ADDA - Via Perego 42/44, ATM",
+830
+],
+[
+"TREZZO SULL'ADDA - Via Nenni, ITC",
+845
+]
+]
+},
+{
+"line": "T10",
+"code": "S5",
+"ago": false,
+"notes": [
+"Y"
+],
+"stops": [
+[
+"CARAVAGGIO - Via Zenale e Butinone",
+850
+],
+[
+"TREVIGLIO - Ospedale / ITIS, lato Trony",
+855
+],
+[
+"TREVIGLIO - Viale MERISIO, lato Agraria",
+857
+],
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+860
+],
+[
+"TREVIGLIO - Piazza del POPOLO",
+862
+],
+[
+"TREVIGLIO - Piazza MENTANA",
+864
+],
+[
+"TREVIGLIO - Via Canonica,lato scuola, GEROMINA",
+872
+],
+[
+"TREVIGLIO - fraz. CASTEL CERRETO",
+878
+],
+[
+"PONTIROLO NUOVO - Viale Italia, municipio",
+885
+],
+[
+"CANONICA D'ADDA - Via Bergamo, edicola",
+889
+],
+[
+"CANONICA D'ADDA - Via Matteotti, chiesa",
+890
+],
+[
+"VAPRIO D'ADDA - Via per Grezzago 2",
+894
+],
+[
+"VAPRIO D'ADDA - Via Perego 42/44, ATM",
+896
+],
+[
+"TREZZO SULL'ADDA - Via Nenni, ITC",
+895
+]
+]
+},
+{
+"line": "T10",
+"code": "S5",
+"ago": false,
+"notes": [
+"W"
+],
+"stops": [
+[
+"CARAVAGGIO - Via Zenale e Butinone",
+850
+],
+[
+"TREVIGLIO - Ospedale / ITIS, lato Trony",
+855
+],
+[
+"TREVIGLIO - Viale MERISIO, lato Agraria",
+857
+],
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+865
+],
+[
+"TREVIGLIO - Piazza del POPOLO",
+867
+],
+[
+"PONTIROLO NUOVO - Viale Italia, municipio",
+878
+],
+[
+"CANONICA D'ADDA - Via Bergamo, edicola",
+883
+],
+[
+"CANONICA D'ADDA - Via Matteotti, chiesa",
+884
+],
+[
+"VAPRIO D'ADDA - Via per Grezzago 2",
+888
+],
+[
+"VAPRIO D'ADDA - Via Perego 42/44, ATM",
+890
+]
+]
+},
+{
+"line": "T10",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+860
+],
+[
+"TREVIGLIO - Viale BUONARROTTI 38",
+861
+],
+[
+"TREVIGLIO - fraz. CASTEL CERRETO",
+870
+]
+]
+},
+{
+"line": "T10",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"CARAVAGGIO - Via Zenale e Butinone",
+905
+],
+[
+"TREVIGLIO - Ospedale / ITIS, lato Trony",
+910
+],
+[
+"TREVIGLIO - Viale MERISIO, lato Agraria",
+912
+],
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+920
+],
+[
+"TREVIGLIO - Piazza del POPOLO",
+922
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+924
+],
+[
+"TREVIGLIO - Viale BUONARROTTI 38",
+926
+],
+[
+"TREVIGLIO - Via Canonica,lato scuola, GEROMINA",
+929
+],
+[
+"TREVIGLIO - fraz. CASTEL CERRETO",
+935
+],
+[
+"PONTIROLO NUOVO - Viale Italia, municipio",
+940
+],
+[
+"CANONICA D'ADDA - Via Bergamo, edicola",
+945
+],
+[
+"CANONICA D'ADDA - Via Matteotti, chiesa",
+946
+],
+[
+"VAPRIO D'ADDA - Via per Grezzago 2",
+950
+],
+[
+"VAPRIO D'ADDA - Via Perego 42/44, ATM",
+952
+],
+[
+"TREZZO SULL'ADDA - Via Biffi, edicola",
+962
+],
+[
+"TREZZO SULL'ADDA - Via Nenni, ITC",
+965
+]
+]
+},
+{
+"line": "T10",
+"code": "NS6",
+"ago": true,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+970
+],
+[
+"TREVIGLIO - Piazza del POPOLO",
+972
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+974
+],
+[
+"TREVIGLIO - Viale BUONARROTTI 38",
+976
+],
+[
+"TREVIGLIO - Via Canonica,lato scuola, GEROMINA",
+979
+],
+[
+"TREVIGLIO - fraz. CASTEL CERRETO",
+983
+],
+[
+"PONTIROLO NUOVO - Viale Italia, municipio",
+988
+],
+[
+"CANONICA D'ADDA - Via Bergamo, edicola",
+992
+],
+[
+"CANONICA D'ADDA - Via Matteotti, chiesa",
+993
+],
+[
+"VAPRIO D'ADDA - Via per Grezzago 2",
+997
+],
+[
+"VAPRIO D'ADDA - Via Perego 42/44, ATM",
+999
+]
+]
+},
+{
+"line": "T10",
+"code": "S5",
+"ago": false,
+"notes": [
+"Y"
+],
+"stops": [
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+973
+],
+[
+"TREVIGLIO - Piazza del POPOLO",
+974
+],
+[
+"TREVIGLIO - Piazza MENTANA",
+976
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+970
+],
+[
+"TREVIGLIO - Viale BUONARROTTI 38",
+972
+],
+[
+"TREVIGLIO - Via Canonica,lato scuola, GEROMINA",
+979
+],
+[
+"TREVIGLIO - fraz. CASTEL CERRETO",
+983
+],
+[
+"PONTIROLO NUOVO - Viale Italia, municipio",
+988
+],
+[
+"CANONICA D'ADDA - Via Bergamo, edicola",
+994
+],
+[
+"CANONICA D'ADDA - Via Matteotti, chiesa",
+995
+],
+[
+"VAPRIO D'ADDA - Via per Grezzago 2",
+999
+],
+[
+"VAPRIO D'ADDA - Via Perego 42/44, ATM",
+1001
+],
+[
+"TREZZO SULL'ADDA - Via Biffi, edicola",
+1010
+]
+]
+},
+{
+"line": "T10",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+1040
+],
+[
+"TREVIGLIO - Piazza del POPOLO",
+1042
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+1044
+],
+[
+"TREVIGLIO - Viale BUONARROTTI 38",
+1046
+],
+[
+"TREVIGLIO - Via Canonica,lato scuola, GEROMINA",
+1049
+],
+[
+"TREVIGLIO - fraz. CASTEL CERRETO",
+1053
+],
+[
+"PONTIROLO NUOVO - Viale Italia, municipio",
+1059
+],
+[
+"CANONICA D'ADDA - Via Bergamo, edicola",
+1063
+],
+[
+"CANONICA D'ADDA - Via Matteotti, chiesa",
+1064
+],
+[
+"VAPRIO D'ADDA - Via per Grezzago 2",
+1068
+],
+[
+"VAPRIO D'ADDA - Via Perego 42/44, ATM",
+1070
+]
+]
+},
+{
+"line": "T10",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+1100
+],
+[
+"TREVIGLIO - Piazza del POPOLO",
+1102
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+1104
+],
+[
+"TREVIGLIO - Viale BUONARROTTI 38",
+1106
+],
+[
+"TREVIGLIO - Via Canonica,lato scuola, GEROMINA",
+1109
+],
+[
+"TREVIGLIO - fraz. CASTEL CERRETO",
+1113
+],
+[
+"PONTIROLO NUOVO - Viale Italia, municipio",
+1119
+],
+[
+"CANONICA D'ADDA - Via Bergamo, edicola",
+1123
+],
+[
+"CANONICA D'ADDA - Via Matteotti, chiesa",
+1124
+],
+[
+"VAPRIO D'ADDA - Via per Grezzago 2",
+1128
+],
+[
+"VAPRIO D'ADDA - Via Perego 42/44, ATM",
+1130
+]
+]
+},
+{
+"line": "T10",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+1133
+],
+[
+"TREVIGLIO - Piazza del POPOLO",
+1134
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+1130
+],
+[
+"TREVIGLIO - Viale BUONARROTTI 38",
+1136
+],
+[
+"TREVIGLIO - Via Canonica,lato scuola, GEROMINA",
+1141
+],
+[
+"TREVIGLIO - fraz. CASTEL CERRETO",
+1145
+],
+[
+"PONTIROLO NUOVO - Viale Italia, municipio",
+1150
+],
+[
+"CANONICA D'ADDA - Via Bergamo, edicola",
+1160
+]
+]
+},
+{
+"line": "T10",
+"code": "F6",
+"ago": true,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+1160
+],
+[
+"TREVIGLIO - Piazza del POPOLO",
+1162
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+1164
+],
+[
+"TREVIGLIO - Viale BUONARROTTI 38",
+1166
+],
+[
+"TREVIGLIO - Via Canonica,lato scuola, GEROMINA",
+1169
+],
+[
+"TREVIGLIO - fraz. CASTEL CERRETO",
+1173
+],
+[
+"PONTIROLO NUOVO - Viale Italia, municipio",
+1178
+],
+[
+"CANONICA D'ADDA - Via Bergamo, edicola",
+1182
+],
+[
+"CANONICA D'ADDA - Via Matteotti, chiesa",
+1183
+],
+[
+"VAPRIO D'ADDA - Via per Grezzago 2",
+1187
+],
+[
+"VAPRIO D'ADDA - Via Perego 42/44, ATM",
+1189
+]
+]
+},
+{
+"line": "T10",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"CANONICA D'ADDA - Via Lodi 40",
+375
+],
+[
+"CANONICA D'ADDA - Via Bergamo, fronte edicola",
+376
+],
+[
+"FARA GERA D'ADDA - Via Udine",
+370
+],
+[
+"PONTIROLO NUOVO - Viale Italia, municipio",
+380
+],
+[
+"TREVIGLIO - fraz. CASTEL CERRETO",
+385
+],
+[
+"TREVIGLIO - Via Canonica lato chiesa, GEROMINA",
+388
+],
+[
+"TREVIGLIO - Viale BUONARROTTI 39",
+392
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+393
+],
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+397
+]
+]
+},
+{
+"line": "T10",
+"code": "S5",
+"ago": false,
+"notes": [
+"C"
+],
+"stops": [
+[
+"TREZZO SULL'ADDA -Via Nenni, ITC",
+400
+],
+[
+"TREZZO SULL'ADDA - Via Biffi, edicola",
+408
+],
+[
+"VAPRIO D'ADDA - Via per Grezzago fronte 2",
+412
+],
+[
+"CANONICA D'ADDA - Via Matteotti, fronte chiesa",
+413
+],
+[
+"PONTIROLO NUOVO - Viale Italia, municipio",
+420
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+435
+],
+[
+"TREVIGLIO - VIALE MONTEGRAPPA - CINEMA",
+438
+],
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+440
+]
+]
+},
+{
+"line": "T10",
+"code": "SSAB",
+"ago": false,
+"notes": [
+"C"
+],
+"stops": [
+[
+"TREZZO SULL'ADDA -Via Nenni, ITC",
+405
+],
+[
+"TREZZO SULL'ADDA - Via Biffi, edicola",
+413
+],
+[
+"VAPRIO D'ADDA - Via Perego 42/44, ATM",
+418
+],
+[
+"VAPRIO D'ADDA - Via per Grezzago fronte 2",
+420
+],
+[
+"CANONICA D'ADDA - Via Matteotti, fronte chiesa",
+424
+],
+[
+"CANONICA D'ADDA - Via Bergamo, fronte edicola",
+425
+],
+[
+"PONTIROLO NUOVO - Viale Italia, municipio",
+429
+],
+[
+"TREVIGLIO - fraz. CASTEL CERRETO",
+433
+],
+[
+"TREVIGLIO - Via Canonica lato chiesa, GEROMINA",
+436
+],
+[
+"TREVIGLIO - Viale BUONARROTTI 39",
+437
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+440
+],
+[
+"TREVIGLIO - VIALE MONTEGRAPPA - CINEMA",
+442
+],
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+444
+]
+]
+},
+{
+"line": "T10",
+"code": "S5",
+"ago": false,
+"notes": [
+"C"
+],
+"stops": [
+[
+"VAPRIO D'ADDA - Via Perego 42/44, ATM",
+410
+],
+[
+"VAPRIO D'ADDA - Via per Grezzago fronte 2",
+412
+],
+[
+"CANONICA D'ADDA - Via Matteotti, fronte chiesa",
+413
+],
+[
+"TREVIGLIO - fraz. CASTEL CERRETO",
+430
+],
+[
+"TREVIGLIO - Via Canonica lato chiesa, GEROMINA",
+433
+],
+[
+"TREVIGLIO - Viale BUONARROTTI 39",
+438
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+440
+],
+[
+"TREVIGLIO - VIALE MONTEGRAPPA - CINEMA",
+441
+],
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+445
+]
+]
+},
+{
+"line": "T10",
+"code": "NS6",
+"ago": true,
+"notes": [],
+"stops": [
+[
+"VAPRIO D'ADDA - Via Perego 42/44, ATM",
+415
+],
+[
+"VAPRIO D'ADDA - Via per Grezzago fronte 2",
+417
+],
+[
+"CANONICA D'ADDA - Via Matteotti, fronte chiesa",
+418
+],
+[
+"CANONICA D'ADDA - Via Bergamo, fronte edicola",
+420
+],
+[
+"PONTIROLO NUOVO - Viale Italia, municipio",
+425
+],
+[
+"TREVIGLIO - fraz. CASTEL CERRETO",
+429
+],
+[
+"TREVIGLIO - Via Canonica lato chiesa, GEROMINA",
+432
+],
+[
+"TREVIGLIO - Viale BUONARROTTI 39",
+433
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+437
+],
+[
+"TREVIGLIO - VIALE MONTEGRAPPA - CINEMA",
+439
+],
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+440
+]
+]
+},
+{
+"line": "T10",
+"code": "S6",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"CANONICA D'ADDA - Via Lodi 40",
+420
+],
+[
+"CANONICA D'ADDA - Via Bergamo, fronte edicola",
+422
+],
+[
+"PONTIROLO NUOVO - Viale Italia, municipio",
+425
+],
+[
+"TREVIGLIO - fraz. CASTEL CERRETO",
+430
+],
+[
+"TREVIGLIO - Via Canonica lato chiesa, GEROMINA",
+435
+],
+[
+"TREVIGLIO - Viale BUONARROTTI 39",
+439
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+440
+]
+]
+},
+{
+"line": "T10",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"TREZZO SULL'ADDA -Via Nenni, ITC",
+470
+],
+[
+"TREZZO SULL'ADDA - Via Biffi, edicola",
+473
+],
+[
+"VAPRIO D'ADDA - Via Perego 42/44, ATM",
+478
+],
+[
+"VAPRIO D'ADDA - Via per Grezzago fronte 2",
+480
+],
+[
+"CANONICA D'ADDA - Via Matteotti, fronte chiesa",
+484
+],
+[
+"CANONICA D'ADDA - Via Bergamo, fronte edicola",
+485
+],
+[
+"PONTIROLO NUOVO - Viale Italia, municipio",
+492
+],
+[
+"TREVIGLIO - fraz. CASTEL CERRETO",
+498
+],
+[
+"TREVIGLIO - Via Canonica lato chiesa, GEROMINA",
+502
+],
+[
+"TREVIGLIO - Viale BUONARROTTI 39",
+504
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+505
+],
+[
+"TREVIGLIO - VIALE MONTEGRAPPA - CINEMA",
+507
+],
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+510
+]
+]
+},
+{
+"line": "T10",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"VAPRIO D'ADDA - Via Perego 42/44, ATM",
+520
+],
+[
+"VAPRIO D'ADDA - Via per Grezzago fronte 2",
+522
+],
+[
+"CANONICA D'ADDA - Via Matteotti, fronte chiesa",
+526
+],
+[
+"CANONICA D'ADDA - Via Bergamo, fronte edicola",
+527
+],
+[
+"PONTIROLO NUOVO - Viale Italia, municipio",
+531
+],
+[
+"TREVIGLIO - fraz. CASTEL CERRETO",
+535
+],
+[
+"TREVIGLIO - Via Canonica lato chiesa, GEROMINA",
+538
+],
+[
+"TREVIGLIO - Viale BUONARROTTI 39",
+539
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+542
+],
+[
+"TREVIGLIO - VIALE MONTEGRAPPA - CINEMA",
+544
+],
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+545
+]
+]
+},
+{
+"line": "T10",
+"code": "NS6",
+"ago": true,
+"notes": [],
+"stops": [
+[
+"VAPRIO D'ADDA - Via Perego 42/44, ATM",
+540
+],
+[
+"VAPRIO D'ADDA - Via per Grezzago fronte 2",
+542
+],
+[
+"CANONICA D'ADDA - Via Matteotti, fronte chiesa",
+546
+],
+[
+"CANONICA D'ADDA - Via Bergamo, fronte edicola",
+547
+],
+[
+"PONTIROLO NUOVO - Viale Italia, municipio",
+551
+],
+[
+"TREVIGLIO - fraz. CASTEL CERRETO",
+555
+],
+[
+"TREVIGLIO - Via Canonica lato chiesa, GEROMINA",
+558
+],
+[
+"TREVIGLIO - Viale BUONARROTTI 39",
+559
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+562
+],
+[
+"TREVIGLIO - VIALE MONTEGRAPPA - CINEMA",
+564
+],
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+565
+]
+]
+},
+{
+"line": "T10",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"VAPRIO D'ADDA - Via Perego 42/44, ATM",
+575
+],
+[
+"VAPRIO D'ADDA - Via per Grezzago fronte 2",
+577
+],
+[
+"CANONICA D'ADDA - Via Matteotti, fronte chiesa",
+581
+],
+[
+"CANONICA D'ADDA - Via Bergamo, fronte edicola",
+582
+],
+[
+"PONTIROLO NUOVO - Viale Italia, municipio",
+586
+],
+[
+"TREVIGLIO - fraz. CASTEL CERRETO",
+590
+],
+[
+"TREVIGLIO - Via Canonica lato chiesa, GEROMINA",
+593
+],
+[
+"TREVIGLIO - Viale BUONARROTTI 39",
+594
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+597
+],
+[
+"TREVIGLIO - VIALE MONTEGRAPPA - CINEMA",
+599
+],
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+600
+]
+]
+},
+{
+"line": "T10",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"VAPRIO D'ADDA - Via Perego 42/44, ATM",
+635
+],
+[
+"VAPRIO D'ADDA - Via per Grezzago fronte 2",
+637
+],
+[
+"CANONICA D'ADDA - Via Matteotti, fronte chiesa",
+641
+],
+[
+"CANONICA D'ADDA - Via Bergamo, fronte edicola",
+642
+],
+[
+"PONTIROLO NUOVO - Viale Italia, municipio",
+646
+],
+[
+"TREVIGLIO - fraz. CASTEL CERRETO",
+650
+],
+[
+"TREVIGLIO - Via Canonica lato chiesa, GEROMINA",
+653
+],
+[
+"TREVIGLIO - Viale BUONARROTTI 39",
+654
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+657
+],
+[
+"TREVIGLIO - VIALE MONTEGRAPPA - CINEMA",
+659
+],
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+660
+]
+]
+},
+{
+"line": "T10",
+"code": "S6",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"TREZZO SULL'ADDA -Via Nenni, ITC",
+785
+],
+[
+"TREZZO SULL'ADDA - Via Biffi, edicola",
+788
+],
+[
+"VAPRIO D'ADDA - Via Perego 42/44, ATM",
+793
+],
+[
+"VAPRIO D'ADDA - Via per Grezzago fronte 2",
+795
+],
+[
+"CANONICA D'ADDA - Via Matteotti, fronte chiesa",
+799
+],
+[
+"CANONICA D'ADDA - Via Lodi 40",
+800
+],
+[
+"FARA GERA D'ADDA - Via Udine",
+803
+],
+[
+"PONTIROLO NUOVO - Viale Italia, municipio",
+811
+],
+[
+"TREVIGLIO - fraz. CASTEL CERRETO",
+815
+],
+[
+"TREVIGLIO - Via Canonica lato chiesa, GEROMINA",
+818
+],
+[
+"TREVIGLIO - Viale BUONARROTTI 39",
+820
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+821
+],
+[
+"TREVIGLIO - VIALE MONTEGRAPPA - CINEMA",
+823
+],
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+827
+]
+]
+},
+{
+"line": "T10",
+"code": "S6",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"TREZZO SULL'ADDA -Via Nenni, ITC",
+850
+],
+[
+"TREZZO SULL'ADDA - Via Biffi, edicola",
+853
+],
+[
+"VAPRIO D'ADDA - Via Perego 42/44, ATM",
+858
+],
+[
+"VAPRIO D'ADDA - Via per Grezzago fronte 2",
+860
+],
+[
+"CANONICA D'ADDA - Via Matteotti, fronte chiesa",
+864
+],
+[
+"CANONICA D'ADDA - Via Lodi 40",
+865
+],
+[
+"FARA GERA D'ADDA - Via Udine",
+869
+],
+[
+"PONTIROLO NUOVO - Viale Italia, municipio",
+875
+],
+[
+"TREVIGLIO - fraz. CASTEL CERRETO",
+879
+],
+[
+"TREVIGLIO - Via Canonica lato chiesa, GEROMINA",
+882
+],
+[
+"TREVIGLIO - Viale BUONARROTTI 39",
+883
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+886
+],
+[
+"TREVIGLIO - VIALE MONTEGRAPPA - CINEMA",
+888
+],
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+890
+]
+]
+},
+{
+"line": "T10",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - fraz. CASTEL CERRETO",
+875
+],
+[
+"TREVIGLIO - Via Canonica lato chiesa, GEROMINA",
+878
+],
+[
+"TREVIGLIO - Viale BUONARROTTI 39",
+882
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+883
+],
+[
+"TREVIGLIO - VIALE MONTEGRAPPA - CINEMA",
+885
+],
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+887
+]
+]
+},
+{
+"line": "T10",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"VAPRIO D'ADDA - Via Perego 42/44, ATM",
+890
+],
+[
+"VAPRIO D'ADDA - Via per Grezzago fronte 2",
+892
+],
+[
+"CANONICA D'ADDA - Via Matteotti, fronte chiesa",
+894
+],
+[
+"CANONICA D'ADDA - Via Bergamo, fronte edicola",
+895
+]
+]
+},
+{
+"line": "T10",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"TREZZO SULL'ADDA -Via Nenni, ITC",
+915
+],
+[
+"TREZZO SULL'ADDA - Via Biffi, edicola",
+918
+],
+[
+"VAPRIO D'ADDA - Via Perego 42/44, ATM",
+923
+],
+[
+"VAPRIO D'ADDA - Via per Grezzago fronte 2",
+925
+],
+[
+"CANONICA D'ADDA - Via Matteotti, fronte chiesa",
+929
+],
+[
+"CANONICA D'ADDA - Via Lodi 40",
+930
+],
+[
+"FARA GERA D'ADDA - Via Udine",
+935
+],
+[
+"PONTIROLO NUOVO - Viale Italia, municipio",
+945
+],
+[
+"TREVIGLIO - fraz. CASTEL CERRETO",
+949
+],
+[
+"TREVIGLIO - Via Canonica lato chiesa, GEROMINA",
+953
+],
+[
+"TREVIGLIO - Viale BUONARROTTI 39",
+957
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+958
+],
+[
+"TREVIGLIO - VIALE MONTEGRAPPA - CINEMA",
+960
+],
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+963
+]
+]
+},
+{
+"line": "T10",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"TREZZO SULL'ADDA -Via Nenni, ITC",
+965
+],
+[
+"TREZZO SULL'ADDA - Via Biffi, edicola",
+968
+],
+[
+"VAPRIO D'ADDA - Via Perego 42/44, ATM",
+973
+],
+[
+"VAPRIO D'ADDA - Via per Grezzago fronte 2",
+975
+],
+[
+"CANONICA D'ADDA - Via Matteotti, fronte chiesa",
+979
+],
+[
+"CANONICA D'ADDA - Via Lodi 40",
+980
+],
+[
+"FARA GERA D'ADDA - Via Udine",
+984
+],
+[
+"PONTIROLO NUOVO - Viale Italia, municipio",
+988
+],
+[
+"TREVIGLIO - fraz. CASTEL CERRETO",
+992
+],
+[
+"TREVIGLIO - Via Canonica lato chiesa, GEROMINA",
+995
+],
+[
+"TREVIGLIO - Viale BUONARROTTI 39",
+996
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+999
+],
+[
+"TREVIGLIO - VIALE MONTEGRAPPA - CINEMA",
+1001
+],
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+1003
+]
+]
+},
+{
+"line": "T10",
+"code": "NS6",
+"ago": true,
+"notes": [],
+"stops": [
+[
+"VAPRIO D'ADDA - Via Perego 42/44, ATM",
+1000
+],
+[
+"VAPRIO D'ADDA - Via per Grezzago fronte 2",
+1002
+],
+[
+"CANONICA D'ADDA - Via Matteotti, fronte chiesa",
+1006
+],
+[
+"CANONICA D'ADDA - Via Bergamo, fronte edicola",
+1007
+],
+[
+"PONTIROLO NUOVO - Viale Italia, municipio",
+1011
+],
+[
+"TREVIGLIO - fraz. CASTEL CERRETO",
+1015
+],
+[
+"TREVIGLIO - Via Canonica lato chiesa, GEROMINA",
+1018
+],
+[
+"TREVIGLIO - Viale BUONARROTTI 39",
+1022
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+1023
+],
+[
+"TREVIGLIO - VIALE MONTEGRAPPA - CINEMA",
+1025
+],
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+1028
+]
+]
+},
+{
+"line": "T10",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"TREZZO SULL'ADDA - Via Biffi, edicola",
+1020
+],
+[
+"VAPRIO D'ADDA - Via Perego 42/44, ATM",
+1028
+],
+[
+"VAPRIO D'ADDA - Via per Grezzago fronte 2",
+1030
+],
+[
+"CANONICA D'ADDA - Via Matteotti, fronte chiesa",
+1034
+],
+[
+"CANONICA D'ADDA - Via Bergamo, fronte edicola",
+1035
+],
+[
+"PONTIROLO NUOVO - Viale Italia, municipio",
+1039
+],
+[
+"TREVIGLIO - fraz. CASTEL CERRETO",
+1047
+],
+[
+"TREVIGLIO - Via Canonica lato chiesa, GEROMINA",
+1049
+],
+[
+"TREVIGLIO - Viale BUONARROTTI 39",
+1050
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+1053
+],
+[
+"TREVIGLIO - VIALE MONTEGRAPPA - CINEMA",
+1055
+],
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+1056
+]
+]
+},
+{
+"line": "T10",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"VAPRIO D'ADDA - Via Perego 42/44, ATM",
+1070
+],
+[
+"VAPRIO D'ADDA - Via per Grezzago fronte 2",
+1072
+],
+[
+"CANONICA D'ADDA - Via Matteotti, fronte chiesa",
+1076
+],
+[
+"CANONICA D'ADDA - Via Bergamo, fronte edicola",
+1077
+],
+[
+"PONTIROLO NUOVO - Viale Italia, municipio",
+1081
+],
+[
+"TREVIGLIO - fraz. CASTEL CERRETO",
+1085
+],
+[
+"TREVIGLIO - Via Canonica lato chiesa, GEROMINA",
+1088
+],
+[
+"TREVIGLIO - Viale BUONARROTTI 39",
+1089
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+1092
+],
+[
+"TREVIGLIO - VIALE MONTEGRAPPA - CINEMA",
+1094
+],
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+1095
+]
+]
+},
+{
+"line": "T10",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"VAPRIO D'ADDA - Via Perego 42/44, ATM",
+1130
+],
+[
+"VAPRIO D'ADDA - Via per Grezzago fronte 2",
+1132
+],
+[
+"CANONICA D'ADDA - Via Matteotti, fronte chiesa",
+1136
+],
+[
+"CANONICA D'ADDA - Via Bergamo, fronte edicola",
+1137
+],
+[
+"PONTIROLO NUOVO - Viale Italia, municipio",
+1143
+],
+[
+"TREVIGLIO - fraz. CASTEL CERRETO",
+1147
+],
+[
+"TREVIGLIO - Via Canonica lato chiesa, GEROMINA",
+1152
+],
+[
+"TREVIGLIO - Viale BUONARROTTI 39",
+1154
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+1155
+],
+[
+"TREVIGLIO - VIALE MONTEGRAPPA - CINEMA",
+1157
+],
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+1160
+]
+]
+},
+{
+"line": "T10",
+"code": "F6",
+"ago": true,
+"notes": [],
+"stops": [
+[
+"VAPRIO D'ADDA - Via Perego 42/44, ATM",
+1190
+],
+[
+"VAPRIO D'ADDA - Via per Grezzago fronte 2",
+1192
+],
+[
+"CANONICA D'ADDA - Via Matteotti, fronte chiesa",
+1196
+],
+[
+"CANONICA D'ADDA - Via Bergamo, fronte edicola",
+1197
+]
+]
+},
+{
+"line": "T10",
+"code": "S6",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"CASSANO - Corso Europa - Liceo",
+755
+],
+[
+"CASSANO - Bv. Colonnella - Civico 2956",
+761
+],
+[
+"BADALASCO - Via Veneziana, bar Italia",
+771
+],
+[
+"FARA GERA D'ADDA - Via Locatelli",
+765
+],
+[
+"FARA GERA D'ADDA - Via Udine",
+766
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+780
+]
+]
+},
+{
+"line": "B812",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+790
+],
+[
+"TREVIGLIO - Piazza del POPOLO",
+792
+],
+[
+"TREVIGLIO - Via Isser 14 - SAME",
+800
+],
+[
+"BADALASCO - Via Veneziana, bar Italia",
+805
+],
+[
+"FARA GERA D'ADDA - Via Locatelli",
+810
+],
+[
+"FARA GERA D'ADDA - Via Udine",
+812
+]
+]
+},
+{
+"line": "T10",
+"code": "S6",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"CASSANO - Corso Europa - Liceo",
+815
+],
+[
+"CASSANO - Bv. Colonnella - Civico 2956",
+822
+],
+[
+"BADALASCO - Via Veneziana, bar Italia",
+834
+],
+[
+"FARA GERA D'ADDA - Via Locatelli",
+828
+],
+[
+"FARA GERA D'ADDA - Via Udine",
+829
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+840
+]
+]
+},
+{
+"line": "B812",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"CASSANO - Corso Europa - Liceo",
+852
+],
+[
+"CASSANO - Bv. Colonnella - Civico 2956",
+859
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+865
+]
+]
+},
+{
+"line": "T10",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"CASSANO - Corso Europa - Liceo",
+872
+],
+[
+"CASSANO - Bv. Colonnella - Civico 2956",
+879
+],
+[
+"BADALASCO - Via Veneziana, bar Italia",
+889
+],
+[
+"FARA GERA D'ADDA - Via Locatelli",
+884
+],
+[
+"FARA GERA D'ADDA - Via Udine",
+885
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+895
+]
+]
+},
+{
+"line": "T10",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+874
+],
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+870
+],
+[
+"TREVIGLIO - Piazza del POPOLO",
+872
+],
+[
+"TREVIGLIO - Via Isser 14 - SAME",
+875
+],
+[
+"BADALASCO - Via Veneziana, bar Italia",
+879
+],
+[
+"FARA GERA D'ADDA - Via Locatelli",
+883
+],
+[
+"FARA GERA D'ADDA - Via Bergamo \"fronte distributore\"",
+885
+]
+]
+},
+{
+"line": "T10",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+905
+],
+[
+"TREVIGLIO - Via Isser 14 - SAME",
+908
+],
+[
+"BADALASCO - Via Veneziana, bar Italia",
+911
+],
+[
+"FARA GERA D'ADDA - Via Locatelli",
+919
+],
+[
+"FARA GERA D'ADDA - Via Udine",
+920
+]
+]
+},
+{
+"line": "T10",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"CASSANO - STAZIONE F.S.",
+1105
+],
+[
+"CASSANO - Bv. Colonnella - Civico 2956",
+1110
+],
+[
+"FARA GERA D'ADDA - Via Locatelli",
+1119
+],
+[
+"FARA GERA D'ADDA - Via Udine",
+1120
+]
+]
+},
+{
+"line": "T10",
+"code": "S6",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+1111
+],
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+1108
+],
+[
+"TREVIGLIO - Piazza del POPOLO",
+1109
+],
+[
+"TREVIGLIO - Via Isser 14 - SAME",
+1114
+],
+[
+"BADALASCO - Via Veneziana, bar Italia",
+1118
+],
+[
+"FARA GERA D'ADDA - Via Locatelli",
+1123
+],
+[
+"FARA GERA D'ADDA - Via Bergamo \"fronte distributore\"",
+1125
+]
+]
+},
+{
+"line": "T10",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+1135
+],
+[
+"TREVIGLIO - Piazza del POPOLO",
+1137
+],
+[
+"TREVIGLIO - Via Isser 14 - SAME",
+1141
+],
+[
+"BADALASCO - Via Veneziana, bar Italia",
+1145
+],
+[
+"FARA GERA D'ADDA - Via Locatelli",
+1149
+],
+[
+"FARA GERA D'ADDA - Via Udine",
+1150
+]
+]
+},
+{
+"line": "T10",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+1165
+],
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+1168
+],
+[
+"TREVIGLIO - Piazza del POPOLO",
+1169
+],
+[
+"TREVIGLIO - Via Isser 14 - SAME",
+1171
+],
+[
+"BADALASCO - Via Veneziana, bar Italia",
+1175
+],
+[
+"FARA GERA D'ADDA - Via Locatelli",
+1178
+],
+[
+"FARA GERA D'ADDA - Via Udine",
+1179
+]
+]
+},
+{
+"line": "T10",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"CASSANO - STAZIONE F.S.",
+1165
+],
+[
+"CASSANO - Bv. Colonnella - Civico 2956",
+1170
+],
+[
+"FARA GERA D'ADDA - Via Locatelli",
+1179
+],
+[
+"FARA GERA D'ADDA - Via Bergamo \"fronte distributore\"",
+1181
+]
+]
+},
+{
+"line": "T10",
+"code": "F6",
+"ago": true,
+"notes": [],
+"stops": [
+[
+"FARA GERA D'ADDA - Via Bergamo \"fronte distributore\"",
+364
+],
+[
+"FARA GERA D'ADDA - Via Udine",
+365
+],
+[
+"FARA GERA D'ADDA - Via Locatelli",
+366
+],
+[
+"BADALASCO",
+370
+],
+[
+"TREVIGLIO - Via Isser 31 - SAME",
+373
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+376
+],
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+380
+]
+]
+},
+{
+"line": "T10",
+"code": "S6",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"FARA GERA D'ADDA - Via Bergamo \"fronte distributore\"",
+396
+],
+[
+"FARA GERA D'ADDA - Via Udine",
+397
+],
+[
+"FARA GERA D'ADDA - Via Locatelli",
+398
+],
+[
+"BADALASCO",
+405
+],
+[
+"TREVIGLIO - Via Isser 31 - SAME",
+408
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+410
+]
+]
+},
+{
+"line": "T10",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"BADALASCO",
+395
+],
+[
+"TREVIGLIO - Via Isser 31 - SAME",
+398
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+405
+]
+]
+},
+{
+"line": "T10",
+"code": "F5",
+"ago": true,
+"notes": [],
+"stops": [
+[
+"FARA GERA D'ADDA - Via Udine",
+405
+],
+[
+"FARA GERA D'ADDA - Via Locatelli",
+406
+],
+[
+"CASSANO - STAZIONE F.S.",
+427
+]
+]
+},
+{
+"line": "T10",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"FARA GERA D'ADDA - Via Bergamo \"fronte distributore\"",
+412
+],
+[
+"FARA GERA D'ADDA - Via Udine",
+413
+],
+[
+"FARA GERA D'ADDA - Via Locatelli",
+415
+],
+[
+"BADALASCO",
+420
+],
+[
+"TREVIGLIO - Via Isser 31 - SAME",
+424
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+427
+]
+]
+},
+{
+"line": "T10",
+"code": "S6",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"FARA GERA D'ADDA - Via Bergamo \"fronte distributore\"",
+412
+],
+[
+"FARA GERA D'ADDA - Via Udine",
+413
+],
+[
+"FARA GERA D'ADDA - Via Locatelli",
+415
+],
+[
+"BADALASCO",
+420
+],
+[
+"TREVIGLIO - Via Isser 31 - SAME",
+424
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+427
+],
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+429
+]
+]
+},
+{
+"line": "T10",
+"code": "S6",
+"ago": false,
+"notes": [
+"Y-C",
+"G"
+],
+"stops": [
+[
+"CASSANO - Corso Europa - Liceo",
+420
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+445
+],
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+450
+]
+]
+},
+{
+"line": "T10",
+"code": "S5",
+"ago": false,
+"notes": [
+"Y-C",
+"G"
+],
+"stops": [
+[
+"CASSANO - Corso Europa - Liceo",
+420
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+445
+],
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+450
+]
+]
+},
+{
+"line": "T10",
+"code": "S6",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"FARA GERA D'ADDA - Via Udine",
+425
+],
+[
+"FARA GERA D'ADDA - Via Locatelli",
+426
+],
+[
+"BADALASCO",
+430
+],
+[
+"TREVIGLIO - Via Isser 31 - SAME",
+434
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+440
+]
+]
+},
+{
+"line": "T10",
+"code": "S6",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+440
+],
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+445
+],
+[
+"TREVIGLIO - Piazza del POPOLO",
+446
+],
+[
+"BADALASCO",
+455
+],
+[
+"FARA GERA D'ADDA - Via Udine",
+460
+],
+[
+"FARA GERA D'ADDA - Via Locatelli",
+461
+],
+[
+"CASSANO - Corso Europa - Liceo",
+475
+]
+]
+},
+{
+"line": "T10",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"FARA GERA D'ADDA - Via Udine",
+1120
+],
+[
+"FARA GERA D'ADDA - Via Locatelli",
+1121
+],
+[
+"BADALASCO",
+1126
+],
+[
+"TREVIGLIO - Via Isser 31 - SAME",
+1129
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+1133
+],
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+1135
+]
+]
+},
+{
+"line": "T10",
+"code": "S5",
+"ago": false,
+"notes": [],
+"stops": [
+[
+"FARA GERA D'ADDA - Via Udine",
+1145
+],
+[
+"FARA GERA D'ADDA - Via Locatelli",
+1146
+],
+[
+"BADALASCO",
+1151
+],
+[
+"TREVIGLIO - Via Isser 31 - SAME",
+1155
+],
+[
+"TREVIGLIO - Piazzale Mazzini, STAZIONE OVEST",
+1158
+],
+[
+"TREVIGLIO - V.le De Gasperi, STAZIONE FS",
+1160
+]
+]
+}
+]
